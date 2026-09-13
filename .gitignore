@@ -1,2 +1,6 @@
 # trmnlp build output
 _build/
+
+# local secrets and editor state
+.env
+.idea/
