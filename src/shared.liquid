@@ -97,10 +97,17 @@ What goes up but never comes down?|Your age
 {% assign riddle_on = true %}{% if v == false or v == "false" or v == 0 or v == "0" %}{% assign riddle_on = false %}{% endif %}
 {% unless fact_on or trivia_on or riddle_on %}{% assign fact_on = true %}{% endunless %}
 
-{% comment %} ---------- Slots: the hero is the first enabled item in priority order (fact, riddle, trivia); the rest go to the sidebar in display order (trivia, riddle). ---------- {% endcomment %}
+{% comment %} ---------- Slots: the hero is the user's chosen primary section if it is enabled, else the first enabled one (fact, trivia, riddle); the rest go to the sidebar in that same order. ---------- {% endcomment %}
+{% assign primary_value = cf.primary | default: primary | default: "fact" %}
 {% assign hero = "" %}
-{% if fact_on %}{% assign hero = "fact" %}{% elsif riddle_on %}{% assign hero = "riddle" %}{% else %}{% assign hero = "trivia" %}{% endif %}
+{% if primary_value == "fact" and fact_on %}{% assign hero = "fact" %}
+{% elsif primary_value == "trivia" and trivia_on %}{% assign hero = "trivia" %}
+{% elsif primary_value == "riddle" and riddle_on %}{% assign hero = "riddle" %}
+{% elsif fact_on %}{% assign hero = "fact" %}
+{% elsif trivia_on %}{% assign hero = "trivia" %}
+{% else %}{% assign hero = "riddle" %}{% endif %}
 {% assign sides = "" %}
+{% if fact_on and hero != "fact" %}{% assign sides = sides | append: "fact," %}{% endif %}
 {% if trivia_on and hero != "trivia" %}{% assign sides = sides | append: "trivia," %}{% endif %}
 {% if riddle_on and hero != "riddle" %}{% assign sides = sides | append: "riddle," %}{% endif %}
 {% assign sides = sides | split: "," %}
@@ -115,10 +122,12 @@ What goes up but never comes down?|Your age
   {% else %}{% assign hero_label = "Trivia · " | append: trivia_category %}{% assign hero_body = trivia_question %}{% assign hero_answer = trivia_answer %}
 {% endcase %}
 {% case side1 %}
+  {% when "fact" %}{% assign side1_label = "Did You Know?" %}{% assign side1_body = fact_text %}{% assign side1_answer = "" %}
   {% when "trivia" %}{% assign side1_label = "Trivia · " | append: trivia_category %}{% assign side1_body = trivia_question %}{% assign side1_answer = trivia_answer %}
   {% when "riddle" %}{% assign side1_label = "Riddle Me This" %}{% assign side1_body = riddle_question %}{% assign side1_answer = riddle_answer %}
 {% endcase %}
 {% case side2 %}
+  {% when "trivia" %}{% assign side2_label = "Trivia · " | append: trivia_category %}{% assign side2_body = trivia_question %}{% assign side2_answer = trivia_answer %}
   {% when "riddle" %}{% assign side2_label = "Riddle Me This" %}{% assign side2_body = riddle_question %}{% assign side2_answer = riddle_answer %}
 {% endcase %}
 
@@ -156,7 +165,7 @@ What goes up but never comes down?|Your age
 <div class="flex flex--col flex--left flex--top gap--xsmall">
   <span class="label label--{{ label_size }} label--underline">{{ label }}</span>
   <span class="{{ body_class }}" data-clamp="{{ lines }}">{{ body }}</span>
-  {% render "answer_line", answer: answer, state: state, reveal_label: reveal_label, text_size: text_size %}
+  {% if answer != blank %}{% render "answer_line", answer: answer, state: state, reveal_label: reveal_label, text_size: text_size %}{% endif %}
 </div>
 {% endtemplate %}
 

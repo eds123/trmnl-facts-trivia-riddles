@@ -8,13 +8,15 @@
     {% if side_count == 1 %}
       {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "title title--small", text_size: "small", lines: 4 %}
     {% else %}
+    {% comment %} A hero with an answer line leaves one less row for the sidebar. {% endcomment %}
+    {% if hero_answer == blank %}{% assign s1_lines = 4 %}{% assign s2_lines = 5 %}{% else %}{% assign s1_lines = 3 %}{% assign s2_lines = 3 %}{% endif %}
     <div class="columns gap--medium">
-      <div class="column">
-        {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "description", text_size: "small", lines: 4 %}
+      <div class="column flex flex--col flex--left flex--top">
+        {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "description", text_size: "small", lines: s1_lines %}
       </div>
       <div class="divider divider--v"></div>
-      <div class="column">
-        {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "description", text_size: "small", lines: 5 %}
+      <div class="column flex flex--col flex--left flex--top">
+        {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "description", text_size: "small", lines: s2_lines %}
       </div>
     </div>
     {% endif %}

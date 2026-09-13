@@ -46,6 +46,16 @@ custom_fields:
   name: Show riddle
   description: Daily riddle
   default: 'true'
+- keyname: primary
+  field_type: select
+  name: Primary section
+  description: Which section gets the large primary slot
+  help_text: If the chosen section is turned off, the first enabled one is used instead.
+  options:
+  - Fact: fact
+  - Trivia: trivia
+  - Riddle: riddle
+  default: fact
 - keyname: answer_mode
   field_type: select
   name: Answer display

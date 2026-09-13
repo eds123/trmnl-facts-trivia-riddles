@@ -4,8 +4,9 @@ watch:
 - src
 custom_fields:
   show_fact: 'true'
-  show_trivia: 'true'
+  show_trivia: 'false'
   show_riddle: 'true'
+  primary: fact
   answer_mode: reveal_at_time
   reveal_time: '18:00'
 variables:
