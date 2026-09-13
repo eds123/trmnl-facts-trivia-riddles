@@ -4,3 +4,4 @@ _build/
 # local secrets and editor state
 .env
 .idea/
+design/
