@@ -2,23 +2,29 @@
 {% comment %} ---- Landscape ---- {% endcomment %}
 <div class="layout layout--col layout--top layout--stretch-x gap--small portrait:hidden">
   {% if side_count == 0 %}
-    {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "base", text_size: "small", lines: 5 %}
+    {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "base", text_size: "small", lines: 5, lg_lines: 7 %}
   {% else %}
-    {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "small", text_size: "small", lines: 2 %}
+    {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "small", text_size: "small", lines: 2, lg_lines: 3 %}
     <div class="divider divider--h"></div>
     {% if side_count == 1 %}
-      {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "title title--small", text_size: "small", lines: 4 %}
+      {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "title title--small", text_size: "small", lines: 4, lg_lines: 6 %}
     {% else %}
     {% comment %} A hero with an answer line leaves one less row for the sidebar. {% endcomment %}
-    {% if hero_answer == blank %}{% assign s1_lines = 4 %}{% assign s2_lines = 5 %}{% else %}{% assign s1_lines = 3 %}{% assign s2_lines = 3 %}{% endif %}
-    <div class="columns gap--medium">
+    {% if hero_answer == blank %}{% assign s1_lines = 4 %}{% assign s2_lines = 5 %}{% assign s_lg_lines = 7 %}{% else %}{% assign s1_lines = 3 %}{% assign s2_lines = 3 %}{% assign s_lg_lines = 6 %}{% endif %}
+    {% comment %} OG: side by side (no vertical room). TRMNL X: three rows like half_vertical. {% endcomment %}
+    <div class="columns gap--medium lg:hidden">
       <div class="column flex flex--col flex--left flex--top">
-        {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "description", text_size: "small", lines: s1_lines %}
+        {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "description", text_size: "small", lines: s1_lines, lg_lines: s_lg_lines %}
       </div>
       <div class="divider divider--v"></div>
       <div class="column flex flex--col flex--left flex--top">
-        {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "description", text_size: "small", lines: s2_lines %}
+        {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "description", text_size: "small", lines: s2_lines, lg_lines: s_lg_lines %}
       </div>
+    </div>
+    <div class="hidden lg:flex flex--col flex--stretch-x gap--small">
+      {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "description", text_size: "small", lines: 3, lg_lines: 3 %}
+      <div class="divider divider--h"></div>
+      {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "description", text_size: "small", lines: 3, lg_lines: 3 %}
     </div>
     {% endif %}
   {% endif %}
@@ -26,11 +32,11 @@
 
 {% comment %} ---- Portrait (225x353 content) ---- {% endcomment %}
 {% if side_count == 0 %}
-  {% render "stacked", hidden: "landscape:hidden", gap: "small", hero_size: "base", hero_text: "small", hero_lines: 9, side_label: "small", side_body: "title title--small", side_text: "small", side1_lines: 0, side2_lines: 0, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+  {% render "stacked", hidden: "landscape:hidden", gap: "small", hero_size: "base", hero_text: "small", hero_lines: 9, hero_lg_lines: 10, side_label: "small", side_body: "title title--small", side_text: "small", side1_lines: 0, side2_lines: 0, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
 {% elsif side_count == 1 %}
-  {% render "stacked", hidden: "landscape:hidden", gap: "small", hero_size: "base", hero_text: "small", hero_lines: 4, side_label: "small", side_body: "title title--small", side_text: "small", side1_lines: 6, side2_lines: 0, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+  {% render "stacked", hidden: "landscape:hidden", gap: "small", hero_size: "base", hero_text: "small", hero_lines: 4, hero_lg_lines: 5, side_label: "small", side_body: "title title--small", side_text: "small", side1_lines: 6, side1_lg_lines: 8, side2_lines: 0, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
 {% else %}
-  {% render "stacked", hidden: "landscape:hidden", gap: "small", hero_size: "small", hero_text: "small", hero_lines: 3, side_label: "small", side_body: "title title--small", side_text: "small", side1_lines: 3, side2_lines: 3, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+  {% render "stacked", hidden: "landscape:hidden", gap: "small", hero_size: "small", hero_text: "small", hero_lines: 3, hero_lg_lines: 4, side_label: "small", side_body: "title title--small", side_text: "small", side1_lines: 3, side1_lg_lines: 4, side2_lines: 3, side2_lg_lines: 4, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
 {% endif %}
 
 {% comment %} Too narrow for the instance label. {% endcomment %}

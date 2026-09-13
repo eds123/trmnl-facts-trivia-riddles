@@ -142,8 +142,12 @@ What goes up but never comes down?|Your age
 {% endunless %}
 
 {% comment %} ---------- Templates ---------- {% endcomment %}
+{% comment %} One step up the size ladder; used for the lg (TRMNL X) variants. {% endcomment %}
+{% template size_up %}{% case size %}{% when "small" %}base{% when "base" %}large{% when "large" %}xlarge{% else %}xxlarge{% endcase %}{% endtemplate %}
+
 {% template answer_line %}
-{% assign cls = "label label--" | append: text_size %}
+{% capture lg_size %}{% render "size_up", size: text_size %}{% endcapture %}
+{% assign cls = "label label--" | append: text_size | append: " lg:label--" | append: lg_size %}
 {% case state %}
   {% when "shown" %}<span class="{{ cls }}">Answer: {{ answer }}</span>
   {% when "upside_down" %}<span class="{{ cls }}">Answer:&nbsp;<span class="reveal">{{ answer }}</span></span>
@@ -151,36 +155,47 @@ What goes up but never comes down?|Your age
 {% endcase %}
 {% endtemplate %}
 
-{% comment %} Hero slot: filled label, big text, answer (if any). {% endcomment %}
+{% comment %} Hero slot: filled label, big text, answer (if any).
+   lines is the OG clamp; lg_lines the TRMNL X clamp (defaults to lines). Text steps up one size on lg. {% endcomment %}
 {% template hero_card %}
+{% capture lg_size %}{% render "size_up", size: title_size %}{% endcapture %}
+{% assign lg_clamp = lg_lines | default: lines %}
 <div class="flex flex--col flex--left flex--top gap--small">
-  <span class="label label--filled">{{ label }}</span>
-  <span class="title title--{{ title_size }}" data-clamp="{{ lines }}">{{ body }}</span>
+  <span class="label label--filled lg:label--large">{{ label }}</span>
+  <span class="title title--{{ title_size }} lg:title--{{ lg_size }}" data-clamp="{{ lines }}" data-clamp-lg="{{ lg_clamp }}">{{ body }}</span>
   {% if answer != blank %}{% render "answer_line", answer: answer, state: state, reveal_label: reveal_label, text_size: text_size %}{% endif %}
 </div>
 {% endtemplate %}
 
-{% comment %} Sidebar slot: underlined label, question, answer. {% endcomment %}
+{% comment %} Sidebar slot: underlined label, question, answer. body_class is one of description / title title--small / title / title title--large. {% endcomment %}
 {% template side_card %}
+{% capture lg_label %}{% render "size_up", size: label_size %}{% endcapture %}
+{% case body_class %}
+  {% when "description" %}{% assign lg_body = "lg:title--small" %}
+  {% when "title title--small" %}{% assign lg_body = "lg:title--base" %}
+  {% when "title" %}{% assign lg_body = "lg:title--large" %}
+  {% else %}{% assign lg_body = "lg:title--xlarge" %}
+{% endcase %}
+{% assign lg_clamp = lg_lines | default: lines %}
 <div class="flex flex--col flex--left flex--top gap--xsmall">
-  <span class="label label--{{ label_size }} label--underline">{{ label }}</span>
-  <span class="{{ body_class }}" data-clamp="{{ lines }}">{{ body }}</span>
+  <span class="label label--{{ label_size }} lg:label--{{ lg_label }} label--underline">{{ label }}</span>
+  <span class="{{ body_class }} {{ lg_body }}" data-clamp="{{ lines }}" data-clamp-lg="{{ lg_clamp }}">{{ body }}</span>
   {% if answer != blank %}{% render "answer_line", answer: answer, state: state, reveal_label: reveal_label, text_size: text_size %}{% endif %}
 </div>
 {% endtemplate %}
 
 {% comment %} Stacked layout (hero on top, sides below): used by the narrow/tall views and every portrait variant.
-   hidden: extra classes for the wrapper (e.g. landscape:hidden). {% endcomment %}
+   hidden: extra classes for the wrapper (e.g. landscape:hidden). *_lg_lines are the TRMNL X clamps. {% endcomment %}
 {% template stacked %}
 <div class="layout layout--col layout--top layout--stretch-x gap--{{ gap }} {{ hidden }}">
-  {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: state, reveal_label: reveal_label, title_size: hero_size, text_size: hero_text, lines: hero_lines %}
+  {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: state, reveal_label: reveal_label, title_size: hero_size, text_size: hero_text, lines: hero_lines, lg_lines: hero_lg_lines %}
   {% if side_count > 0 %}
   <div class="divider divider--h"></div>
-  {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: state, reveal_label: reveal_label, label_size: side_label, body_class: side_body, text_size: side_text, lines: side1_lines %}
+  {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: state, reveal_label: reveal_label, label_size: side_label, body_class: side_body, text_size: side_text, lines: side1_lines, lg_lines: side1_lg_lines %}
   {% endif %}
   {% if side_count > 1 %}
   <div class="divider divider--h"></div>
-  {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: state, reveal_label: reveal_label, label_size: side_label, body_class: side_body, text_size: side_text, lines: side2_lines %}
+  {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: state, reveal_label: reveal_label, label_size: side_label, body_class: side_body, text_size: side_text, lines: side2_lines, lg_lines: side2_lg_lines %}
   {% endif %}
 </div>
 {% endtemplate %}
