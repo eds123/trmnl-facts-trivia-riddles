@@ -1,0 +1,46 @@
+<style>
+  /* Answers are printed upside down so the reader can choose when to peek. */
+  .reveal { display: inline-block; transform: rotate(180deg); }
+</style>
+
+{% template fact_card %}
+<div class="item">
+  <div class="meta"></div>
+  <div class="content">
+    <span class="label label--underline">Did You Know?</span>
+    <span class="title title--small" data-clamp="{{ lines | default: 4 }}">{{ fact.text }}</span>
+    <span class="label label--small">Source: {{ fact.source }}</span>
+  </div>
+</div>
+{% endtemplate %}
+
+{% template trivia_card %}
+<div class="item">
+  <div class="meta"></div>
+  <div class="content">
+    <span class="label label--underline">Trivia &middot; {{ trivia.category }} &middot; {{ trivia.difficulty }}</span>
+    <span class="title title--small" data-clamp="{{ lines | default: 3 }}">{{ trivia.question }}</span>
+    <span class="description">{% for choice in trivia.choices %}{{ forloop.index }}. {{ choice }}{% unless forloop.last %} &nbsp;&middot;&nbsp; {% endunless %}{% endfor %}</span>
+    <span class="label label--small">Answer:&nbsp;<span class="reveal">{{ trivia.answer }}</span></span>
+  </div>
+</div>
+{% endtemplate %}
+
+{% template riddle_card %}
+<div class="item">
+  <div class="meta"></div>
+  <div class="content">
+    <span class="label label--underline">Riddle Me This</span>
+    <span class="title title--small" data-clamp="{{ lines | default: 4 }}">{{ riddle.question }}</span>
+    <span class="label label--small">Answer:&nbsp;<span class="reveal">{{ riddle.answer }}</span></span>
+  </div>
+</div>
+{% endtemplate %}
+
+{% template plugin_title_bar %}
+<div class="title_bar">
+  <img class="image image--adaptive" alt="" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%23000' stroke-width='3'/%3E%3Ctext x='16' y='23' font-family='Arial, sans-serif' font-size='20' font-weight='bold' text-anchor='middle' fill='%23000'%3E?%3C/text%3E%3C/svg%3E">
+  <span class="title">Facts, Trivia &amp; Riddles</span>
+  <span class="instance">{{ instance | default: "Daily Brain Snack" }}</span>
+</div>
+{% endtemplate %}

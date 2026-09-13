@@ -1,0 +1,13 @@
+<div class="layout layout--col gap--large">
+  {% render "fact_card", fact: fact, lines: 3 %}
+  <div class="columns">
+    <div class="column">
+      {% render "trivia_card", trivia: trivia, lines: 3 %}
+    </div>
+    <div class="column">
+      {% render "riddle_card", riddle: riddle, lines: 4 %}
+    </div>
+  </div>
+</div>
+
+{% render "plugin_title_bar" %}
