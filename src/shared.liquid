@@ -18,13 +18,13 @@ Cleopatra lived closer in time to the Moon landing than to the building of the G
 {% endcapture %}
 
 {% capture trivia_raw %}
-Science & Nature|Which planet in our solar system has the most known moons?|Saturn ~~
+Science & nature|Which planet in our solar system has the most known moons?|Saturn ~~
 Geography|What is the capital city of Australia?|Canberra ~~
 History|In which year did the Berlin Wall fall?|1989 ~~
-Science & Nature|What is the chemical symbol for gold?|Au ~~
-Art & Literature|Who painted the ceiling of the Sistine Chapel?|Michelangelo ~~
+Science & nature|What is the chemical symbol for gold?|Au ~~
+Art & literature|Who painted the ceiling of the Sistine Chapel?|Michelangelo ~~
 Geography|Which is the longest river in Africa?|Nile ~~
-Science & Nature|How many bones are in the adult human body?|206 ~~
+Science & nature|How many bones are in the adult human body?|206 ~~
 Music|Which composer wrote the Moonlight Sonata?|Beethoven ~~
 Sport|How many players does a volleyball team have on court?|6 ~~
 History|Who was the first person to walk on the Moon?|Neil Armstrong
@@ -117,28 +117,28 @@ What goes up but never comes down?|Your age
 
 {% comment %} Per-slot content, so layouts only ever pass slot variables. {% endcomment %}
 {% case hero %}
-  {% when "fact" %}{% assign hero_label = "Did You Know?" %}{% assign hero_body = fact_text %}{% assign hero_answer = "" %}
-  {% when "riddle" %}{% assign hero_label = "Riddle Me This" %}{% assign hero_body = riddle_question %}{% assign hero_answer = riddle_answer %}
+  {% when "fact" %}{% assign hero_label = "Did you know?" %}{% assign hero_body = fact_text %}{% assign hero_answer = "" %}
+  {% when "riddle" %}{% assign hero_label = "Riddle me this" %}{% assign hero_body = riddle_question %}{% assign hero_answer = riddle_answer %}
   {% else %}{% assign hero_label = "Trivia · " | append: trivia_category %}{% assign hero_body = trivia_question %}{% assign hero_answer = trivia_answer %}
 {% endcase %}
 {% case side1 %}
-  {% when "fact" %}{% assign side1_label = "Did You Know?" %}{% assign side1_body = fact_text %}{% assign side1_answer = "" %}
+  {% when "fact" %}{% assign side1_label = "Did you know?" %}{% assign side1_body = fact_text %}{% assign side1_answer = "" %}
   {% when "trivia" %}{% assign side1_label = "Trivia · " | append: trivia_category %}{% assign side1_body = trivia_question %}{% assign side1_answer = trivia_answer %}
-  {% when "riddle" %}{% assign side1_label = "Riddle Me This" %}{% assign side1_body = riddle_question %}{% assign side1_answer = riddle_answer %}
+  {% when "riddle" %}{% assign side1_label = "Riddle me this" %}{% assign side1_body = riddle_question %}{% assign side1_answer = riddle_answer %}
 {% endcase %}
 {% case side2 %}
   {% when "trivia" %}{% assign side2_label = "Trivia · " | append: trivia_category %}{% assign side2_body = trivia_question %}{% assign side2_answer = trivia_answer %}
-  {% when "riddle" %}{% assign side2_label = "Riddle Me This" %}{% assign side2_body = riddle_question %}{% assign side2_answer = riddle_answer %}
+  {% when "riddle" %}{% assign side2_label = "Riddle me this" %}{% assign side2_body = riddle_question %}{% assign side2_answer = riddle_answer %}
 {% endcase %}
 
 {% comment %} Title bar instance text reflects what is enabled. {% endcomment %}
-{% assign instance_label = "Daily Brain Snack" %}
+{% assign instance_label = "Daily brain snack" %}
 {% unless fact_on and trivia_on and riddle_on %}
   {% assign names = "" %}
   {% if fact_on %}{% assign names = names | append: "Fact," %}{% endif %}
   {% if trivia_on %}{% assign names = names | append: "Trivia," %}{% endif %}
   {% if riddle_on %}{% assign names = names | append: "Riddle," %}{% endif %}
-  {% assign instance_label = names | split: "," | join: " & " %}
+  {% assign instance_label = names | split: "," | join: " & " | capitalize %}
 {% endunless %}
 
 {% comment %} ---------- Templates ---------- {% endcomment %}
