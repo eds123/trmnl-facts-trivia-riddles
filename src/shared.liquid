@@ -132,7 +132,7 @@ What goes up but never comes down?|Your age
 {% endcase %}
 
 {% comment %} Title bar instance text reflects what is enabled. {% endcomment %}
-{% assign instance_label = "Daily brain snack" %}
+{% assign instance_label = "Daily Brain Snack" %}
 {% unless fact_on and trivia_on and riddle_on %}
   {% assign names = "" %}
   {% if fact_on %}{% assign names = names | append: "Fact," %}{% endif %}
@@ -169,10 +169,26 @@ What goes up but never comes down?|Your age
 </div>
 {% endtemplate %}
 
+{% comment %} Stacked layout (hero on top, sides below): used by the narrow/tall views and every portrait variant.
+   hidden: extra classes for the wrapper (e.g. landscape:hidden). {% endcomment %}
+{% template stacked %}
+<div class="layout layout--col layout--top layout--stretch-x gap--{{ gap }} {{ hidden }}">
+  {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: state, reveal_label: reveal_label, title_size: hero_size, text_size: hero_text, lines: hero_lines %}
+  {% if side_count > 0 %}
+  <div class="divider divider--h"></div>
+  {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: state, reveal_label: reveal_label, label_size: side_label, body_class: side_body, text_size: side_text, lines: side1_lines %}
+  {% endif %}
+  {% if side_count > 1 %}
+  <div class="divider divider--h"></div>
+  {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: state, reveal_label: reveal_label, label_size: side_label, body_class: side_body, text_size: side_text, lines: side2_lines %}
+  {% endif %}
+</div>
+{% endtemplate %}
+
 {% template plugin_title_bar %}
 <div class="title_bar">
   <img class="image image--adaptive" alt="" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%23000' stroke-width='3'/%3E%3Ctext x='16' y='23' font-family='Arial, sans-serif' font-size='20' font-weight='bold' text-anchor='middle' fill='%23000'%3E?%3C/text%3E%3C/svg%3E">
   <span class="title">Facts, Trivia &amp; Riddles</span>
-  <span class="instance">{{ instance }}</span>
+  {% if instance != blank %}<span class="instance">{{ instance }}</span>{% endif %}
 </div>
 {% endtemplate %}

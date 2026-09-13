@@ -1,5 +1,6 @@
-{% comment %} Quadrant 400x240: hero on top, remaining sections side by side below. {% endcomment %}
-<div class="layout layout--col layout--top layout--stretch-x gap--small">
+{% comment %} Quadrant. Landscape 400x240: hero on top, remaining sections side by side below. Portrait 240x400: everything stacked. {% endcomment %}
+{% comment %} ---- Landscape ---- {% endcomment %}
+<div class="layout layout--col layout--top layout--stretch-x gap--small portrait:hidden">
   {% if side_count == 0 %}
     {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "base", text_size: "small", lines: 5 %}
   {% else %}
@@ -23,4 +24,14 @@
   {% endif %}
 </div>
 
-{% render "plugin_title_bar", instance: instance_label %}
+{% comment %} ---- Portrait (225x353 content) ---- {% endcomment %}
+{% if side_count == 0 %}
+  {% render "stacked", hidden: "landscape:hidden", gap: "small", hero_size: "base", hero_text: "small", hero_lines: 9, side_label: "small", side_body: "title title--small", side_text: "small", side1_lines: 0, side2_lines: 0, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+{% elsif side_count == 1 %}
+  {% render "stacked", hidden: "landscape:hidden", gap: "small", hero_size: "base", hero_text: "small", hero_lines: 4, side_label: "small", side_body: "title title--small", side_text: "small", side1_lines: 6, side2_lines: 0, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+{% else %}
+  {% render "stacked", hidden: "landscape:hidden", gap: "small", hero_size: "small", hero_text: "small", hero_lines: 3, side_label: "small", side_body: "title title--small", side_text: "small", side1_lines: 3, side2_lines: 3, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+{% endif %}
+
+{% comment %} Too narrow for the instance label. {% endcomment %}
+{% render "plugin_title_bar", instance: "" %}

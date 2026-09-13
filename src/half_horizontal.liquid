@@ -1,10 +1,11 @@
-{% comment %} Half horizontal 800x240: hero left, sidebar stacked right. {% endcomment %}
+{% comment %} Half horizontal. Landscape 800x240: hero left, sidebar stacked right. Portrait 480x400: stacked. {% endcomment %}
+{% comment %} ---- Landscape ---- {% endcomment %}
 {% if side_count == 0 %}
-<div class="layout layout--col layout--stretch">
+<div class="layout layout--col layout--stretch portrait:hidden">
   {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "large", text_size: "base", lines: 3 %}
 </div>
 {% else %}
-<div class="layout layout--row layout--stretch-y gap--medium">
+<div class="layout layout--row layout--stretch-y gap--medium portrait:hidden">
   <div class="basis--96 shrink-0 flex">
     {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "base", text_size: "small", lines: 5 %}
   </div>
@@ -19,6 +20,15 @@
     {% endif %}
   </div>
 </div>
+{% endif %}
+
+{% comment %} ---- Portrait (460x353 content) ---- {% endcomment %}
+{% if side_count == 0 %}
+  {% render "stacked", hidden: "landscape:hidden", gap: "medium", hero_size: "large", hero_text: "base", hero_lines: 6, side_label: "base", side_body: "title", side_text: "base", side1_lines: 0, side2_lines: 0, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+{% elsif side_count == 1 %}
+  {% render "stacked", hidden: "landscape:hidden", gap: "medium", hero_size: "large", hero_text: "base", hero_lines: 3, side_label: "base", side_body: "title", side_text: "base", side1_lines: 4, side2_lines: 0, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+{% else %}
+  {% render "stacked", hidden: "landscape:hidden", gap: "small", hero_size: "base", hero_text: "small", hero_lines: 3, side_label: "small", side_body: "title title--small", side_text: "small", side1_lines: 2, side2_lines: 3, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
 {% endif %}
 
 {% render "plugin_title_bar", instance: instance_label %}

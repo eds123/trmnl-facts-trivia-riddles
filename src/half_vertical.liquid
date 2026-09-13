@@ -1,18 +1,21 @@
-{% comment %} Half vertical 400x480: hero on top, sidebar below. {% endcomment %}
-<div class="layout layout--col layout--top layout--stretch-x gap--medium">
-  {% if side_count == 0 %}
-    {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "large", text_size: "base", lines: 9 %}
-  {% else %}
-    {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "base", text_size: "small", lines: 6 %}
-    <div class="divider divider--h"></div>
-    {% if side_count == 1 %}
-      {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "base", body_class: "title", text_size: "base", lines: 6 %}
-    {% else %}
-      {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "base", body_class: "title title--small", text_size: "small", lines: 3 %}
-      <div class="divider divider--h"></div>
-      {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: answer_state, reveal_label: reveal_label, label_size: "base", body_class: "title title--small", text_size: "small", lines: 5 %}
-    {% endif %}
-  {% endif %}
-</div>
+{% comment %} Half vertical. Landscape 400x480: hero on top, sidebar below. Portrait 240x800: same, tall and narrow. {% endcomment %}
+{% comment %} ---- Landscape (385x428 content) ---- {% endcomment %}
+{% if side_count == 0 %}
+  {% render "stacked", hidden: "portrait:hidden", gap: "medium", hero_size: "large", hero_text: "base", hero_lines: 9, side_label: "base", side_body: "title", side_text: "base", side1_lines: 0, side2_lines: 0, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+{% elsif side_count == 1 %}
+  {% render "stacked", hidden: "portrait:hidden", gap: "medium", hero_size: "base", hero_text: "small", hero_lines: 6, side_label: "base", side_body: "title", side_text: "base", side1_lines: 6, side2_lines: 0, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+{% else %}
+  {% render "stacked", hidden: "portrait:hidden", gap: "medium", hero_size: "base", hero_text: "small", hero_lines: 6, side_label: "base", side_body: "title title--small", side_text: "small", side1_lines: 3, side2_lines: 5, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+{% endif %}
 
-{% render "plugin_title_bar", instance: instance_label %}
+{% comment %} ---- Portrait (225x748 content) ---- {% endcomment %}
+{% if side_count == 0 %}
+  {% render "stacked", hidden: "landscape:hidden", gap: "medium", hero_size: "large", hero_text: "base", hero_lines: 14, side_label: "base", side_body: "title", side_text: "base", side1_lines: 0, side2_lines: 0, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+{% elsif side_count == 1 %}
+  {% render "stacked", hidden: "landscape:hidden", gap: "medium", hero_size: "base", hero_text: "small", hero_lines: 9, side_label: "base", side_body: "title", side_text: "base", side1_lines: 10, side2_lines: 0, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+{% else %}
+  {% render "stacked", hidden: "landscape:hidden", gap: "medium", hero_size: "base", hero_text: "small", hero_lines: 8, side_label: "base", side_body: "title", side_text: "base", side1_lines: 5, side2_lines: 6, hero_label: hero_label, hero_body: hero_body, hero_answer: hero_answer, side_count: side_count, side1_label: side1_label, side1_body: side1_body, side1_answer: side1_answer, side2_label: side2_label, side2_body: side2_body, side2_answer: side2_answer, state: answer_state, reveal_label: reveal_label %}
+{% endif %}
+
+{% comment %} Too narrow for the instance label. {% endcomment %}
+{% render "plugin_title_bar", instance: "" %}
