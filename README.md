@@ -1,8 +1,9 @@
 # Facts, Trivia & Riddles for TRMNL
 
-A daily brain snack for your [TRMNL](https://usetrmnl.com) e-ink display: one "Did you know?"
-fact, one trivia question and one riddle, fresh every day, with answers printed upside down so
-you can peek when you want.
+A daily run plugin for your [TRMNL](https://usetrmnl.com) e-ink display: 
+
+One "Did you know?"
+fact, one trivia question and one riddle, fresh every day.
 
 ![Full layout on the original TRMNL](assets/preview-full.png)
 
@@ -18,8 +19,7 @@ be shown upside down (the default), hidden until a time of your choosing, shown 
 shown.
 
 Content is served from a daily feed built in this repository (see [How it works](#how-it-works)),
-and every item is tracked so nothing repeats while unseen items remain. At the current pool sizes
-a fact or trivia question takes years to come around again; riddles take a bit over a year.
+and every item is tracked so nothing repeats while unseen items remain.
 
 ## Layouts
 
@@ -29,8 +29,6 @@ larger TRMNL X.
 | Half horizontal | Half vertical | Quadrant |
 |---|---|---|
 | ![Half horizontal](assets/preview-half-horizontal.png) | ![Half vertical](assets/preview-half-vertical.png) | ![Quadrant](assets/preview-quadrant.png) |
-
-![Full layout on TRMNL X](assets/preview-full-trmnl-x.png)
 
 ## Install
 
@@ -70,17 +68,6 @@ branch (the workflow creates it on its first run) and point `polling_url` at you
 
 </details>
 
-## Settings
-
-| Setting | Options | Default | Notes |
-|---|---|---|---|
-| Show fact | on / off | on | |
-| Show trivia | on / off | on | |
-| Show riddle | on / off | on | |
-| Primary section | Fact, Trivia, Riddle | Fact | Gets the large slot. Falls back to the first enabled section if the chosen one is off. |
-| Answer display | Upside down, Reveal at a set time, Show plainly, Never show | Upside down | |
-| Reveal time | time | 18:00 | Only used with "Reveal at a set time". Uses your account time zone. The device has to refresh after this time to pick up the answer. |
-
 ## How it works
 
 ```
@@ -107,24 +94,9 @@ The feed is a JSON object keyed by date, covering the past week and the next 45 
 }
 ```
 
-Because the feed is generated ahead of time, the plugin keeps working through short outages and
-every device sees the same item on the same day. If the feed is unreachable the templates fall
+Note: If the feed is unreachable the templates fall
 back to a small built-in sample set.
 
-Repeat avoidance: an item is never scheduled again while any unscheduled item remains in its
-pool. When a pool runs dry, the least recently shown item is reused, so the gap between repeats
-is always as long as the pool allows.
-
-## Data sources and licences
-
-| Section | Source | Licence |
-|---|---|---|
-| Trivia | [Open Trivia Database](https://opentdb.com) | CC BY-SA 4.0 |
-| Facts | Wikipedia "Did you know?" hooks via [derenrich/enwiki-did-you-know](https://huggingface.co/datasets/derenrich/enwiki-did-you-know), and [Wikipedia "On this day"](https://en.wikipedia.org/api/rest_v1/) via the Wikimedia REST API | CC BY-SA 4.0 |
-| Riddles | [crawsome/riddles](https://github.com/crawsome/riddles) | Unlicense (public domain) |
-
-See [SOURCES.md](SOURCES.md) for details on how each source is filtered and attributed. The
-generated `data.json` is published under CC BY-SA 4.0.
 
 ## Development
 
@@ -155,6 +127,18 @@ input does the same as the flag above.
 
 The facts pool in `data/facts.json` was imported once with `scripts/import_facts.py`, which needs
 `pyarrow` and a local copy of the Hugging Face dataset. It does not run in CI.
+
+## Data sources
+
+| Section | Source | Licence |
+|---|---|---|
+| Trivia | [Open Trivia Database](https://opentdb.com) | CC BY-SA 4.0 |
+| Facts | Wikipedia "Did you know?" hooks via [derenrich/enwiki-did-you-know](https://huggingface.co/datasets/derenrich/enwiki-did-you-know), and [Wikipedia "On this day"](https://en.wikipedia.org/api/rest_v1/) via the Wikimedia REST API | CC BY-SA 4.0 |
+| Riddles | [crawsome/riddles](https://github.com/crawsome/riddles) | Unlicense (public domain) |
+
+See [SOURCES.md](SOURCES.md) for details on how each source is filtered and attributed. The
+generated `data.json` is published under CC BY-SA 4.0.
+
 
 ## Licence
 
