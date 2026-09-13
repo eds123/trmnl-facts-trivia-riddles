@@ -75,11 +75,13 @@ What goes up but never comes down?|Your age
 {% assign today_key = local_ts | date: "%Y-%m-%d" %}
 {% assign today_data = days[today_key] %}
 {% assign data_source = "sample" %}
+{% assign fact_label = "Did you know?" %}
 {% if today_data %}
   {% assign data_source = "feed" %}
   {% if today_data.fact.text != blank %}
     {% assign fact_text = today_data.fact.text %}
     {% assign fact_url = today_data.fact.url %}
+    {% if today_data.fact.kind == "on_this_day" %}{% assign fact_label = "On this day" %}{% endif %}
   {% endif %}
   {% if today_data.trivia.question != blank %}
     {% assign trivia_category = today_data.trivia.category %}
@@ -139,12 +141,12 @@ What goes up but never comes down?|Your age
 
 {% comment %} Per-slot content, so layouts only ever pass slot variables. {% endcomment %}
 {% case hero %}
-  {% when "fact" %}{% assign hero_label = "Did you know?" %}{% assign hero_body = fact_text %}{% assign hero_answer = "" %}
+  {% when "fact" %}{% assign hero_label = fact_label %}{% assign hero_body = fact_text %}{% assign hero_answer = "" %}
   {% when "riddle" %}{% assign hero_label = "Riddle me this" %}{% assign hero_body = riddle_question %}{% assign hero_answer = riddle_answer %}
   {% else %}{% assign hero_label = "Trivia · " | append: trivia_category %}{% assign hero_body = trivia_question %}{% assign hero_answer = trivia_answer %}
 {% endcase %}
 {% case side1 %}
-  {% when "fact" %}{% assign side1_label = "Did you know?" %}{% assign side1_body = fact_text %}{% assign side1_answer = "" %}
+  {% when "fact" %}{% assign side1_label = fact_label %}{% assign side1_body = fact_text %}{% assign side1_answer = "" %}
   {% when "trivia" %}{% assign side1_label = "Trivia · " | append: trivia_category %}{% assign side1_body = trivia_question %}{% assign side1_answer = trivia_answer %}
   {% when "riddle" %}{% assign side1_label = "Riddle me this" %}{% assign side1_body = riddle_question %}{% assign side1_answer = riddle_answer %}
 {% endcase %}

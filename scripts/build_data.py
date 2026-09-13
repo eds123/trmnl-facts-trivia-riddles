@@ -35,10 +35,12 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RIDDLES_PATH = ROOT / "data" / "riddles.json"
+FACTS_PATH = ROOT / "data" / "facts.json"
 HISTORY_PATH = ROOT / "data" / "history.json"
 PUBLIC_DIR = ROOT / "public"
 
 HORIZON_AHEAD = 45  # days scheduled in advance
+ON_THIS_DAY_EVERY = 6  # most days use a "Did you know" hook; every Nth day is an "On this day" event
 WINDOW_BEHIND = 7  # past days kept in data.json for devices that are behind
 
 USER_AGENT = "trmnl-facts-trivia-riddles/1.0 (https://github.com/eds123/trmnl-facts-trivia-riddles)"
@@ -54,7 +56,9 @@ GRIM = re.compile(
     r"shooting|shot|crash|crashed|disaster|famine|plague|epidemic|pandemic|war|wars|battle|"
     r"invasion|invaded|hostage|torture|rape|abuse|slaughter|casualt\w*|wounded|injur\w*|"
     r"earthquake|tsunami|hurricane|typhoon|cyclone|flood|floods|wildfire|explosion|exploded|"
-    r"sank|sinking|collapse|collapsed|riot|riots|coup|lynch\w*|holocaust|nazi|nazis)\b",
+    r"sank|sinking|collapse|collapsed|riot|riots|coup|lynch\w*|holocaust|nazi|nazis|kidnap\w*|"
+    r"abduct\w*|beaten|assault\w*|klan|hanged|hanging|drown\w*|poison\w*|stabb\w*|strangl\w*|"
+    r"corpse|cannibal\w*|prison|prisoners|slave|slaves|slavery|molest\w*|pedophil\w*|paedophil\w*)\b",
     re.I,
 )
 
@@ -79,7 +83,7 @@ NICHE_EVERY = 7
 
 SOURCES = {
     "trivia": {"name": "Open Trivia Database", "url": "https://opentdb.com", "license": "CC BY-SA 4.0"},
-    "fact": {"name": "Wikipedia", "url": "https://en.wikipedia.org", "license": "CC BY-SA 4.0"},
+    "fact": {"name": "Wikipedia (Did you know hooks and On this day events)", "url": "https://en.wikipedia.org", "license": "CC BY-SA 4.0"},
     "riddle": {"name": "crawsome/riddles", "url": "https://github.com/crawsome/riddles", "license": "Unlicense"},
 }
 
@@ -109,6 +113,10 @@ def load_history() -> dict:
         with HISTORY_PATH.open(encoding="utf-8") as fh:
             hist = json.load(fh)
         hist.setdefault("days", {})
+        for entry in hist["days"].values():  # entries written before facts carried a kind
+            fact = entry.get("fact")
+            if fact and "kind" not in fact:
+                fact["kind"] = "on_this_day" if fact.get("text", "").startswith(("On this day", "In ")) else "dyk"
         return hist
     return {"version": 1, "days": {}}
 
@@ -137,6 +145,11 @@ def pick(candidates: list[dict], used: dict[str, str], rng: random.Random) -> di
 
 MAX_RIDDLE_LEN = 200  # longer riddles truncate on the OG quadrant / half layouts
 MAX_TRIVIA_LEN = 180
+
+
+def load_facts() -> list[dict]:
+    with FACTS_PATH.open(encoding="utf-8") as fh:
+        return [dict(f, kind="dyk") for f in json.load(fh)["facts"]]
 
 
 def load_riddles() -> list[dict]:
@@ -241,7 +254,7 @@ def fact_text(year: int, text: str) -> str:
     if not text.endswith((".", "!", "?")):
         text += "."
     when = f"{abs(year)} BC" if year < 0 else str(year)
-    return f"On this day in {when}, {text}"
+    return f"In {when}, {text}"
 
 
 def fetch_fact_candidates(month: int, day: int) -> list[dict]:
@@ -265,6 +278,7 @@ def fetch_fact_candidates(month: int, day: int) -> list[dict]:
             ident = "wiki-" + hashlib.sha1(f"{month:02d}{day:02d}|{year}|{text}".encode("utf-8")).hexdigest()[:12]
             items.append({
                 "id": ident,
+                "kind": "on_this_day",
                 "text": fact_text(year, text),
                 "year": year,
                 "title": title,
@@ -293,9 +307,16 @@ def daterange(start: dt.date, end: dt.date):
         d += dt.timedelta(days=1)
 
 
-def build(today: dt.date) -> None:
+def build(today: dt.date, reschedule_from: dt.date | None = None) -> None:
     history = load_history()
     days = history["days"]
+    if reschedule_from:
+        # Drop not-yet-shown days so they are re-picked with the current rules; past days stay in the ledger.
+        cutoff = max(reschedule_from, today + dt.timedelta(days=1)).isoformat()
+        dropped = [k for k in days if k >= cutoff]
+        for k in dropped:
+            del days[k]
+        log(f"rescheduling: dropped {len(dropped)} future day(s) from {cutoff}")
     before = len(days)
 
     horizon = today + dt.timedelta(days=HORIZON_AHEAD)
@@ -303,6 +324,7 @@ def build(today: dt.date) -> None:
     log(f"history has {before} day(s); scheduling {len(missing)} new day(s) up to {horizon}")
 
     riddles = load_riddles()
+    facts = load_facts()
     trivia_pool = fetch_trivia(len(missing), last_used(history, "trivia")) if missing else []
 
     for d in missing:
@@ -310,7 +332,12 @@ def build(today: dt.date) -> None:
         rng = random.Random(key)
         entry: dict = {}
 
-        fact = pick(fetch_fact_candidates(d.month, d.day), last_used(history, "fact"), rng)
+        used_facts = last_used(history, "fact")
+        fact = None
+        if d.toordinal() % ON_THIS_DAY_EVERY == 0:
+            fact = pick(fetch_fact_candidates(d.month, d.day), used_facts, rng)
+        if not fact:
+            fact = pick(facts, used_facts, rng)
         if fact:
             entry["fact"] = fact
         else:
@@ -359,7 +386,7 @@ def write_public(history: dict, today: dt.date) -> None:
             continue
         out = {}
         if "fact" in entry:
-            out["fact"] = slim(entry["fact"], ("text", "year", "title", "url"))
+            out["fact"] = slim(entry["fact"], ("kind", "text", "year", "title", "url"))
         if "trivia" in entry:
             out["trivia"] = slim(entry["trivia"], ("category", "difficulty", "question", "answer", "choices"))
         if "riddle" in entry:
@@ -396,5 +423,12 @@ def write_public(history: dict, today: dt.date) -> None:
 
 
 if __name__ == "__main__":
-    today = dt.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else dt.datetime.now(dt.timezone.utc).date()
-    build(today)
+    import argparse
+
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("today", nargs="?", help="override today's date (YYYY-MM-DD, UTC)")
+    ap.add_argument("--reschedule-from", metavar="YYYY-MM-DD",
+                    help="discard scheduled picks from this date on (never earlier than tomorrow) and pick again")
+    args = ap.parse_args()
+    today = dt.date.fromisoformat(args.today) if args.today else dt.datetime.now(dt.timezone.utc).date()
+    build(today, dt.date.fromisoformat(args.reschedule_from) if args.reschedule_from else None)

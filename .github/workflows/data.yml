@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "17 3 * * *" # daily, 03:17 UTC (off the hour to dodge the busiest slot)
   workflow_dispatch:
+    inputs:
+      reschedule_from:
+        description: "Re-pick scheduled days from this date (YYYY-MM-DD); leave empty to only top up"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -32,7 +37,12 @@ jobs:
           fi
 
       - name: Build data.json
-        run: python scripts/build_data.py
+        run: |
+          if [ -n "${{ github.event.inputs.reschedule_from }}" ]; then
+            python scripts/build_data.py --reschedule-from "${{ github.event.inputs.reschedule_from }}"
+          else
+            python scripts/build_data.py
+          fi
 
       - name: Publish to gh-pages
         run: |
