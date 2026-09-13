@@ -95,7 +95,7 @@ What goes up but never comes down?|Your age
 {% case state %}
   {% when "shown" %}<span class="label label--small">Answer: {{ answer }}</span>
   {% when "upside_down" %}<span class="label label--small">Answer:&nbsp;<span class="reveal">{{ answer }}</span></span>
-  {% when "pending" %}<span class="label label--small">Answer revealed at {{ reveal_label }}</span>
+  {% when "pending" %}<span class="label label--small">Answer reveals after {{ reveal_label }}</span>
 {% endcase %}
 {% endtemplate %}
 
