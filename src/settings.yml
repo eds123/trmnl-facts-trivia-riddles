@@ -1,20 +1,15 @@
-#
-# Changes to this file will be overwritten by `trmnlp pull`.
-#
-# Docs: https://help.trmnl.com/en/articles/10542599-importing-and-exporting-private-plugins#h_581fb988f0
-#
 ---
 strategy: static
 no_screen_padding: 'no'
 dark_mode: 'no'
+static_data: "{}"
 polling_verb: get
+framework_version: latest
+serverless_language:
 polling_url: ''
 polling_headers: ''
-framework_version: latest
-name: Facts, Trivia & Riddles
-description: A fact, a question and a riddle
-refresh_interval: 15
-static_data: '{}'
+polling_body:
+id: 476393
 custom_fields:
 - keyname: answer_mode
   field_type: select
@@ -34,3 +29,6 @@ custom_fields:
   help_text: Uses your account time zone. Your device needs to refresh after this time to pick up the answer, so a device that only wakes once a day may never show it.
   default: '18:00'
   optional: true
+name: Facts, Trivia & Riddles
+description: A fact, a question and a riddle
+refresh_interval: 15
