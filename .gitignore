@@ -5,3 +5,8 @@ _build/
 .env
 .idea/
 design/
+
+# build output (published to the gh-pages branch by the workflow)
+public/
+data/history.json
+__pycache__/

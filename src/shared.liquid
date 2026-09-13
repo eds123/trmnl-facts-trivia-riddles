@@ -70,6 +70,28 @@ What goes up but never comes down?|Your age
 {% assign riddle_question = riddle_parts[0] | strip %}
 {% assign riddle_answer = riddle_parts[1] | strip %}
 
+{% comment %} ---------- Polled data wins over the bundled samples above.
+   data.json (built daily by scripts/build_data.py) has days["YYYY-MM-DD"] = { fact, trivia, riddle }. ---------- {% endcomment %}
+{% assign today_key = local_ts | date: "%Y-%m-%d" %}
+{% assign today_data = days[today_key] %}
+{% assign data_source = "sample" %}
+{% if today_data %}
+  {% assign data_source = "feed" %}
+  {% if today_data.fact.text != blank %}
+    {% assign fact_text = today_data.fact.text %}
+    {% assign fact_url = today_data.fact.url %}
+  {% endif %}
+  {% if today_data.trivia.question != blank %}
+    {% assign trivia_category = today_data.trivia.category %}
+    {% assign trivia_question = today_data.trivia.question %}
+    {% assign trivia_answer = today_data.trivia.answer %}
+  {% endif %}
+  {% if today_data.riddle.question != blank %}
+    {% assign riddle_question = today_data.riddle.question %}
+    {% assign riddle_answer = today_data.riddle.answer %}
+  {% endif %}
+{% endif %}
+
 {% comment %} ---------- Resolve the answer display setting into one state: shown | upside_down | hidden | pending ---------- {% endcomment %}
 {% comment %} Custom field values live under trmnl.plugin_settings.custom_fields_values; the hosted service also exposes them top-level. {% endcomment %}
 {% assign cf = trmnl.plugin_settings.custom_fields_values %}

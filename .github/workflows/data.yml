@@ -1,0 +1,55 @@
+name: Update data
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # daily, 03:17 UTC (off the hour to dodge the busiest slot)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Restore the pick history from gh-pages
+        run: |
+          if git fetch --depth=1 origin gh-pages 2>/dev/null; then
+            git show origin/gh-pages:history.json > data/history.json
+            echo "restored $(python3 -c "import json;print(len(json.load(open('data/history.json'))['days']))") day(s)"
+          else
+            echo "no gh-pages branch yet; starting a fresh history"
+          fi
+
+      - name: Build data.json
+        run: python scripts/build_data.py
+
+      - name: Publish to gh-pages
+        run: |
+          cd public
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git -C .. rev-parse -q --verify origin/gh-pages >/dev/null; then
+            # keep the branch history so a bad run can be rolled back
+            git fetch -q "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+            git reset -q --soft FETCH_HEAD
+          fi
+          git add -A
+          if git diff --cached --quiet; then
+            echo "nothing changed"; exit 0
+          fi
+          git commit -q -m "Update data for $(date -u +%F)"
+          git push -q "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
