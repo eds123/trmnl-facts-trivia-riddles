@@ -1,10 +1,10 @@
 <div class="layout">
   <div class="columns">
     <div class="column">
-      {% render "fact_card", fact: fact, lines: 3 %}
+      {% render "fact_card", text: fact_text, source: fact_source, lines: 3 %}
     </div>
     <div class="column">
-      {% render "riddle_card", riddle: riddle, lines: 3 %}
+      {% render "riddle_card", question: riddle_question, answer: riddle_answer, state: answer_state, reveal_label: reveal_label, lines: 3 %}
     </div>
   </div>
 </div>

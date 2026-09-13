@@ -13,22 +13,24 @@ polling_headers: ''
 framework_version: latest
 name: Facts, Trivia & Riddles
 description: A fact, a question and a riddle
-refresh_interval: 60
-static_data: |
-  {
-    "fact": {
-      "text": "Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.",
-      "source": "Smithsonian Magazine"
-    },
-    "trivia": {
-      "category": "Science & Nature",
-      "difficulty": "Medium",
-      "question": "Which planet in our solar system has the most known moons?",
-      "choices": ["Jupiter", "Saturn", "Uranus", "Neptune"],
-      "answer": "Saturn"
-    },
-    "riddle": {
-      "question": "I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?",
-      "answer": "An echo"
-    }
-  }
+refresh_interval: 15
+static_data: '{}'
+custom_fields:
+- keyname: answer_mode
+  field_type: select
+  name: Answer display
+  description: How the trivia and riddle answers are shown
+  help_text: Upside down lets you peek when you want. "Reveal at a set time" hides the answer until the time below.
+  options:
+  - Upside down: upside_down
+  - Reveal at a set time: reveal_at_time
+  - Show plainly: shown
+  - Never show: hidden
+  default: upside_down
+- keyname: reveal_time
+  field_type: time
+  name: Reveal time
+  description: Only used when Answer display is "Reveal at a set time"
+  help_text: Uses your account time zone. Your device needs to refresh after this time to pick up the answer, so a device that only wakes once a day may never show it.
+  default: '18:00'
+  optional: true

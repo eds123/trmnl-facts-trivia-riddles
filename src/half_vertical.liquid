@@ -1,6 +1,6 @@
 <div class="layout layout--col gap--large">
-  {% render "fact_card", fact: fact, lines: 4 %}
-  {% render "riddle_card", riddle: riddle, lines: 4 %}
+  {% render "fact_card", text: fact_text, source: fact_source, lines: 4 %}
+  {% render "riddle_card", question: riddle_question, answer: riddle_answer, state: answer_state, reveal_label: reveal_label, lines: 4 %}
 </div>
 
 {% render "plugin_title_bar", instance: "Fact & Riddle" %}

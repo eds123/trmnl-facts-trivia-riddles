@@ -3,13 +3,109 @@
   .reveal { display: inline-block; transform: rotate(180deg); }
 </style>
 
+{% comment %} ---------- Content lists: one item per line, fields split by | , items split by ~~ ---------- {% endcomment %}
+{% capture facts_raw %}
+Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.|Smithsonian Magazine ~~
+Octopuses have three hearts and blue blood. Two hearts pump blood to the gills and one to the rest of the body.|Smithsonian Magazine ~~
+Botanically, bananas are berries but strawberries are not.|Encyclopaedia Britannica ~~
+A day on Venus is longer than its year. Venus takes 243 Earth days to spin once but only 225 to orbit the Sun.|NASA ~~
+The Eiffel Tower grows about 15 centimetres taller in summer as the iron expands in the heat.|Eiffel Tower official site ~~
+Wombats are the only animals known to produce cube-shaped droppings.|Georgia Institute of Technology ~~
+There are more possible games of chess than there are atoms in the observable universe.|Claude Shannon, 1950 ~~
+The national animal of Scotland is the unicorn.|National Records of Scotland ~~
+Sharks are older than trees. Sharks appeared around 450 million years ago, trees around 385 million.|Natural History Museum ~~
+Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid of Giza.|Encyclopaedia Britannica
+{% endcapture %}
+
+{% capture trivia_raw %}
+Science & Nature|Which planet in our solar system has the most known moons?|Jupiter;Saturn;Uranus;Neptune|Saturn ~~
+Geography|What is the capital city of Australia?|Sydney;Melbourne;Canberra;Perth|Canberra ~~
+History|In which year did the Berlin Wall fall?|1987;1989;1991;1993|1989 ~~
+Science & Nature|What is the chemical symbol for gold?|Ag;Au;Gd;Go|Au ~~
+Art & Literature|Who painted the ceiling of the Sistine Chapel?|Leonardo da Vinci;Raphael;Michelangelo;Donatello|Michelangelo ~~
+Geography|Which is the longest river in Africa?|Congo;Niger;Zambezi;Nile|Nile ~~
+Science & Nature|How many bones are in the adult human body?|186;206;226;246|206 ~~
+Music|Which composer wrote the Moonlight Sonata?|Mozart;Beethoven;Chopin;Bach|Beethoven ~~
+Sport|How many players does a volleyball team have on court?|5;6;7;8|6 ~~
+History|Who was the first person to walk on the Moon?|Buzz Aldrin;Yuri Gagarin;Neil Armstrong;John Glenn|Neil Armstrong
+{% endcapture %}
+
+{% capture riddles_raw %}
+I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?|An echo ~~
+What has keys but cannot open locks?|A piano ~~
+The more you take, the more you leave behind. What am I?|Footsteps ~~
+What has to be broken before you can use it?|An egg ~~
+What gets wetter the more it dries?|A towel ~~
+I have cities but no houses, forests but no trees, and water but no fish. What am I?|A map ~~
+What can travel around the world while staying in a corner?|A stamp ~~
+What has a head and a tail but no body?|A coin ~~
+What runs but never walks, and has a mouth but never talks?|A river ~~
+What goes up but never comes down?|Your age
+{% endcapture %}
+
+{% comment %} ---------- Pick today's items (local day of year, offset so the three lists don't move in lockstep) ---------- {% endcomment %}
+{% assign local_ts = trmnl.system.timestamp_utc | plus: trmnl.user.utc_offset %}
+{% assign day_of_year = local_ts | date: "%j" | plus: 0 %}
+{% assign now_hm = local_ts | date: "%H:%M" %}
+
+{% assign facts = facts_raw | strip | split: "~~" %}
+{% assign trivias = trivia_raw | strip | split: "~~" %}
+{% assign riddles = riddles_raw | strip | split: "~~" %}
+{% assign facts_count = facts | size %}
+{% assign trivias_count = trivias | size %}
+{% assign riddles_count = riddles | size %}
+
+{% assign fact_idx = day_of_year | modulo: facts_count %}
+{% assign trivia_idx = day_of_year | plus: 3 | modulo: trivias_count %}
+{% assign riddle_idx = day_of_year | plus: 6 | modulo: riddles_count %}
+
+{% assign fact_parts = facts[fact_idx] | strip | split: "|" %}
+{% assign fact_text = fact_parts[0] | strip %}
+{% assign fact_source = fact_parts[1] | strip %}
+
+{% assign trivia_parts = trivias[trivia_idx] | strip | split: "|" %}
+{% assign trivia_category = trivia_parts[0] | strip %}
+{% assign trivia_question = trivia_parts[1] | strip %}
+{% assign trivia_choices = trivia_parts[2] | strip | split: ";" %}
+{% assign trivia_answer = trivia_parts[3] | strip %}
+
+{% assign riddle_parts = riddles[riddle_idx] | strip | split: "|" %}
+{% assign riddle_question = riddle_parts[0] | strip %}
+{% assign riddle_answer = riddle_parts[1] | strip %}
+
+{% comment %} ---------- Resolve the answer display setting into one state: shown | upside_down | hidden | pending ---------- {% endcomment %}
+{% comment %} Custom field values live under trmnl.plugin_settings.custom_fields_values; the hosted service also exposes them top-level. {% endcomment %}
+{% assign cf = trmnl.plugin_settings.custom_fields_values %}
+{% assign answer_mode_value = cf.answer_mode | default: answer_mode | default: "upside_down" %}
+{% assign reveal_time_value = cf.reveal_time | default: reveal_time | default: "" | slice: 0, 5 %}
+
+{% assign answer_state = answer_mode_value %}
+{% assign reveal_label = "" %}
+{% if answer_state == "reveal_at_time" %}
+  {% if reveal_time_value == blank or now_hm >= reveal_time_value %}
+    {% assign answer_state = "shown" %}
+  {% else %}
+    {% assign answer_state = "pending" %}
+    {% assign reveal_label = "2000-01-01 " | append: reveal_time_value | date: "%-I:%M %p" %}
+  {% endif %}
+{% endif %}
+
+{% comment %} ---------- Templates ---------- {% endcomment %}
+{% template answer_line %}
+{% case state %}
+  {% when "shown" %}<span class="label label--small">Answer: {{ answer }}</span>
+  {% when "upside_down" %}<span class="label label--small">Answer:&nbsp;<span class="reveal">{{ answer }}</span></span>
+  {% when "pending" %}<span class="label label--small">Answer revealed at {{ reveal_label }}</span>
+{% endcase %}
+{% endtemplate %}
+
 {% template fact_card %}
 <div class="item">
   <div class="meta"></div>
   <div class="content">
     <span class="label label--underline">Did You Know?</span>
-    <span class="title title--small" data-clamp="{{ lines | default: 4 }}">{{ fact.text }}</span>
-    <span class="label label--small">Source: {{ fact.source }}</span>
+    <span class="title title--small" data-clamp="{{ lines | default: 4 }}">{{ text }}</span>
+    <span class="label label--small">Source: {{ source }}</span>
   </div>
 </div>
 {% endtemplate %}
@@ -18,10 +114,10 @@
 <div class="item">
   <div class="meta"></div>
   <div class="content">
-    <span class="label label--underline">Trivia &middot; {{ trivia.category }} &middot; {{ trivia.difficulty }}</span>
-    <span class="title title--small" data-clamp="{{ lines | default: 3 }}">{{ trivia.question }}</span>
-    <span class="description">{% for choice in trivia.choices %}{{ forloop.index }}. {{ choice }}{% unless forloop.last %} &nbsp;&middot;&nbsp; {% endunless %}{% endfor %}</span>
-    <span class="label label--small">Answer:&nbsp;<span class="reveal">{{ trivia.answer }}</span></span>
+    <span class="label label--underline">Trivia &middot; {{ category }}</span>
+    <span class="title title--small" data-clamp="{{ lines | default: 3 }}">{{ question }}</span>
+    <span class="description">{% for choice in choices %}{{ forloop.index }}. {{ choice | strip }}{% unless forloop.last %} &nbsp;&middot;&nbsp; {% endunless %}{% endfor %}</span>
+    {% render "answer_line", answer: answer, state: state, reveal_label: reveal_label %}
   </div>
 </div>
 {% endtemplate %}
@@ -31,8 +127,8 @@
   <div class="meta"></div>
   <div class="content">
     <span class="label label--underline">Riddle Me This</span>
-    <span class="title title--small" data-clamp="{{ lines | default: 4 }}">{{ riddle.question }}</span>
-    <span class="label label--small">Answer:&nbsp;<span class="reveal">{{ riddle.answer }}</span></span>
+    <span class="title title--small" data-clamp="{{ lines | default: 4 }}">{{ question }}</span>
+    {% render "answer_line", answer: answer, state: state, reveal_label: reveal_label %}
   </div>
 </div>
 {% endtemplate %}
