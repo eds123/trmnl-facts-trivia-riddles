@@ -1,6 +1,18 @@
-<div class="layout layout--col gap--large">
-  {% render "fact_card", text: fact_text, source: fact_source, lines: 4 %}
-  {% render "riddle_card", question: riddle_question, answer: riddle_answer, state: answer_state, reveal_label: reveal_label, lines: 4 %}
+{% comment %} Half vertical 400x480: hero on top, sidebar below. {% endcomment %}
+<div class="layout layout--col layout--top layout--stretch-x gap--medium">
+  {% if side_count == 0 %}
+    {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "large", text_size: "base", lines: 9 %}
+  {% else %}
+    {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "base", text_size: "small", lines: 6 %}
+    <div class="divider divider--h"></div>
+    {% if side_count == 1 %}
+      {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "base", body_class: "title", text_size: "base", lines: 6 %}
+    {% else %}
+      {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "base", body_class: "title title--small", text_size: "small", lines: 3 %}
+      <div class="divider divider--h"></div>
+      {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: answer_state, reveal_label: reveal_label, label_size: "base", body_class: "title title--small", text_size: "small", lines: 5 %}
+    {% endif %}
+  {% endif %}
 </div>
 
-{% render "plugin_title_bar", instance: "Fact & Riddle" %}
+{% render "plugin_title_bar", instance: instance_label %}

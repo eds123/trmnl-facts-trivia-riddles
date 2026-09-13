@@ -1,13 +1,28 @@
-<div class="layout layout--col gap--large">
-  {% render "fact_card", text: fact_text, source: fact_source, lines: 3 %}
-  <div class="columns">
-    <div class="column">
-      {% render "trivia_card", category: trivia_category, question: trivia_question, choices: trivia_choices, answer: trivia_answer, state: answer_state, reveal_label: reveal_label, lines: 3 %}
-    </div>
-    <div class="column">
-      {% render "riddle_card", question: riddle_question, answer: riddle_answer, state: answer_state, reveal_label: reveal_label, lines: 4 %}
-    </div>
+{% comment %} Full 800x480: hero left, sidebar right. Sizes step up as fewer sections are enabled. {% endcomment %}
+{% if side_count == 0 %}
+<div class="layout layout--col layout--stretch">
+  {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "xxlarge", text_size: "large", lines: 7 %}
+</div>
+{% else %}
+<div class="layout layout--row layout--stretch-y gap--large">
+  <div class="basis--96 shrink-0 flex">
+    {% if side_count == 1 %}
+      {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "xlarge", text_size: "base", lines: 8 %}
+    {% else %}
+      {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "large", text_size: "base", lines: 8 %}
+    {% endif %}
+  </div>
+  <div class="divider divider--v"></div>
+  <div class="grow flex flex--col flex--stretch-x gap--medium">
+    {% if side_count == 1 %}
+      {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "base", body_class: "title title--large", text_size: "base", lines: 8 %}
+    {% else %}
+      {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "base", body_class: "title", text_size: "base", lines: 4 %}
+      <div class="divider divider--h"></div>
+      {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: answer_state, reveal_label: reveal_label, label_size: "base", body_class: "title", text_size: "base", lines: 6 %}
+    {% endif %}
   </div>
 </div>
+{% endif %}
 
-{% render "plugin_title_bar" %}
+{% render "plugin_title_bar", instance: instance_label %}

@@ -1,17 +1,12 @@
-# TRMNLP configuration
-# {{ env.VARIABLE }} interpolation is available here
 ---
-# auto-reload when files change (`watch: false` to disable)
 watch:
-  - .trmnlp.yml
-  - src
-
-# values of custom fields (defined in src/settings.yml)
-# answer_mode: upside_down | reveal_at_time | shown | hidden
+- ".trmnlp.yml"
+- src
 custom_fields:
-  answer_mode: upside_down
-  reveal_time: "18:00"
-
-# override variables
+  show_fact: 'true'
+  show_trivia: 'true'
+  show_riddle: 'true'
+  answer_mode: reveal_at_time
+  reveal_time: '18:00'
 variables:
   trmnl: {}

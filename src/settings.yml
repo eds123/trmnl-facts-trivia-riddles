@@ -31,6 +31,21 @@ oauth_expiry_field_name: ''
 oauth_expiry_strategy: ''
 oauth_fixed_expiry_ms: ''
 custom_fields:
+- keyname: show_fact
+  field_type: boolean
+  name: Show fact
+  description: Daily "Did you know?" fact
+  default: 'true'
+- keyname: show_trivia
+  field_type: boolean
+  name: Show trivia
+  description: Daily trivia question
+  default: 'true'
+- keyname: show_riddle
+  field_type: boolean
+  name: Show riddle
+  description: Daily riddle
+  default: 'true'
 - keyname: answer_mode
   field_type: select
   name: Answer display

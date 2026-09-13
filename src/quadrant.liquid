@@ -1,5 +1,24 @@
-<div class="layout layout--col layout--center">
-  {% render "riddle_card", question: riddle_question, answer: riddle_answer, state: answer_state, reveal_label: reveal_label, lines: 3 %}
+{% comment %} Quadrant 400x240: hero on top, remaining sections side by side below. {% endcomment %}
+<div class="layout layout--col layout--top layout--stretch-x gap--small">
+  {% if side_count == 0 %}
+    {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "base", text_size: "small", lines: 5 %}
+  {% else %}
+    {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: answer_state, reveal_label: reveal_label, title_size: "small", text_size: "small", lines: 2 %}
+    <div class="divider divider--h"></div>
+    {% if side_count == 1 %}
+      {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "title title--small", text_size: "small", lines: 4 %}
+    {% else %}
+    <div class="columns gap--medium">
+      <div class="column">
+        {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "description", text_size: "small", lines: 4 %}
+      </div>
+      <div class="divider divider--v"></div>
+      <div class="column">
+        {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: answer_state, reveal_label: reveal_label, label_size: "small", body_class: "description", text_size: "small", lines: 5 %}
+      </div>
+    </div>
+    {% endif %}
+  {% endif %}
 </div>
 
-{% render "plugin_title_bar", instance: "Riddle" %}
+{% render "plugin_title_bar", instance: instance_label %}

@@ -1,33 +1,33 @@
 <style>
   /* Answers are printed upside down so the reader can choose when to peek. */
-  .reveal { display: inline-block; transform: rotate(180deg); }
+  .reveal { display: inline-block; transform: rotate(180deg) translateY(-0.2em); line-height: 1; }
 </style>
 
 {% comment %} ---------- Content lists: one item per line, fields split by | , items split by ~~ ---------- {% endcomment %}
 {% capture facts_raw %}
-Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible.|Smithsonian Magazine ~~
-Octopuses have three hearts and blue blood. Two hearts pump blood to the gills and one to the rest of the body.|Smithsonian Magazine ~~
-Botanically, bananas are berries but strawberries are not.|Encyclopaedia Britannica ~~
-A day on Venus is longer than its year. Venus takes 243 Earth days to spin once but only 225 to orbit the Sun.|NASA ~~
-The Eiffel Tower grows about 15 centimetres taller in summer as the iron expands in the heat.|Eiffel Tower official site ~~
-Wombats are the only animals known to produce cube-shaped droppings.|Georgia Institute of Technology ~~
-There are more possible games of chess than there are atoms in the observable universe.|Claude Shannon, 1950 ~~
-The national animal of Scotland is the unicorn.|National Records of Scotland ~~
-Sharks are older than trees. Sharks appeared around 450 million years ago, trees around 385 million.|Natural History Museum ~~
-Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid of Giza.|Encyclopaedia Britannica
+Honey never spoils. Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible. ~~
+Octopuses have three hearts and blue blood. Two hearts pump blood to the gills and one to the rest of the body. ~~
+Botanically, bananas are berries but strawberries are not. ~~
+A day on Venus is longer than its year. Venus takes 243 Earth days to spin once but only 225 to orbit the Sun. ~~
+The Eiffel Tower grows about 15 centimetres taller in summer as the iron expands in the heat. ~~
+Wombats are the only animals known to produce cube-shaped droppings. ~~
+There are more possible games of chess than there are atoms in the observable universe. ~~
+The national animal of Scotland is the unicorn. ~~
+Sharks are older than trees. Sharks appeared around 450 million years ago, trees around 385 million. ~~
+Cleopatra lived closer in time to the Moon landing than to the building of the Great Pyramid of Giza.
 {% endcapture %}
 
 {% capture trivia_raw %}
-Science & Nature|Which planet in our solar system has the most known moons?|Jupiter;Saturn;Uranus;Neptune|Saturn ~~
-Geography|What is the capital city of Australia?|Sydney;Melbourne;Canberra;Perth|Canberra ~~
-History|In which year did the Berlin Wall fall?|1987;1989;1991;1993|1989 ~~
-Science & Nature|What is the chemical symbol for gold?|Ag;Au;Gd;Go|Au ~~
-Art & Literature|Who painted the ceiling of the Sistine Chapel?|Leonardo da Vinci;Raphael;Michelangelo;Donatello|Michelangelo ~~
-Geography|Which is the longest river in Africa?|Congo;Niger;Zambezi;Nile|Nile ~~
-Science & Nature|How many bones are in the adult human body?|186;206;226;246|206 ~~
-Music|Which composer wrote the Moonlight Sonata?|Mozart;Beethoven;Chopin;Bach|Beethoven ~~
-Sport|How many players does a volleyball team have on court?|5;6;7;8|6 ~~
-History|Who was the first person to walk on the Moon?|Buzz Aldrin;Yuri Gagarin;Neil Armstrong;John Glenn|Neil Armstrong
+Science & Nature|Which planet in our solar system has the most known moons?|Saturn ~~
+Geography|What is the capital city of Australia?|Canberra ~~
+History|In which year did the Berlin Wall fall?|1989 ~~
+Science & Nature|What is the chemical symbol for gold?|Au ~~
+Art & Literature|Who painted the ceiling of the Sistine Chapel?|Michelangelo ~~
+Geography|Which is the longest river in Africa?|Nile ~~
+Science & Nature|How many bones are in the adult human body?|206 ~~
+Music|Which composer wrote the Moonlight Sonata?|Beethoven ~~
+Sport|How many players does a volleyball team have on court?|6 ~~
+History|Who was the first person to walk on the Moon?|Neil Armstrong
 {% endcapture %}
 
 {% capture riddles_raw %}
@@ -59,15 +59,12 @@ What goes up but never comes down?|Your age
 {% assign trivia_idx = day_of_year | plus: 3 | modulo: trivias_count %}
 {% assign riddle_idx = day_of_year | plus: 6 | modulo: riddles_count %}
 
-{% assign fact_parts = facts[fact_idx] | strip | split: "|" %}
-{% assign fact_text = fact_parts[0] | strip %}
-{% assign fact_source = fact_parts[1] | strip %}
+{% assign fact_text = facts[fact_idx] | strip %}
 
 {% assign trivia_parts = trivias[trivia_idx] | strip | split: "|" %}
 {% assign trivia_category = trivia_parts[0] | strip %}
 {% assign trivia_question = trivia_parts[1] | strip %}
-{% assign trivia_choices = trivia_parts[2] | strip | split: ";" %}
-{% assign trivia_answer = trivia_parts[3] | strip %}
+{% assign trivia_answer = trivia_parts[2] | strip %}
 
 {% assign riddle_parts = riddles[riddle_idx] | strip | split: "|" %}
 {% assign riddle_question = riddle_parts[0] | strip %}
@@ -80,6 +77,7 @@ What goes up but never comes down?|Your age
 {% assign reveal_time_value = cf.reveal_time | default: reveal_time | default: "" | slice: 0, 5 %}
 
 {% assign answer_state = answer_mode_value %}
+{% unless answer_state == "upside_down" or answer_state == "reveal_at_time" or answer_state == "shown" or answer_state == "hidden" %}{% assign answer_state = "upside_down" %}{% endunless %}
 {% assign reveal_label = "" %}
 {% if answer_state == "reveal_at_time" %}
   {% if reveal_time_value == blank or now_hm >= reveal_time_value %}
@@ -90,46 +88,75 @@ What goes up but never comes down?|Your age
   {% endif %}
 {% endif %}
 
+{% comment %} ---------- Which sections are on (boolean custom fields; default on) ---------- {% endcomment %}
+{% assign v = cf.show_fact %}{% if v == nil %}{% assign v = show_fact %}{% endif %}
+{% assign fact_on = true %}{% if v == false or v == "false" or v == 0 or v == "0" %}{% assign fact_on = false %}{% endif %}
+{% assign v = cf.show_trivia %}{% if v == nil %}{% assign v = show_trivia %}{% endif %}
+{% assign trivia_on = true %}{% if v == false or v == "false" or v == 0 or v == "0" %}{% assign trivia_on = false %}{% endif %}
+{% assign v = cf.show_riddle %}{% if v == nil %}{% assign v = show_riddle %}{% endif %}
+{% assign riddle_on = true %}{% if v == false or v == "false" or v == 0 or v == "0" %}{% assign riddle_on = false %}{% endif %}
+{% unless fact_on or trivia_on or riddle_on %}{% assign fact_on = true %}{% endunless %}
+
+{% comment %} ---------- Slots: the hero is the first enabled item in priority order (fact, riddle, trivia); the rest go to the sidebar in display order (trivia, riddle). ---------- {% endcomment %}
+{% assign hero = "" %}
+{% if fact_on %}{% assign hero = "fact" %}{% elsif riddle_on %}{% assign hero = "riddle" %}{% else %}{% assign hero = "trivia" %}{% endif %}
+{% assign sides = "" %}
+{% if trivia_on and hero != "trivia" %}{% assign sides = sides | append: "trivia," %}{% endif %}
+{% if riddle_on and hero != "riddle" %}{% assign sides = sides | append: "riddle," %}{% endif %}
+{% assign sides = sides | split: "," %}
+{% assign side_count = sides | size %}
+{% assign side1 = sides[0] %}
+{% assign side2 = sides[1] %}
+
+{% comment %} Per-slot content, so layouts only ever pass slot variables. {% endcomment %}
+{% case hero %}
+  {% when "fact" %}{% assign hero_label = "Did You Know?" %}{% assign hero_body = fact_text %}{% assign hero_answer = "" %}
+  {% when "riddle" %}{% assign hero_label = "Riddle Me This" %}{% assign hero_body = riddle_question %}{% assign hero_answer = riddle_answer %}
+  {% else %}{% assign hero_label = "Trivia · " | append: trivia_category %}{% assign hero_body = trivia_question %}{% assign hero_answer = trivia_answer %}
+{% endcase %}
+{% case side1 %}
+  {% when "trivia" %}{% assign side1_label = "Trivia · " | append: trivia_category %}{% assign side1_body = trivia_question %}{% assign side1_answer = trivia_answer %}
+  {% when "riddle" %}{% assign side1_label = "Riddle Me This" %}{% assign side1_body = riddle_question %}{% assign side1_answer = riddle_answer %}
+{% endcase %}
+{% case side2 %}
+  {% when "riddle" %}{% assign side2_label = "Riddle Me This" %}{% assign side2_body = riddle_question %}{% assign side2_answer = riddle_answer %}
+{% endcase %}
+
+{% comment %} Title bar instance text reflects what is enabled. {% endcomment %}
+{% assign instance_label = "Daily Brain Snack" %}
+{% unless fact_on and trivia_on and riddle_on %}
+  {% assign names = "" %}
+  {% if fact_on %}{% assign names = names | append: "Fact," %}{% endif %}
+  {% if trivia_on %}{% assign names = names | append: "Trivia," %}{% endif %}
+  {% if riddle_on %}{% assign names = names | append: "Riddle," %}{% endif %}
+  {% assign instance_label = names | split: "," | join: " & " %}
+{% endunless %}
+
 {% comment %} ---------- Templates ---------- {% endcomment %}
 {% template answer_line %}
+{% assign cls = "label label--" | append: text_size %}
 {% case state %}
-  {% when "shown" %}<span class="label label--small">Answer: {{ answer }}</span>
-  {% when "upside_down" %}<span class="label label--small">Answer:&nbsp;<span class="reveal">{{ answer }}</span></span>
-  {% when "pending" %}<span class="label label--small">Answer reveals after {{ reveal_label }}</span>
+  {% when "shown" %}<span class="{{ cls }}">Answer: {{ answer }}</span>
+  {% when "upside_down" %}<span class="{{ cls }}">Answer:&nbsp;<span class="reveal">{{ answer }}</span></span>
+  {% when "pending" %}<span class="{{ cls }}">Answer reveals after {{ reveal_label }}</span>
 {% endcase %}
 {% endtemplate %}
 
-{% template fact_card %}
-<div class="item">
-  <div class="meta"></div>
-  <div class="content">
-    <span class="label label--underline">Did You Know?</span>
-    <span class="title title--small" data-clamp="{{ lines | default: 4 }}">{{ text }}</span>
-    <span class="label label--small">Source: {{ source }}</span>
-  </div>
+{% comment %} Hero slot: filled label, big text, answer (if any). {% endcomment %}
+{% template hero_card %}
+<div class="flex flex--col flex--left flex--top gap--small">
+  <span class="label label--filled">{{ label }}</span>
+  <span class="title title--{{ title_size }}" data-clamp="{{ lines }}">{{ body }}</span>
+  {% if answer != blank %}{% render "answer_line", answer: answer, state: state, reveal_label: reveal_label, text_size: text_size %}{% endif %}
 </div>
 {% endtemplate %}
 
-{% template trivia_card %}
-<div class="item">
-  <div class="meta"></div>
-  <div class="content">
-    <span class="label label--underline">Trivia &middot; {{ category }}</span>
-    <span class="title title--small" data-clamp="{{ lines | default: 3 }}">{{ question }}</span>
-    <span class="description">{% for choice in choices %}{{ forloop.index }}. {{ choice | strip }}{% unless forloop.last %} &nbsp;&middot;&nbsp; {% endunless %}{% endfor %}</span>
-    {% render "answer_line", answer: answer, state: state, reveal_label: reveal_label %}
-  </div>
-</div>
-{% endtemplate %}
-
-{% template riddle_card %}
-<div class="item">
-  <div class="meta"></div>
-  <div class="content">
-    <span class="label label--underline">Riddle Me This</span>
-    <span class="title title--small" data-clamp="{{ lines | default: 4 }}">{{ question }}</span>
-    {% render "answer_line", answer: answer, state: state, reveal_label: reveal_label %}
-  </div>
+{% comment %} Sidebar slot: underlined label, question, answer. {% endcomment %}
+{% template side_card %}
+<div class="flex flex--col flex--left flex--top gap--xsmall">
+  <span class="label label--{{ label_size }} label--underline">{{ label }}</span>
+  <span class="{{ body_class }}" data-clamp="{{ lines }}">{{ body }}</span>
+  {% render "answer_line", answer: answer, state: state, reveal_label: reveal_label, text_size: text_size %}
 </div>
 {% endtemplate %}
 
@@ -137,6 +164,6 @@ What goes up but never comes down?|Your age
 <div class="title_bar">
   <img class="image image--adaptive" alt="" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%23000' stroke-width='3'/%3E%3Ctext x='16' y='23' font-family='Arial, sans-serif' font-size='20' font-weight='bold' text-anchor='middle' fill='%23000'%3E?%3C/text%3E%3C/svg%3E">
   <span class="title">Facts, Trivia &amp; Riddles</span>
-  <span class="instance">{{ instance | default: "Daily Brain Snack" }}</span>
+  <span class="instance">{{ instance }}</span>
 </div>
 {% endtemplate %}
