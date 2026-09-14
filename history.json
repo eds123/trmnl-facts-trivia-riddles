@@ -71,13 +71,11 @@
   },
   "2026-09-15": {
    "fact": {
-    "id": "dyk-730329396318",
-    "kind": "dyk",
-    "ran": "2024-01-31",
-    "text": "A city in Virginia's 88.5-foot-tall (27.0 m) Christmas decoration was so popular with residents that it was decided to light it nightly year-round.",
-    "title": "Roanoke,_Virginia",
-    "url": "https://en.wikipedia.org/wiki/Roanoke,_Virginia",
-    "views": 5123
+    "id": "myth-a81f6a0488b2",
+    "kind": "misconception",
+    "text": "Seizures cannot cause a person to swallow their own tongue, and it is dangerous to attempt to place a foreign object into a convulsing person's mouth.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
    },
    "riddle": {
     "answer": "Milk",
@@ -88,30 +86,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Wayne Rooney",
-    "category": "Sports",
+    "answer": "Should I Stay or Should I Go?",
+    "category": "Television",
     "choices": [
-     "Wayne Rooney",
-     "David Beckham",
-     "Steven Gerrard",
-     "Michael Owen"
+     "Should I Stay or Should I Go?",
+     "Love Will Tear Us Apart",
+     "This Charming Man",
+     "Africa"
     ],
     "difficulty": "medium",
-    "id": "otdb-ff46e9790c31",
+    "id": "otdb-75e6b258e52b",
     "license": "CC BY-SA 4.0",
-    "question": "Who was the topscorer for England national football team?",
+    "question": "In the Netflix show, Stranger Things, what song would Will sing to himself as he was missing?",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-16": {
    "fact": {
-    "id": "dyk-2f782c4e7999",
-    "kind": "dyk",
-    "ran": "2022-10-25",
-    "text": "The Lithuanian-Belorussian Soviet Republic exchanged 13 detained German diplomats for 24 jailed leaders of the Kaunas Soviet of Workers Deputies.",
-    "title": "Kaunas_Soviet_of_Workers_Deputies",
-    "url": "https://en.wikipedia.org/wiki/Kaunas_Soviet_of_Workers_Deputies",
-    "views": 1636
+    "id": "fact-2ad5cddb5ad8",
+    "kind": "simple",
+    "text": "Weight-bearing exercise strengthens bones.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Chair",
@@ -122,64 +118,55 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Packard",
-    "category": "Vehicles",
-    "choices": [
-     "Packard",
-     "Tucker",
-     "Ford",
-     "Hudson"
-    ],
-    "difficulty": "medium",
-    "id": "otdb-19370579bc70",
+    "answer": "False",
+    "category": "Film",
+    "choices": [],
+    "difficulty": "easy",
+    "id": "otdb-bcf28598dd66",
     "license": "CC BY-SA 4.0",
-    "question": "What was the first vehicle that came with air conditioning as a factory standard?",
+    "question": "True or false: \"Minions\" was released on the June 10th, 2015.",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-17": {
    "fact": {
-    "id": "dyk-d7e7fd3bc12e",
-    "kind": "dyk",
-    "ran": "2022-03-25",
-    "text": "Oleksandr Oksanchenko won the As the Crow Flies Award at the Royal International Air Tattoo in 2017.",
-    "title": "Oleksandr_Oksanchenko",
-    "url": "https://en.wikipedia.org/wiki/Oleksandr_Oksanchenko",
-    "views": 1036
+    "id": "myth-48900c4fe940",
+    "kind": "misconception",
+    "text": "Ingesting Visine, a brand of eye drops, does not cause diarrhea. It is neurotoxic, with consumption causing several serious side effects.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
    },
    "riddle": {
-    "answer": "Fear",
-    "id": "crawsome-c089ee30b7",
+    "answer": "Corn",
+    "id": "crawsome-bfcae334ff",
     "license": "Unlicense",
-    "question": "I make you weak at the worst of all times. I keep you safe, I keep you fine. I make your hands sweat. And your heart grow cold. I visit the weak, but seldom the bold.",
+    "question": "You throw away the outside and cook the inside. Then you eat the outside and throw away the inside. What did you eat?",
     "source": "crawsome/riddles",
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Stephen Sondheim",
-    "category": "Musicals & theatres",
+    "answer": "1957",
+    "category": "Film",
     "choices": [
-     "Stephen Sondheim",
-     "Himself",
-     "Oscar Hammerstein",
-     "Richard Rodgers"
+     "1957",
+     "1962",
+     "1938",
+     "1954"
     ],
     "difficulty": "hard",
-    "id": "otdb-9c28f9dfa5ea",
+    "id": "otdb-a9836cf19691",
     "license": "CC BY-SA 4.0",
-    "question": "Who wrote the lyrics for Leonard Bernstein's 1957 Brodway musical West Side Story?",
+    "question": "In what year was the first Indian movie submitted for an Oscar?",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-18": {
    "fact": {
-    "id": "dyk-43e40af7288f",
-    "kind": "dyk",
-    "ran": "2020-05-26",
-    "text": "It took more than eight hours to apply makeup for the first time to the actor playing the character Bib Fortuna in Return of the Jedi.",
-    "title": "Bib_Fortuna",
-    "url": "https://en.wikipedia.org/wiki/Bib_Fortuna",
-    "views": 4299
+    "id": "myth-eba422c0224e",
+    "kind": "misconception",
+    "text": "The human brain, particularly the prefrontal cortex, does not reach \"full maturity\" or \"full development\" at any particular age (e.g. 16, 18, 21, 25, 30).",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
    },
    "riddle": {
     "answer": "Shadow",
@@ -190,18 +177,18 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Simien Jackel",
-    "category": "Animals",
+    "answer": "Apollo 17",
+    "category": "History",
     "choices": [
-     "Simien Jackel",
-     "Ethiopian Coyote",
-     "Amharic Fox",
-     "Canis Simiensis"
+     "Apollo 17",
+     "Apollo 13",
+     "Apollo 11",
+     "Apollo 15"
     ],
-    "difficulty": "hard",
-    "id": "otdb-8060087ff152",
+    "difficulty": "medium",
+    "id": "otdb-03f564ac81a8",
     "license": "CC BY-SA 4.0",
-    "question": "What was the name of the Ethiopian Wolf before they knew it was related to wolves?",
+    "question": "Which Apollo mission was the last one in NASA's Apollo program?",
     "source": "Open Trivia DB"
    }
   },
@@ -225,30 +212,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "2",
-    "category": "Science & nature",
+    "answer": "Real Madrid C.F.",
+    "category": "Sports",
     "choices": [
-     "2",
-     "1",
-     "4",
-     "3"
+     "Real Madrid C.F.",
+     "FC Bayern Munich",
+     "Atletico Madrid",
+     "Manchester City F.C."
     ],
     "difficulty": "easy",
-    "id": "otdb-e4fc111e3aec",
+    "id": "otdb-116f0f04455b",
     "license": "CC BY-SA 4.0",
-    "question": "Human cells typically have how many copies of each gene?",
+    "question": "Who won the UEFA Champions League in 2016?",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-20": {
    "fact": {
-    "id": "dyk-c8d5632aa7ac",
-    "kind": "dyk",
-    "ran": "2019-03-07",
-    "text": "Saudi prince Khaled bin Alwaleed bin Talal is a vegan.",
-    "title": "Khaled_bin_Alwaleed_bin_Talal",
-    "url": "https://en.wikipedia.org/wiki/Khaled_bin_Alwaleed_bin_Talal",
-    "views": 2794
+    "id": "fact-fde6b92b4415",
+    "kind": "simple",
+    "text": "Starfish haven't got brains.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Stamp",
@@ -259,30 +244,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Vincent van Gogh",
-    "category": "Art",
+    "answer": "Nitrogen",
+    "category": "Science & nature",
     "choices": [
-     "Vincent van Gogh",
-     "Salvador Dali",
-     "Rembrandt",
-     "Michelangelo"
+     "Nitrogen",
+     "Helium",
+     "Carbon",
+     "Hydrogen"
     ],
-    "difficulty": "easy",
-    "id": "otdb-db7f29a4a54d",
+    "difficulty": "medium",
+    "id": "otdb-333d135682af",
     "license": "CC BY-SA 4.0",
-    "question": "Which artist is famous for cutting off his ear?",
+    "question": "Along with Oxygen, which element is primarily responsible for the sky appearing blue?",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-21": {
    "fact": {
-    "id": "dyk-9478095ff027",
-    "kind": "dyk",
-    "ran": "2021-03-08",
-    "text": "The Venkateswara Temple only allowed male barbers to shave off the ton of hair that is donated every day until Kagganapalli Radha Devi challenged the rules.",
-    "title": "Kagganapalli_Radha_Devi",
-    "url": "https://en.wikipedia.org/wiki/Kagganapalli_Radha_Devi",
-    "views": 5308
+    "id": "myth-c4d218afe94d",
+    "kind": "misconception",
+    "text": "The white streaks seen in the sky after airplanes pass overhead are contrails consisting of condensed water vapor and engine exhaust.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
    },
    "riddle": {
     "answer": "Iron",
@@ -293,30 +276,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Nine",
-    "category": "Sports",
+    "answer": "Pierre",
+    "category": "Geography",
     "choices": [
-     "Nine",
-     "Ten",
-     "Seven",
-     "Eight"
+     "Pierre",
+     "Sioux Falls",
+     "Rapid City",
+     "Watertown"
     ],
-    "difficulty": "hard",
-    "id": "otdb-8bca4f7911a2",
+    "difficulty": "medium",
+    "id": "otdb-c60b15bfe6ad",
     "license": "CC BY-SA 4.0",
-    "question": "How many times did Martina Navratilova win the Wimbledon Singles Championship?",
+    "question": "What is the state capital of South Dakota?",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-22": {
    "fact": {
-    "id": "dyk-93124397366e",
-    "kind": "dyk",
-    "ran": "2022-07-29",
-    "text": "The name of the Indian city Bangalore could be derived from a Kannada word meaning 'town of boiled beans'.",
-    "title": "Bangalore",
-    "url": "https://en.wikipedia.org/wiki/Bangalore",
-    "views": 7319
+    "id": "myth-33349b9164c4",
+    "kind": "misconception",
+    "text": "There was never a bill to make German the official language of the United States that was defeated by one vote in the House of Representatives, nor has one been proposed at the state level.",
+    "title": "List of common misconceptions about history",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_history"
    },
    "riddle": {
     "answer": "Time",
@@ -327,30 +308,23 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Corsica",
-    "category": "History",
-    "choices": [
-     "Corsica",
-     "Normandy",
-     "Brittany",
-     "Paris"
-    ],
+    "answer": "True",
+    "category": "Books",
+    "choices": [],
     "difficulty": "hard",
-    "id": "otdb-c30f88b2f94d",
+    "id": "otdb-8b8cadc48937",
     "license": "CC BY-SA 4.0",
-    "question": "Where was Napoleon Bonaparte born?",
+    "question": "True or false: Harry Potter was born on July 31st, 1980.",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-23": {
    "fact": {
-    "id": "dyk-a07705800b51",
-    "kind": "dyk",
-    "ran": "2020-09-20",
-    "text": "Len Lanzi was legally fired by the Boy Scouts of America after coming out as gay.",
-    "title": "Len_Lanzi",
-    "url": "https://en.wikipedia.org/wiki/Len_Lanzi",
-    "views": 4503
+    "id": "myth-030e4eb8c943",
+    "kind": "misconception",
+    "text": "Thomas Edison did not invent the light bulb.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
    },
    "riddle": {
     "answer": "Moon",
@@ -362,24 +336,22 @@
    },
    "trivia": {
     "answer": "True",
-    "category": "Animals",
+    "category": "Geography",
     "choices": [],
-    "difficulty": "easy",
-    "id": "otdb-2d5ee28edeae",
+    "difficulty": "hard",
+    "id": "otdb-027e79fe29d2",
     "license": "CC BY-SA 4.0",
-    "question": "True or false: The freshwater amphibian, the Axolotl, can regrow it's limbs.",
+    "question": "True or false: Only one country in the world starts with the letter Q.",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-24": {
    "fact": {
-    "id": "dyk-13c36d25b5d5",
-    "kind": "dyk",
-    "ran": "2023-01-08",
-    "text": "The 2022 Boca Raton Bowl was the first bowl game loss in Liberty program history after three wins in their first three appearances.",
-    "title": "2022_Boca_Raton_Bowl",
-    "url": "https://en.wikipedia.org/wiki/2022_Boca_Raton_Bowl",
-    "views": 1792
+    "id": "fact-45cb69b480b3",
+    "kind": "simple",
+    "text": "Alarm pheromones help plants communicate threats.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Bell",
@@ -390,18 +362,18 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Guy Fawkes",
-    "category": "History",
+    "answer": "Crab",
+    "category": "Music",
     "choices": [
-     "Guy Fawkes",
-     "Robert Catesby",
-     "Francis Tresham",
-     "Everard Digby"
+     "Crab",
+     "Fox",
+     "Elephant",
+     "Tiger"
     ],
     "difficulty": "medium",
-    "id": "otdb-c259ae56664c",
+    "id": "otdb-9a384062b44c",
     "license": "CC BY-SA 4.0",
-    "question": "Which infamous European traitor was known as \"the last person to enter Parliament with honest intentions\"?",
+    "question": "What animal is featured on the cover of English electronic music group The Prodigy's album, \"The Fat of the Land\"?",
     "source": "Open Trivia DB"
    }
   },
@@ -425,30 +397,23 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Australia",
-    "category": "History",
-    "choices": [
-     "Australia",
-     "India",
-     "Canada",
-     "Brazil"
-    ],
-    "difficulty": "hard",
-    "id": "otdb-86ac1a8213cf",
+    "answer": "True",
+    "category": "Film",
+    "choices": [],
+    "difficulty": "medium",
+    "id": "otdb-5db3f1b5781e",
     "license": "CC BY-SA 4.0",
-    "question": "Which country did the Eureka Rebellion, an 1856 battle against colonial rule, take place in?",
+    "question": "True or false: Sean Connery wasn't in \"Indiana Jones and the Kingdom of the Crystal Skull\" because he found retirement too enjoyable.",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-26": {
    "fact": {
-    "id": "dyk-f65c9bddcecb",
-    "kind": "dyk",
-    "ran": "2021-03-21",
-    "text": "Physicist Joseph Gelders was kidnapped and beaten, probably by members of the Ku Klux Klan, for his civil rights and labor organizing activities.",
-    "title": "Joseph_Gelders",
-    "url": "https://en.wikipedia.org/wiki/Joseph_Gelders",
-    "views": 5411
+    "id": "myth-17558e67638e",
+    "kind": "misconception",
+    "text": "Contemporary global warming is driven by human activities, despite claims that it is not occurring, lacks strong scientific consensus, or that warming is mostly caused by non-human factors.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
    },
    "riddle": {
     "answer": "Bed",
@@ -459,30 +424,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Sweden",
-    "category": "Music",
+    "answer": "1-7",
+    "category": "Sports",
     "choices": [
-     "Sweden",
-     "Finland",
-     "Denmark",
-     "Norway"
+     "1-7",
+     "1-5",
+     "1-6",
+     "2-6"
     ],
-    "difficulty": "medium",
-    "id": "otdb-e5cee6127fb5",
+    "difficulty": "easy",
+    "id": "otdb-9d1aa627566d",
     "license": "CC BY-SA 4.0",
-    "question": "Which country does the electronic music duo \"The Knife\" originate from?",
+    "question": "In the 2014 FIFA World Cup, what was the final score in the match Brazil - Germany?",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-27": {
    "fact": {
-    "id": "dyk-f6f65bc91552",
-    "kind": "dyk",
-    "ran": "2017-02-16",
-    "text": "Establishing the chemical structure of apparicine was a notable early use of nuclear magnetic resonance decoupling.",
-    "title": "Apparicine",
-    "url": "https://en.wikipedia.org/wiki/Apparicine",
-    "views": 3727
+    "id": "fact-8c7c6076b70f",
+    "kind": "simple",
+    "text": "Iceland does not have a railway system.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Skeleton",
@@ -493,25 +456,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "True",
+    "answer": "The Gage Weapon Pack #1",
     "category": "Video games",
-    "choices": [],
-    "difficulty": "hard",
-    "id": "otdb-5373a007cdb9",
+    "choices": [
+     "The Gage Weapon Pack #1",
+     "The Overkill Pack",
+     "The Gage Chivalry Pack",
+     "The Gage Historical Pack"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-a0b9b65e8391",
     "license": "CC BY-SA 4.0",
-    "question": "True or false: Super Mario and Paarthurnax (Skyrim) are voiced by the same actor.",
+    "question": "What was the first weapon pack for \"PAYDAY 2\"?",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-28": {
    "fact": {
-    "id": "dyk-da86019e89c8",
-    "kind": "dyk",
-    "ran": "2020-09-10",
-    "text": "Finishers of the Sheffield Star Walk were rewarded with a hot mug of Oxo.",
-    "title": "Sheffield_Star_Walk",
-    "url": "https://en.wikipedia.org/wiki/Sheffield_Star_Walk",
-    "views": 2287
+    "id": "fact-11285736cf10",
+    "kind": "simple",
+    "text": "The longest recorded time without sleep is 264 hours.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Breath",
@@ -522,30 +488,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "1789",
-    "category": "History",
+    "answer": "Bard",
+    "category": "Books",
     "choices": [
-     "1789",
-     "1823",
-     "1756",
-     "1799"
+     "Bard",
+     "Bilbo Baggins",
+     "Gandalf the Grey",
+     "Frodo"
     ],
-    "difficulty": "hard",
-    "id": "otdb-cddc782e32d4",
+    "difficulty": "medium",
+    "id": "otdb-a667467f18b8",
     "license": "CC BY-SA 4.0",
-    "question": "When did the French Revolution begin?",
+    "question": "In the \"The Hobbit\", who kills Smaug?",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-29": {
    "fact": {
-    "id": "dyk-da0f1782bbb2",
-    "kind": "dyk",
-    "ran": "2022-05-17",
-    "text": "After activist Aakar Patel was prevented from travelling abroad, a court asked the director of India's Central Bureau of Investigation to apologise.",
-    "title": "Aakar_Patel",
-    "url": "https://en.wikipedia.org/wiki/Aakar_Patel",
-    "views": 1714
+    "id": "fact-28c9c5e3eceb",
+    "kind": "simple",
+    "text": "The white egret orchid looks like a flying egret.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Air",
@@ -556,30 +520,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Natural History Museum",
-    "category": "General knowledge",
+    "answer": "North America",
+    "category": "Geography",
     "choices": [
-     "Natural History Museum",
-     "Tate",
-     "British Museum",
-     "Science Museum"
+     "North America",
+     "South America",
+     "Asia",
+     "Africa"
     ],
     "difficulty": "medium",
-    "id": "otdb-de779c4e0f95",
+    "id": "otdb-641c0ed54a46",
     "license": "CC BY-SA 4.0",
-    "question": "A statue of Charles Darwin sits in what London museum?",
+    "question": "Where is the \"Sonoran Desert\" located?",
     "source": "Open Trivia DB"
    }
   },
   "2026-09-30": {
    "fact": {
-    "id": "dyk-84e7d1b7e876",
-    "kind": "dyk",
-    "ran": "2020-05-09",
-    "text": "The spinosaurid dinosaur Ichthyovenator had two sails on its back.",
-    "title": "Ichthyovenator",
-    "url": "https://en.wikipedia.org/wiki/Ichthyovenator",
-    "views": 1510
+    "id": "fact-b1ad7bc9cc30",
+    "kind": "simple",
+    "text": "Antarctica is technically the world's largest desert.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Coal",
@@ -590,18 +552,18 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "White Christmas",
-    "category": "Music",
+    "answer": "C18H27NO3",
+    "category": "Science & nature",
     "choices": [
-     "White Christmas",
-     "Frosty the Snowman",
-     "Rudolph the Red-Nosed Reindeer",
-     "Here Comes Santa Claus"
+     "C18H27NO3",
+     "C21H23NO3",
+     "C6H4Cl2",
+     "C13H25NO4"
     ],
-    "difficulty": "easy",
-    "id": "otdb-6d2bb891140b",
+    "difficulty": "medium",
+    "id": "otdb-de3e0ae36260",
     "license": "CC BY-SA 4.0",
-    "question": "\"The Singing Cowboy\" Gene Autry is credited with the first recording for all but which classic Christmas jingle?",
+    "question": "What is the molecular formula of the active component of chili peppers(Capsaicin)?",
     "source": "Open Trivia DB"
    }
   },
@@ -625,30 +587,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Beer",
+    "answer": "Heroin",
     "category": "Film",
     "choices": [
-     "Beer",
-     "Fast food",
-     "Food stamps",
-     "They weren't paid"
+     "Heroin",
+     "Cocaine",
+     "Marijuana",
+     "Oxycodone"
     ],
-    "difficulty": "hard",
-    "id": "otdb-8fbe220e213e",
+    "difficulty": "medium",
+    "id": "otdb-3bf801860d12",
     "license": "CC BY-SA 4.0",
-    "question": "In order to cut costs, what were most of the extras of Mad Max (1979) paid with?",
+    "question": "In the film \"Requiem for a Dream\", what drug does Jared Leto's character get addicted to?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-02": {
    "fact": {
-    "id": "dyk-034719b23f17",
-    "kind": "dyk",
-    "ran": "2021-05-27",
-    "text": "Simonie Michael was the first elected Inuk legislator in Canada.",
-    "title": "Simonie_Michael",
-    "url": "https://en.wikipedia.org/wiki/Simonie_Michael",
-    "views": 1798
+    "id": "fact-1f53c846d5d4",
+    "kind": "simple",
+    "text": "Adult humans have 206 bones after some fuse together.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Orange",
@@ -659,64 +619,55 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Titan",
-    "category": "Science & nature",
-    "choices": [
-     "Titan",
-     "Europa",
-     "Miranda",
-     "Callisto"
-    ],
-    "difficulty": "hard",
-    "id": "otdb-363270adbda5",
+    "answer": "True",
+    "category": "Music",
+    "choices": [],
+    "difficulty": "medium",
+    "id": "otdb-daf8f1490ece",
     "license": "CC BY-SA 4.0",
-    "question": "Which moon is the only satellite in our solar system to possess a dense atmosphere?",
+    "question": "True or false: Nick Mason is the only member to appear on every Pink Floyd album.",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-03": {
    "fact": {
-    "id": "dyk-75fb471040f0",
-    "kind": "dyk",
-    "ran": "2021-08-11",
-    "text": "Mixed-use stadium districts around major sports venues often include public squares, office space, hotels and residential units.",
-    "title": "Stadium_district",
-    "url": "https://en.wikipedia.org/wiki/Stadium_district",
-    "views": 1579
+    "id": "fact-dde64953437f",
+    "kind": "simple",
+    "text": "The coconut orchid smells like coconut.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
-    "answer": "Carpet",
-    "id": "crawsome-dd2ceb0176",
+    "answer": "Echo",
+    "id": "crawsome-b17fa45842",
     "license": "Unlicense",
-    "question": "What kind of pet always stays on the floor?",
+    "question": "You heard me before, yet you hear me again, then I die. Until you call me again.",
     "source": "crawsome/riddles",
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "The Cylons",
-    "category": "Television",
+    "answer": "1",
+    "category": "Vehicles",
     "choices": [
-     "The Cylons",
-     "The Collective",
-     "The Federation",
-     "The Rebels"
+     "1",
+     "4",
+     "3",
+     "6"
     ],
-    "difficulty": "medium",
-    "id": "otdb-dc65f1f0c819",
+    "difficulty": "easy",
+    "id": "otdb-9094ae456455",
     "license": "CC BY-SA 4.0",
-    "question": "What is the name of the main antagonists in Battlestar Galactica?",
+    "question": "How many wheels does a unicycle have?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-04": {
    "fact": {
-    "id": "dyk-05cbcf3178b5",
-    "kind": "dyk",
-    "ran": "2023-03-22",
-    "text": "Frances Helen Prideaux's skill convinced Sir William Gull that women were intellectually capable of being doctors.",
-    "title": "Frances_Helen_Prideaux",
-    "url": "https://en.wikipedia.org/wiki/Frances_Helen_Prideaux",
-    "views": 2594
+    "id": "fact-cfdbb029c066",
+    "kind": "simple",
+    "text": "The heart beats about 100,000 times per day.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Hole",
@@ -727,30 +678,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Tewi Inaba",
-    "category": "Video games",
+    "answer": "88 mph",
+    "category": "Film",
     "choices": [
-     "Tewi Inaba",
-     "Mystia Lorelei",
-     "Kaguya Houraisan",
-     "Rumia"
+     "88 mph",
+     "77 mph",
+     "100 mph",
+     "70 mph"
     ],
-    "difficulty": "hard",
-    "id": "otdb-227d954be120",
+    "difficulty": "medium",
+    "id": "otdb-373eb3b581ae",
     "license": "CC BY-SA 4.0",
-    "question": "What Touhou Project character's first ever appearance was as a midboss in the eighth game, Imperishable Night?",
+    "question": "In the movie \"Back to the Future,\" what speed does Doc Brown's DeLorean need to reach in order to travel through time?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-05": {
    "fact": {
-    "id": "dyk-66716631dfd9",
-    "kind": "dyk",
-    "ran": "2020-11-16",
-    "text": "Sam Quek played in all of England's games at the 2014 Women's Hockey Champions Trophy despite breaking two ribs in their opening match.",
-    "title": "Sam_Quek",
-    "url": "https://en.wikipedia.org/wiki/Sam_Quek",
-    "views": 1743
+    "id": "fact-6a9d12708609",
+    "kind": "simple",
+    "text": "The dragon orchid looks like a tiny dragon.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Firework",
@@ -761,42 +710,50 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "True",
-    "category": "Music",
-    "choices": [],
-    "difficulty": "medium",
-    "id": "otdb-59c8ee43f43f",
+    "answer": "John and Mary",
+    "category": "History",
+    "choices": [
+     "John and Mary",
+     "Joseph and Catherine",
+     "William and Elizabeth",
+     "George and Anne"
+    ],
+    "difficulty": "hard",
+    "id": "otdb-517d2c9e7ea0",
     "license": "CC BY-SA 4.0",
-    "question": "True or false: Pink Floyd's 1973 album \"Animals\" features a photograph of Battersea Power Station.",
+    "question": "In the year 1900, what were the most popular first names given to boy and girl babies born in the United States?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-06": {
    "fact": {
-    "id": "dyk-9b0f169dec59",
-    "kind": "dyk",
-    "ran": "2023-06-15",
-    "text": "After trans woman Dylan Mulvaney was sponsored by Bud Light, American conservatives boycotted the brand and its parent company Anheuser-Busch.",
-    "title": "2023_Anheuser-Busch_boycott",
-    "url": "https://en.wikipedia.org/wiki/2023_Anheuser-Busch_boycott",
-    "views": 4308
+    "id": "myth-0c750886cfed",
+    "kind": "misconception",
+    "text": "Humans have more than the commonly cited five senses. The number of senses in various categorizations ranges from 5 to more than 20.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
    },
    "riddle": {
     "answer": "Egg",
-    "id": "crawsome-4ab8c57e7a",
+    "id": "crawsome-68007a70e7",
     "license": "Unlicense",
-    "question": "A box without hinges, lock or key, yet golden treasure lies within.",
+    "question": "What has to be broken before it can be used?",
     "source": "crawsome/riddles",
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "False",
-    "category": "Politics",
-    "choices": [],
-    "difficulty": "easy",
-    "id": "otdb-d3197f5cea94",
+    "answer": "Thought & Memory",
+    "category": "Mythology",
+    "choices": [
+     "Thought & Memory",
+     "Power & Peace",
+     "War & Learning",
+     "Sleeping & Waking"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-dd784afb419b",
     "license": "CC BY-SA 4.0",
-    "question": "True or false: Despite being seperated into multiple countries, The Scandinavian countries are unified by all having the same monarch.",
+    "question": "The Norse god Odin has two pet crows named \"Huginn\" and \"Muninn\".  What do their names mean?",
     "source": "Open Trivia DB"
    }
   },
@@ -820,30 +777,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "9",
-    "category": "Geography",
+    "answer": "Beerbongs & Bentleys",
+    "category": "Music",
     "choices": [
-     "9",
-     "3",
-     "6",
-     "2"
+     "Beerbongs & Bentleys",
+     "Takin' Shots",
+     "Rockstar",
+     "Better Now"
     ],
-    "difficulty": "hard",
-    "id": "otdb-925bfc2c8004",
+    "difficulty": "medium",
+    "id": "otdb-4d4434fb1e07",
     "license": "CC BY-SA 4.0",
-    "question": "How many islands does Kuwait have?",
+    "question": "What is the name of the second studio album released by American rapper Post Malone in 2018?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-08": {
    "fact": {
-    "id": "dyk-a099ad360216",
-    "kind": "dyk",
-    "ran": "2020-01-30",
-    "text": "The player controls a smiley face in 868-HACK.",
-    "title": "868-HACK",
-    "url": "https://en.wikipedia.org/wiki/868-HACK",
-    "views": 1987
+    "id": "fact-b14c8b4ba228",
+    "kind": "simple",
+    "text": "The rainiest place on Earth is Mawsynram, India.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Shoes",
@@ -854,64 +809,60 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Teardrop",
-    "category": "Television",
+    "answer": "Porsche",
+    "category": "Sports",
     "choices": [
-     "Teardrop",
-     "Protection",
-     "Angel",
-     "Black Milk"
+     "Porsche",
+     "Toyota",
+     "Audi",
+     "Ferrari"
     ],
     "difficulty": "medium",
-    "id": "otdb-cc26dd52dbde",
+    "id": "otdb-0dda6358573e",
     "license": "CC BY-SA 4.0",
-    "question": "Which track by \"Massive Attack\" is used for the theme of \"House\"?",
+    "question": "Which car manufacturer won the 2016 24 Hours of Le Mans?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-09": {
    "fact": {
-    "id": "dyk-13c07507a359",
-    "kind": "dyk",
-    "ran": "2021-01-23",
-    "text": "Anna Feldhusen was for a long time the only female German artist to acquire a business license.",
-    "title": "Anna_Feldhusen",
-    "url": "https://en.wikipedia.org/wiki/Anna_Feldhusen",
-    "views": 2001
+    "id": "fact-2d108fb4758c",
+    "kind": "simple",
+    "text": "The foggiest place on Earth is Grand Banks, Newfoundland.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
-    "answer": "Elephant",
-    "id": "crawsome-376eab342e",
+    "answer": "Envelope",
+    "id": "crawsome-1821a119e7",
     "license": "Unlicense",
-    "question": "Face with a tree, skin like the sea. A great beast I am. Yet vermin frightens me.",
+    "question": "What word starts with 'E', ends with 'E', but only has one letter? It is not the letter 'E'.",
     "source": "crawsome/riddles",
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Jamie xx",
-    "category": "Music",
+    "answer": "Yggdrasil",
+    "category": "Mythology",
     "choices": [
-     "Jamie xx",
-     "Romy Madley Croft",
-     "Oliver Sim",
-     "Baria Qureshi"
+     "Yggdrasil",
+     "Ymir",
+     "Tree of the Earth",
+     "Odin's Roots"
     ],
-    "difficulty": "hard",
-    "id": "otdb-f31170192890",
+    "difficulty": "medium",
+    "id": "otdb-89acb2ef9191",
     "license": "CC BY-SA 4.0",
-    "question": "Which member of the English band \"The xx\" released their solo album \"In Colour\" in 2015?",
+    "question": "In Norse Mythology, what is the name of the symbol commonly referred to as the \"Tree of Life\"?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-10": {
    "fact": {
-    "id": "dyk-bcaa19f359de",
-    "kind": "dyk",
-    "ran": "2023-03-10",
-    "text": "Former CIA agent Bazzel Baz was hired to be a consultant for The Blacklist television series and instead became a cast member.",
-    "title": "The_Blacklist",
-    "url": "https://en.wikipedia.org/wiki/The_Blacklist",
-    "views": 7187
+    "id": "myth-c67065142d55",
+    "kind": "misconception",
+    "text": "Not all skinheads are white supremacists; many skinheads identify as left-wing or apolitical, and many oppose racism, such as the Skinheads Against Racial Prejudice.",
+    "title": "List of common misconceptions about history",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_history"
    },
    "riddle": {
     "answer": "Dozens",
@@ -923,58 +874,54 @@
    },
    "trivia": {
     "answer": "True",
-    "category": "General knowledge",
+    "category": "Vehicles",
     "choices": [],
-    "difficulty": "medium",
-    "id": "otdb-cf9564ad294c",
+    "difficulty": "hard",
+    "id": "otdb-2702f7f61c6b",
     "license": "CC BY-SA 4.0",
-    "question": "True or false: \"Santa Claus\" is a variety of melon.",
+    "question": "True or false: The term \"GTO\" was originated by Ferrari?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-11": {
    "fact": {
-    "id": "dyk-c13b5384d0f4",
-    "kind": "dyk",
-    "ran": "2021-03-01",
-    "text": "The 2020 crime film Caught in Time is based on the real-life robber and serial killer Zhang Jun.",
-    "title": "Caught_in_Time",
-    "url": "https://en.wikipedia.org/wiki/Caught_in_Time",
-    "views": 3680
+    "id": "fact-2e332a3ef921",
+    "kind": "simple",
+    "text": "Lettuce is a member of the sunflower family.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
-    "answer": "Castle",
-    "id": "crawsome-5a51b3c007",
+    "answer": "Carpet",
+    "id": "crawsome-dd2ceb0176",
     "license": "Unlicense",
-    "question": "Halo of water, tongue of wood. Skin of stone, long I've stood. My fingers short reach to the sky. Inside my heart men live and die.",
+    "question": "What kind of pet always stays on the floor?",
     "source": "crawsome/riddles",
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Eat a salamander and jump out the window.",
-    "category": "Cartoon & animations",
+    "answer": "Willie Wombat",
+    "category": "Video games",
     "choices": [
-     "Eat a salamander and jump out the window.",
-     "Leave in peace.",
-     "Jump out the window.",
-     "Release 1,000 captive salamanders into the white house."
+     "Willie Wombat",
+     "Coco Bandicoot",
+     "Marvelous Mole",
+     "Wally Wombat"
     ],
-    "difficulty": "hard",
-    "id": "otdb-de6a10c1b809",
+    "difficulty": "easy",
+    "id": "otdb-d726031eeff1",
     "license": "CC BY-SA 4.0",
-    "question": "In \"Gravity Falls\", what does Quentin Trembley do when he is driven out from the White House?",
+    "question": "What was the original name of Crash Bandicoot?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-12": {
    "fact": {
-    "id": "dyk-84c2b61ccd75",
-    "kind": "dyk",
-    "ran": "2022-01-12",
-    "text": "Music critic Motoo Ōtaguro held private piano concerts in his own residence despite not being a professional musician.",
-    "title": "Motoo_Ōtaguro",
-    "url": "https://en.wikipedia.org/wiki/Motoo_Ōtaguro",
-    "views": 5611
+    "id": "myth-2b62147c37a9",
+    "kind": "misconception",
+    "text": "Humans are animals, despite the fact that the word animal is colloquially used as an antonym for human.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
    },
    "riddle": {
     "answer": "Rope",
@@ -985,13 +932,18 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "False",
-    "category": "History",
-    "choices": [],
+    "answer": "Peregrine Falcon",
+    "category": "Animals",
+    "choices": [
+     "Peregrine Falcon",
+     "Golden Eagle",
+     "Cheetah",
+     "Horsefly"
+    ],
     "difficulty": "medium",
-    "id": "otdb-830a01746cae",
+    "id": "otdb-253957b797c4",
     "license": "CC BY-SA 4.0",
-    "question": "True or false: Augustus was the cousin of Julius Caesar.",
+    "question": "What is the fastest animal?",
     "source": "Open Trivia DB"
    }
   },
@@ -1015,30 +967,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Victor",
-    "category": "General knowledge",
+    "answer": "Chlorophyll",
+    "category": "Science & nature",
     "choices": [
-     "Victor",
-     "Kilo",
-     "Papa",
-     "Delta"
+     "Chlorophyll",
+     "Light refraction",
+     "Natural pigments",
+     "UV radiation"
     ],
-    "difficulty": "hard",
-    "id": "otdb-d503433b4eca",
+    "difficulty": "easy",
+    "id": "otdb-a356d604b4f1",
     "license": "CC BY-SA 4.0",
-    "question": "Going by the International Code of Signals, which single flag is interpreted as \"I require assistance (not distress)\"?",
+    "question": "What produces the green colour of most plant leaves?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-14": {
    "fact": {
-    "id": "dyk-f1a6211cdee2",
-    "kind": "dyk",
-    "ran": "2018-12-21",
-    "text": "When the Pokémon Meltan was first revealed in Pokémon Go, many players thought it was a placeholder revealed by a glitch.",
-    "title": "Meltan_and_Melmetal",
-    "url": "https://en.wikipedia.org/wiki/Meltan_and_Melmetal",
-    "views": 3017
+    "id": "fact-6a2341cc94ab",
+    "kind": "simple",
+    "text": "All babies are colour blind when they are born.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Snow",
@@ -1049,30 +999,23 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "6",
-    "category": "Mathematics",
-    "choices": [
-     "6",
-     "3",
-     "4",
-     "5"
-    ],
+    "answer": "True",
+    "category": "Music",
+    "choices": [],
     "difficulty": "medium",
-    "id": "otdb-f7bad82340f8",
+    "id": "otdb-59c8ee43f43f",
     "license": "CC BY-SA 4.0",
-    "question": "To the nearest whole number, how many radians are in a whole circle?",
+    "question": "True or false: Pink Floyd's 1973 album \"Animals\" features a photograph of Battersea Power Station.",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-15": {
    "fact": {
-    "id": "dyk-f40a42e377eb",
-    "kind": "dyk",
-    "ran": "2020-06-14",
-    "text": "Jim Lander graduated from Lander University.",
-    "title": "Jim_Lander",
-    "url": "https://en.wikipedia.org/wiki/Jim_Lander",
-    "views": 1524
+    "id": "fact-c1a1a1b15ea6",
+    "kind": "simple",
+    "text": "The human eye can see 10 million colors.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Splinter",
@@ -1083,64 +1026,60 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Shambala",
-    "category": "Film",
+    "answer": "Star City",
+    "category": "General knowledge",
     "choices": [
-     "Shambala",
-     "Peace",
-     "Ancient",
-     "Chakra"
+     "Star City",
+     "Central City",
+     "Gotham City",
+     "Metropolis"
     ],
-    "difficulty": "hard",
-    "id": "otdb-1169bc5dda60",
+    "difficulty": "easy",
+    "id": "otdb-39545b0e141f",
     "license": "CC BY-SA 4.0",
-    "question": "What was the wifi password given to Stephen Strange in Doctor Strange?",
+    "question": "In DC comics where does the Green Arrow (Oliver Queen) live?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-16": {
    "fact": {
-    "id": "dyk-b291991fdcce",
-    "kind": "dyk",
-    "ran": "2021-03-22",
-    "text": "The 1938 film Gangster's Boy starred silent-film actress Betty Blythe, who took on roles that she liked despite a source saying that she was \"more or less retired\".",
-    "title": "Gangster's_Boy",
-    "url": "https://en.wikipedia.org/wiki/Gangster's_Boy",
-    "views": 1268
+    "id": "fact-91e4264ab132",
+    "kind": "simple",
+    "text": "The cornea is one of only two parts of the human body without blood vessels.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
-    "answer": "Glasses",
-    "id": "crawsome-eb60112f7a",
+    "answer": "Gun",
+    "id": "crawsome-021e668e11",
     "license": "Unlicense",
-    "question": "Without a bridle, or a saddle, across a thing I ride a-straddle. And those I ride, by help of me, though almost blind, are made to see.",
+    "question": "Long and slinky like a trout, never sings till it's guts come out.",
     "source": "crawsome/riddles",
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Sigourney Weaver",
-    "category": "Film",
+    "answer": "Leicester City",
+    "category": "Sports",
     "choices": [
-     "Sigourney Weaver",
-     "Jessica Chastain",
-     "Melissa Beckett",
-     "Alyssa Monroe"
+     "Leicester City",
+     "Northampton Town",
+     "Bradford City",
+     "West Bromwich Albion"
     ],
-    "difficulty": "hard",
-    "id": "otdb-3f89b9668117",
+    "difficulty": "easy",
+    "id": "otdb-7bcecb88b0c5",
     "license": "CC BY-SA 4.0",
-    "question": "Which actress portrayed Dr. Grace Augustine in the James Cameron movie \"Avatar\"?",
+    "question": "Which English football club has the nickname 'The Foxes'?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-17": {
    "fact": {
-    "id": "dyk-e50bc15c5e85",
-    "kind": "dyk",
-    "ran": "2022-01-01",
-    "text": "Lou Swarz became famous for her \"One Woman Show\" involving monologue performances as various characters, including Phillis Wheatley and Sojourner Truth.",
-    "title": "Lou_Swarz",
-    "url": "https://en.wikipedia.org/wiki/Lou_Swarz",
-    "views": 1911
+    "id": "fact-eb1322d9885a",
+    "kind": "simple",
+    "text": "The tree with the thickest trunk can be 119 feet in diameter.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Moon",
@@ -1151,30 +1090,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Marshall Mathers",
-    "category": "Music",
+    "answer": "Joseph Fry",
+    "category": "General knowledge",
     "choices": [
-     "Marshall Mathers",
-     "Calvin Broadus",
-     "Shawn Carter",
-     "Nasir Jones"
+     "Joseph Fry",
+     "Andrew Johnson",
+     "John Cadbury",
+     "John Tyler"
     ],
     "difficulty": "easy",
-    "id": "otdb-7d65ee93ce4f",
+    "id": "otdb-5e5941770505",
     "license": "CC BY-SA 4.0",
-    "question": "What is the real name of American rapper Eminem, also known as Slim Shady?",
+    "question": "Who invented the first ever chocolate bar, in 1847?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-18": {
    "fact": {
-    "id": "dyk-43693d54c7e6",
-    "kind": "dyk",
-    "ran": "2020-07-20",
-    "text": "The 5th-century saint Apollinaris Syncletica might have been wrongly accused of seducing her own sister.",
-    "title": "Apollinaris_Syncletica",
-    "url": "https://en.wikipedia.org/wiki/Apollinaris_Syncletica",
-    "views": 3814
+    "id": "fact-e5b06435e141",
+    "kind": "simple",
+    "text": "One habit of intelligent humans is being easily annoyed by people around them but saying nothing in order to avoid a meaningless argument.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Noose",
@@ -1185,18 +1122,18 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Spanish Civil War",
-    "category": "History",
+    "answer": "Pacific",
+    "category": "Geography",
     "choices": [
-     "Spanish Civil War",
-     "World War I",
-     "World War II",
-     "Russian Civil War"
+     "Pacific",
+     "Atlantic",
+     "Indian",
+     "Arctic"
     ],
     "difficulty": "easy",
-    "id": "otdb-246b53b7451e",
+    "id": "otdb-731be4d5c43c",
     "license": "CC BY-SA 4.0",
-    "question": "What war did George Orwell famously volunteer for and nearly died in?",
+    "question": "Which ocean borders the west coast of the United States?",
     "source": "Open Trivia DB"
    }
   },
@@ -1220,64 +1157,60 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Marie Antoinette",
-    "category": "History",
+    "answer": "The Sixth Sense",
+    "category": "Film",
     "choices": [
-     "Marie Antoinette",
-     "Czar Nicholas II",
-     "Elizabeth I",
-     "Henry VIII"
+     "The Sixth Sense",
+     "The Fifth Element",
+     "Die Hard",
+     "Armageddon"
     ],
     "difficulty": "easy",
-    "id": "otdb-ef4cb3ca85ea",
+    "id": "otdb-bc80538e1846",
     "license": "CC BY-SA 4.0",
-    "question": "Which famous world leader is famed for the saying, \"Let them eat cake\", yet is rumored that he/she never said it at all?",
+    "question": "What movie starring Bruce Willis contains the line \"I see dead people\"?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-20": {
    "fact": {
-    "id": "dyk-3accec07080f",
-    "kind": "dyk",
-    "ran": "2017-02-06",
-    "text": "Stockpiles of United States Marine Corps weapons and equipment are stored in caves in Norway as part of a Marine Corps Prepositioning Program.",
-    "title": "Marine_Corps_Prepositioning_Program-Norway",
-    "url": "https://en.wikipedia.org/wiki/Marine_Corps_Prepositioning_Program-Norway",
-    "views": 5104
+    "id": "myth-38ef8fc9ea19",
+    "kind": "misconception",
+    "text": "Urine is not sterile, not even in the bladder. This misconception may derive from urine bacterial screening tests, which return \"negative\" when bacteria levels are low, but nonzero.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
    },
    "riddle": {
-    "answer": "Cheese",
-    "id": "crawsome-522e479c7c",
+    "answer": "Charcoal",
+    "id": "crawsome-544f4a6bf3",
     "license": "Unlicense",
-    "question": "Not born, but from a Mother's body drawn. I hang until half of me is gone. I sleep in a cave until I grow old. Then valued for my hardened gold.",
+    "question": "What's black when you get it, red when you use it, and white when you're all through with it?",
     "source": "crawsome/riddles",
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "The Hague",
-    "category": "Politics",
+    "answer": "Quebec City",
+    "category": "Sports",
     "choices": [
-     "The Hague",
-     "Amsterdam",
-     "Utrecht",
-     "Rotterdam"
+     "Quebec City",
+     "Houston",
+     "Montreal",
+     "New York"
     ],
-    "difficulty": "medium",
-    "id": "otdb-d8941c8c943e",
+    "difficulty": "easy",
+    "id": "otdb-f3917eb02765",
     "license": "CC BY-SA 4.0",
-    "question": "Which city is the seat of government of the Netherlands?",
+    "question": "Which city did the former NHL team \"The Nordiques\" originiate from?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-21": {
    "fact": {
-    "id": "dyk-704448f9635b",
-    "kind": "dyk",
-    "ran": "2017-01-31",
-    "text": "Jean Davies, then a junior officer in the Women's Royal Naval Service, attended Winston Churchill's 69th birthday party along with President Franklin Roosevelt and Soviet Marshal Josef Stalin.",
-    "title": "Jean_Davies",
-    "url": "https://en.wikipedia.org/wiki/Jean_Davies",
-    "views": 3969
+    "id": "fact-d00ec300fc43",
+    "kind": "simple",
+    "text": "The unicorn is Scotland's national animal.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Stars",
@@ -1288,64 +1221,60 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Velociraptor",
-    "category": "Film",
+    "answer": "Grey",
+    "category": "Art",
     "choices": [
-     "Velociraptor",
-     "Triceratops",
-     "Troodon",
-     "Brachiosaurus"
+     "Grey",
+     "Black",
+     "Brown",
+     "White"
     ],
-    "difficulty": "hard",
-    "id": "otdb-3b63c2092dbc",
+    "difficulty": "easy",
+    "id": "otdb-e34e9e4ecd0d",
     "license": "CC BY-SA 4.0",
-    "question": "In the \"Jurassic Park\" universe, what was the first dinosaur cloned by InGen in 1986?",
+    "question": "What color is produced by mixing black and white?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-22": {
    "fact": {
-    "id": "dyk-3a11d6a6a7b8",
-    "kind": "dyk",
-    "ran": "2019-02-27",
-    "text": "Cleitarchus's History of Alexander, written in the fourth century BC, was criticized by contemporaries as being overly sensational.",
-    "title": "History_of_Alexander",
-    "url": "https://en.wikipedia.org/wiki/History_of_Alexander",
-    "views": 1446
+    "id": "fact-f00dcb6d35e0",
+    "kind": "simple",
+    "text": "Platypuses are one of the only venomous mammals.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
-    "answer": "Paper",
-    "id": "crawsome-f4e90de88c",
+    "answer": "Sun",
+    "id": "crawsome-14432cfe8f",
     "license": "Unlicense",
-    "question": "It holds most knowledge that has ever been said. But is not the brain, is not the head. To feathers and their masters, it's both bane and boon One empty, and one full.",
+    "question": "My children are near and far. No matter that I know where they are. The gift I give them make their day. But if I were gone they would wander away.",
     "source": "crawsome/riddles",
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Hydrogen",
-    "category": "Science & nature",
+    "answer": "Ohio State Buckeyes",
+    "category": "Sports",
     "choices": [
-     "Hydrogen",
-     "Nitrogen",
-     "Helium",
-     "Neon"
+     "Ohio State Buckeyes",
+     "Alabama Crimson Tide",
+     "Clemson Tigers",
+     "Wisconsin Badgers"
     ],
     "difficulty": "medium",
-    "id": "otdb-1cc1cf8a857a",
+    "id": "otdb-cc4eb7d53537",
     "license": "CC BY-SA 4.0",
-    "question": "Deuterium is an isotope of which element?",
+    "question": "Who won the 2015 College Football Playoff (CFP) National Championship?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-23": {
    "fact": {
-    "id": "dyk-2f339ef9a78d",
-    "kind": "dyk",
-    "ran": "2019-03-04",
-    "text": "K2, the world's second highest mountain, was first climbed by Achille Compagnoni and Lino Lacedelli on the 1954 Italian Karakoram expedition.",
-    "title": "1954_Italian_Karakoram_expedition_to_K2",
-    "url": "https://en.wikipedia.org/wiki/1954_Italian_Karakoram_expedition_to_K2",
-    "views": 3867
+    "id": "fact-2cb11c0a3ea5",
+    "kind": "simple",
+    "text": "The longest hiccuping spree lasted for 68 years.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Hair",
@@ -1356,52 +1285,45 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Grand Banks",
+    "answer": "True",
     "category": "Geography",
-    "choices": [
-     "Grand Banks",
-     "Great Barrier Reef",
-     "Mariana Trench",
-     "Hudson Bay"
-    ],
-    "difficulty": "hard",
-    "id": "otdb-c63171a1e608",
+    "choices": [],
+    "difficulty": "easy",
+    "id": "otdb-24878985317e",
     "license": "CC BY-SA 4.0",
-    "question": "What is the name of the formerly rich fishing grounds off the island of Newfoundland, Canada?",
+    "question": "True or false: There are no deserts in Europe.",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-24": {
    "fact": {
-    "id": "dyk-dfea4c98b75d",
-    "kind": "dyk",
-    "ran": "2017-07-16",
-    "text": "Mail artist Pauline Smith created the Adolf Hitler Fan Club.",
-    "title": "Pauline_Smith_(artist)",
-    "url": "https://en.wikipedia.org/wiki/Pauline_Smith_(artist)",
-    "views": 3537
+    "id": "fact-40e0bef1554f",
+    "kind": "simple",
+    "text": "The glue on Israeli postage is certified kosher.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
-    "answer": "Music",
-    "id": "crawsome-9c165e0449",
+    "answer": "Cat",
+    "id": "crawsome-7939857ade",
     "license": "Unlicense",
-    "question": "At the sound of me, one may dream or stamp their feet, At the sound of me, one may laugh or sometimes weep.",
+    "question": "Though desert men once called me God, today men call me mad. For I wag my tail when I am angry. And growl when I am glad.",
     "source": "crawsome/riddles",
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Capillaries",
-    "category": "Science & nature",
+    "answer": "Greek and Roman",
+    "category": "Mythology",
     "choices": [
-     "Capillaries",
-     "Arterioles",
-     "Veinules",
-     "Lymphatics"
+     "Greek and Roman",
+     "Roman and Spanish",
+     "Greek and Chinese",
+     "Greek, Roman and Norse"
     ],
-    "difficulty": "medium",
-    "id": "otdb-dab0221b2777",
+    "difficulty": "easy",
+    "id": "otdb-c761cc2ade64",
     "license": "CC BY-SA 4.0",
-    "question": "What are the smallest blood vessels in the human body?",
+    "question": "What mythology did the god \"Apollo\" come from?",
     "source": "Open Trivia DB"
    }
   },
@@ -1417,38 +1339,31 @@
     "year": 1760
    },
    "riddle": {
-    "answer": "Doughnut",
-    "id": "crawsome-69ce22093c",
+    "answer": "Dream",
+    "id": "crawsome-3321b547be",
     "license": "Unlicense",
-    "question": "What kind of nut is empty at the center and has no shell.",
+    "question": "This is in a realm of true and in a realm false, but you experience me as you turn and toss.",
     "source": "crawsome/riddles",
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Martin Chambers",
-    "category": "Music",
-    "choices": [
-     "Martin Chambers",
-     "Morrissey",
-     "Andy Rourke",
-     "Mike Joyce"
-    ],
+    "answer": "False",
+    "category": "Video games",
+    "choices": [],
     "difficulty": "hard",
-    "id": "otdb-ba52d577f5e4",
+    "id": "otdb-b9af57f422df",
     "license": "CC BY-SA 4.0",
-    "question": "Who was not in the band \"The Smiths\"?",
+    "question": "True or false: Danganronpa 2: Goodbye Despair featured all of the surviving students from the first game.",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-26": {
    "fact": {
-    "id": "dyk-8164f4ba41f2",
-    "kind": "dyk",
-    "ran": "2017-07-17",
-    "text": "The book Dezinformatsia by Richard H. Shultz and Roy Godson explains Communist propaganda used by the Soviet Union.",
-    "title": "Dezinformatsia_(book)",
-    "url": "https://en.wikipedia.org/wiki/Dezinformatsia_(book)",
-    "views": 1865
+    "id": "fact-c67ae43cabda",
+    "kind": "simple",
+    "text": "The human foot has 26 bones in total.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
    },
    "riddle": {
     "answer": "Anchor",
@@ -1459,30 +1374,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "35",
-    "category": "History",
+    "answer": "Custard and Raspberry Sauce",
+    "category": "Film",
     "choices": [
-     "35",
-     "62",
-     "87",
-     "73"
+     "Custard and Raspberry Sauce",
+     "Strawberry Ice Cream",
+     "Cherry Yogurt",
+     "Raspberry Sorbet"
     ],
-    "difficulty": "hard",
-    "id": "otdb-80b631fe5cc2",
+    "difficulty": "medium",
+    "id": "otdb-febc8fa80933",
     "license": "CC BY-SA 4.0",
-    "question": "What age was King Henry V when he died?",
+    "question": "What were the Chilled Monkey Brains made from during Indiana Jones and the Temple of Doom?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-27": {
    "fact": {
-    "id": "dyk-15990043ae1d",
-    "kind": "dyk",
-    "ran": "2021-12-11",
-    "text": "In 2000, the Sacramento County Policy Planning Commission decided that humans would never be allowed to live on Kimball Island again.",
-    "title": "Kimball_Island",
-    "url": "https://en.wikipedia.org/wiki/Kimball_Island",
-    "views": 5392
+    "id": "myth-598bcdd62c65",
+    "kind": "misconception",
+    "text": "Lightning can, and often does, strike the same place twice. Lightning in a thunderstorm is more likely to strike objects and spots that are more prominent or conductive.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
    },
    "riddle": {
     "answer": "Bell",
@@ -1493,30 +1406,28 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "Passion Pit",
-    "category": "Music",
+    "answer": "St. Helena",
+    "category": "History",
     "choices": [
-     "Passion Pit",
-     "The Chemical Brothers",
-     "LadyTron",
-     "Kraftwerk"
+     "St. Helena",
+     "Elba",
+     "Corsica",
+     "Canary"
     ],
-    "difficulty": "easy",
-    "id": "otdb-d26888e02b78",
+    "difficulty": "medium",
+    "id": "otdb-702637e97564",
     "license": "CC BY-SA 4.0",
-    "question": "\"Sleepyhead\" is the debut single from which Electronic band?",
+    "question": "After his loss at the Battle of Waterloo, Napoleon Bonaparte was exiled to which island?",
     "source": "Open Trivia DB"
    }
   },
   "2026-10-28": {
    "fact": {
-    "id": "dyk-97740f5e865d",
-    "kind": "dyk",
-    "ran": "2017-02-03",
-    "text": "The Oriental Desert Express is equipped with shovels to help clear sand off the railroad tracks.",
-    "title": "Oriental_Desert_Express",
-    "url": "https://en.wikipedia.org/wiki/Oriental_Desert_Express",
-    "views": 5292
+    "id": "myth-758c18c3640a",
+    "kind": "misconception",
+    "text": "In the US, an increase in gross income will never reduce a taxpayer's post-tax earnings (net income) by putting them in a higher tax bracket.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
    },
    "riddle": {
     "answer": "Walnut",
@@ -1527,13 +1438,50 @@
     "source_url": "https://github.com/crawsome/riddles"
    },
    "trivia": {
-    "answer": "False",
-    "category": "Geography",
-    "choices": [],
+    "answer": "Temüjin",
+    "category": "History",
+    "choices": [
+     "Temüjin",
+     "Möngke",
+     "Ögedei",
+     "Temür"
+    ],
     "difficulty": "medium",
-    "id": "otdb-13d0eec57e2d",
+    "id": "otdb-0e3d8d09ebda",
     "license": "CC BY-SA 4.0",
-    "question": "True or false: Is Tartu the capital of Estonia?",
+    "question": "What was Genghis Khan's real name?",
+    "source": "Open Trivia DB"
+   }
+  },
+  "2026-10-29": {
+   "fact": {
+    "id": "fact-d8eec6be90e4",
+    "kind": "simple",
+    "text": "Cats can hear ultrasound.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Snail",
+    "id": "crawsome-e772b8b70d",
+    "license": "Unlicense",
+    "question": "Who is he that runs without a leg. And his house on his back?",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "David Tennant",
+    "category": "Television",
+    "choices": [
+     "David Tennant",
+     "William Hartnell",
+     "Peter Capaldi",
+     "Peter Davison"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-efebde6f3b55",
+    "license": "CC BY-SA 4.0",
+    "question": "In the Sci-Fi television show Doctor Who, who plays the Tenth Doctor?",
     "source": "Open Trivia DB"
    }
   }
