@@ -175,7 +175,7 @@ What goes up but never comes down?|Your age
 {% template size_up %}{% case size %}{% when "small" %}base{% when "base" %}large{% when "large" %}xlarge{% else %}xxlarge{% endcase %}{% endtemplate %}
 
 {% comment %} The answer (or the reveal time) goes on the label line so it never costs a body line. {% endcomment %}
-{% template with_answer %}{% if answer != blank %}{% case state %}{% when "shown" %}{{ label }} · Answer: {{ answer }}{% when "upside_down" %}{{ label }} · Answer:&nbsp;<span class="reveal">{{ answer }}</span>{% when "pending" %}{{ label }} · {{ reveal_label }}{% else %}{{ label }}{% endcase %}{% else %}{{ label }}{% endif %}{% endtemplate %}
+{% template with_answer %}{% if answer != blank %}{% case state %}{% when "shown" %}{{ label }} · Answer: {{ answer }}{% when "upside_down" %}{{ label }} · Answer:&nbsp;<span class="reveal">{{ answer }}</span>{% when "pending" %}{{ label }} · After {{ reveal_label }}{% else %}{{ label }}{% endcase %}{% else %}{{ label }}{% endif %}{% endtemplate %}
 
 {% comment %} Hero slot: filled label, big text, answer (if any).
    lines is the OG clamp; lg_lines the TRMNL X clamp (defaults to lines). Text steps up one size on lg. {% endcomment %}
