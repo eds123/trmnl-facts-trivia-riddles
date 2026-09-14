@@ -314,8 +314,8 @@ def build(today: dt.date, reschedule_from: dt.date | None = None) -> None:
     history = load_history()
     days = history["days"]
     if reschedule_from:
-        # Drop not-yet-shown days so they are re-picked with the current rules; past days stay in the ledger.
-        cutoff = max(reschedule_from, today + dt.timedelta(days=1)).isoformat()
+        # Drop days from the given date on so they are re-picked with the current rules; earlier days stay in the ledger.
+        cutoff = max(reschedule_from, today).isoformat()
         dropped = [k for k in days if k >= cutoff]
         for k in dropped:
             del days[k]
@@ -448,7 +448,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("today", nargs="?", help="override today's date (YYYY-MM-DD, UTC)")
     ap.add_argument("--reschedule-from", metavar="YYYY-MM-DD",
-                    help="discard scheduled picks from this date on (never earlier than tomorrow) and pick again")
+                    help="discard scheduled picks from this date on (never earlier than today) and pick again")
     args = ap.parse_args()
     today = dt.date.fromisoformat(args.today) if args.today else dt.datetime.now(dt.timezone.utc).date()
     build(today, dt.date.fromisoformat(args.reschedule_from) if args.reschedule_from else None)
