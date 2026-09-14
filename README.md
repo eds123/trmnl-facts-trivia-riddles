@@ -1,16 +1,13 @@
 # Facts, Trivia & Riddles for TRMNL
 
-A daily run plugin for your [TRMNL](https://usetrmnl.com) e-ink display: 
-
-One "Did you know?"
-fact, one trivia question and one riddle, fresh every day.
+A fact, a question and a riddle. Daily run plugin for your [TRMNL](https://usetrmnl.com) e-ink display.
 
 ![Full layout on the original TRMNL](assets/preview-full.png)
 
 ## What it shows
 
-- **Fact**: a Wikipedia "Did you know?" hook most days, and an "On this day" anniversary for the
-  current date about one day in six.
+- **Fact**: a light fun fact or a busted myth from Wikipedia's list of common misconceptions most
+  days, and an "On this day" anniversary for the current date about one day in six.
 - **Trivia**: a question from the Open Trivia Database, with its category in the label.
 - **Riddle**: a classic riddle.
 
@@ -86,7 +83,7 @@ The feed is a JSON object keyed by date, covering the past week and the next 45 
 {
   "days": {
     "2026-09-22": {
-      "fact":   { "kind": "dyk", "text": "…", "url": "https://en.wikipedia.org/wiki/…" },
+      "fact":   { "kind": "simple", "text": "…", "url": "…" },
       "trivia": { "category": "History", "difficulty": "hard", "question": "…", "answer": "…", "choices": ["…"] },
       "riddle": { "question": "…", "answer": "…" }
     }
@@ -125,15 +122,17 @@ python3 scripts/build_data.py --reschedule-from 2026-09-14   # re-pick future da
 The GitHub workflow can be run by hand from the Actions tab. Its optional `reschedule_from`
 input does the same as the flag above.
 
-The facts pool in `data/facts.json` was imported once with `scripts/import_facts.py`, which needs
-`pyarrow` and a local copy of the Hugging Face dataset. It does not run in CI.
+The facts pool in `data/facts.json` is built by `scripts/import_facts.py` (stdlib only) from the
+Wikipedia misconception lists and the Hugging Face simple-facts set. Re-run it to refresh the pool;
+ids are content hashes, so facts that survive keep their place in the repeat-avoidance ledger.
 
 ## Data sources
 
 | Section | Source | Licence |
 |---|---|---|
 | Trivia | [Open Trivia Database](https://opentdb.com) | CC BY-SA 4.0 |
-| Facts | Wikipedia "Did you know?" hooks via [derenrich/enwiki-did-you-know](https://huggingface.co/datasets/derenrich/enwiki-did-you-know), and [Wikipedia "On this day"](https://en.wikipedia.org/api/rest_v1/) via the Wikimedia REST API | CC BY-SA 4.0 |
+| Facts | [Wikipedia "List of common misconceptions"](https://en.wikipedia.org/wiki/List_of_common_misconceptions) and [Wikipedia "On this day"](https://en.wikipedia.org/api/rest_v1/) | CC BY-SA 4.0 |
+| Facts | [ProCreations/simple-facts](https://huggingface.co/datasets/ProCreations/simple-facts) | CC BY 4.0 |
 | Riddles | [crawsome/riddles](https://github.com/crawsome/riddles) | Unlicense (public domain) |
 
 See [SOURCES.md](SOURCES.md) for details on how each source is filtered and attributed. The

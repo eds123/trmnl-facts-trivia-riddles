@@ -3,6 +3,7 @@
 
 Reads
   data/riddles.json   curated riddle pool (committed)
+  data/facts.json     fact pool built by scripts/import_facts.py (committed)
   data/history.json   every pick ever made, keyed by date (restored from the gh-pages branch)
 Fetches
   Open Trivia DB      https://opentdb.com            CC BY-SA 4.0
@@ -40,7 +41,7 @@ HISTORY_PATH = ROOT / "data" / "history.json"
 PUBLIC_DIR = ROOT / "public"
 
 HORIZON_AHEAD = 45  # days scheduled in advance
-ON_THIS_DAY_EVERY = 6  # most days use a "Did you know" hook; every Nth day is an "On this day" event
+ON_THIS_DAY_EVERY = 6  # most days use the facts pool; every Nth day is an "On this day" event
 WINDOW_BEHIND = 7  # past days kept in data.json for devices that are behind
 
 USER_AGENT = "trmnl-facts-trivia-riddles/1.0 (https://github.com/eds123/trmnl-facts-trivia-riddles)"
@@ -83,7 +84,8 @@ NICHE_EVERY = 7
 
 SOURCES = {
     "trivia": {"name": "Open Trivia Database", "url": "https://opentdb.com", "license": "CC BY-SA 4.0"},
-    "fact": {"name": "Wikipedia (Did you know hooks and On this day events)", "url": "https://en.wikipedia.org", "license": "CC BY-SA 4.0"},
+    "fact": {"name": "Wikipedia (List of common misconceptions, On this day) and ProCreations/simple-facts",
+             "url": "https://github.com/eds123/trmnl-facts-trivia-riddles/blob/main/SOURCES.md", "license": "CC BY-SA 4.0"},
     "riddle": {"name": "crawsome/riddles", "url": "https://github.com/crawsome/riddles", "license": "Unlicense"},
 }
 
@@ -149,7 +151,7 @@ MAX_TRIVIA_LEN = 180
 
 def load_facts() -> list[dict]:
     with FACTS_PATH.open(encoding="utf-8") as fh:
-        return [dict(f, kind="dyk") for f in json.load(fh)["facts"]]
+        return [dict(f, kind=f.get("kind", "simple")) for f in json.load(fh)["facts"]]
 
 
 def load_riddles() -> list[dict]:

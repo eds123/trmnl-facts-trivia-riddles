@@ -82,6 +82,7 @@ What goes up but never comes down?|Your age
     {% assign fact_text = today_data.fact.text %}
     {% assign fact_url = today_data.fact.url %}
     {% if today_data.fact.kind == "on_this_day" %}{% assign fact_label = "On this day" %}{% endif %}
+    {% if today_data.fact.kind == "misconception" %}{% assign fact_label = "Myth busted" %}{% endif %}
   {% endif %}
   {% if today_data.trivia.question != blank %}
     {% assign trivia_category = today_data.trivia.category %}
