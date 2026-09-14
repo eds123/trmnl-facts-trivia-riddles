@@ -156,6 +156,10 @@ What goes up but never comes down?|Your age
   {% when "riddle" %}{% assign side2_label = "Riddle me this" %}{% assign side2_body = riddle_question %}{% assign side2_answer = riddle_answer %}
 {% endcase %}
 
+{% comment %} Short labels for the narrow quadrant columns, where "Trivia · Science & nature · Answer: …" would wrap. {% endcomment %}
+{% case side1 %}{% when "fact" %}{% assign side1_short = fact_label %}{% when "trivia" %}{% assign side1_short = "Trivia" %}{% else %}{% assign side1_short = "Riddle" %}{% endcase %}
+{% case side2 %}{% when "trivia" %}{% assign side2_short = "Trivia" %}{% else %}{% assign side2_short = "Riddle" %}{% endcase %}
+
 {% comment %} Title bar instance text reflects what is enabled. {% endcomment %}
 {% assign instance_label = "Daily Brain Snack" %}
 {% unless fact_on and trivia_on and riddle_on %}
@@ -170,15 +174,8 @@ What goes up but never comes down?|Your age
 {% comment %} One step up the size ladder; used for the lg (TRMNL X) variants. {% endcomment %}
 {% template size_up %}{% case size %}{% when "small" %}base{% when "base" %}large{% when "large" %}xlarge{% else %}xxlarge{% endcase %}{% endtemplate %}
 
-{% template answer_line %}
-{% capture lg_size %}{% render "size_up", size: text_size %}{% endcapture %}
-{% assign cls = "label label--" | append: text_size | append: " lg:label--" | append: lg_size %}
-{% case state %}
-  {% when "shown" %}<span class="{{ cls }}">Answer: {{ answer }}</span>
-  {% when "upside_down" %}<span class="{{ cls }}">Answer:&nbsp;<span class="reveal">{{ answer }}</span></span>
-  {% when "pending" %}<span class="{{ cls }}">Answer reveals after {{ reveal_label }}</span>
-{% endcase %}
-{% endtemplate %}
+{% comment %} The answer (or the reveal time) goes on the label line so it never costs a body line. {% endcomment %}
+{% template with_answer %}{% if answer != blank %}{% case state %}{% when "shown" %}{{ label }} · Answer: {{ answer }}{% when "upside_down" %}{{ label }} · Answer:&nbsp;<span class="reveal">{{ answer }}</span>{% when "pending" %}{{ label }} · {{ reveal_label }}{% else %}{{ label }}{% endcase %}{% else %}{{ label }}{% endif %}{% endtemplate %}
 
 {% comment %} Hero slot: filled label, big text, answer (if any).
    lines is the OG clamp; lg_lines the TRMNL X clamp (defaults to lines). Text steps up one size on lg. {% endcomment %}
@@ -186,9 +183,8 @@ What goes up but never comes down?|Your age
 {% capture lg_size %}{% render "size_up", size: title_size %}{% endcapture %}
 {% assign lg_clamp = lg_lines | default: lines %}
 <div class="flex flex--col flex--left flex--top gap--small">
-  <span class="label label--filled lg:label--large">{{ label }}</span>
+  <span class="label label--filled lg:label--large">{% render "with_answer", label: label, answer: answer, state: state, reveal_label: reveal_label %}</span>
   <span class="title title--{{ title_size }} lg:title--{{ lg_size }}" data-clamp="{{ lines }}" data-clamp-lg="{{ lg_clamp }}">{{ body }}</span>
-  {% if answer != blank %}{% render "answer_line", answer: answer, state: state, reveal_label: reveal_label, text_size: text_size %}{% endif %}
 </div>
 {% endtemplate %}
 
@@ -203,26 +199,121 @@ What goes up but never comes down?|Your age
 {% endcase %}
 {% assign lg_clamp = lg_lines | default: lines %}
 <div class="flex flex--col flex--left flex--top gap--xsmall">
-  <span class="label label--{{ label_size }} lg:label--{{ lg_label }} label--underline">{{ label }}</span>
+  <span class="label label--{{ label_size }} lg:label--{{ lg_label }} label--underline">{% render "with_answer", label: label, answer: answer, state: state, reveal_label: reveal_label %}</span>
   <span class="{{ body_class }} {{ lg_body }}" data-clamp="{{ lines }}" data-clamp-lg="{{ lg_clamp }}">{{ body }}</span>
-  {% if answer != blank %}{% render "answer_line", answer: answer, state: state, reveal_label: reveal_label, text_size: text_size %}{% endif %}
 </div>
 {% endtemplate %}
 
+{% comment %} ---------- Space budgets: short cards donate their unused room to long ones. ----------
+   Each layout passes the measured pixel room for body text (with no answer lines shown) as `room` (OG) and `room_lg`
+   (TRMNL X). Cards are given clamps by how much of that room they need. Metrics below were measured in the browser.
+   cpl: characters per line for a text size at a content width (glyph width x 1.15 for wrap waste; near enough on X too).
+   lh: line height of a text size per device (dev = og | lg). {% endcomment %}
+{% template cpl %}{% case size %}{% when "description" %}{{ width | times: 10 | divided_by: 69 }}{% when "small" %}{{ width | times: 10 | divided_by: 92 }}{% when "base" %}{{ width | divided_by: 12 }}{% when "large" %}{{ width | times: 10 | divided_by: 152 }}{% when "xlarge" %}{{ width | times: 10 | divided_by: 175 }}{% else %}{{ width | times: 10 | divided_by: 198 }}{% endcase %}{% endtemplate %}
+{% template lh %}{% if dev == "lg" %}{% case size %}{% when "description" %}19{% when "small" %}25{% when "base" %}36{% when "large" %}42{% else %}48{% endcase %}{% else %}{% case size %}{% when "description" %}12{% when "small" %}16{% when "base" %}21{% when "large" %}36{% when "xlarge" %}42{% else %}48{% endcase %}{% endif %}{% endtemplate %}
+
+{% comment %} lines_needed: ceil(chars / cpl), 0 for empty text. {% endcomment %}
+{% template lines_needed %}{% assign chars = text | size %}{% if chars == 0 %}0{% else %}{{ chars | plus: cpl | minus: 1 | divided_by: cpl }}{% endif %}{% endtemplate %}
+
+{% comment %} fit3: share a budget between three cards given what each needs (any unit). Outputs "h,s1,s2".
+   If everything fits, each card gets its need plus the slack (clamps are only a ceiling). Otherwise cards
+   within their fair share keep their need and the long ones split what is left. {% endcomment %}
+{% template fit3 %}
+{% assign sum = need_h | plus: need_1 | plus: need_2 %}
+{% if sum <= budget %}
+  {% assign slack = budget | minus: sum %}
+  {{ need_h | plus: slack }},{{ need_1 | plus: slack }},{{ need_2 | plus: slack }}
+{% else %}
+  {% assign n = 0 %}
+  {% if need_h > 0 %}{% assign n = n | plus: 1 %}{% endif %}
+  {% if need_1 > 0 %}{% assign n = n | plus: 1 %}{% endif %}
+  {% if need_2 > 0 %}{% assign n = n | plus: 1 %}{% endif %}
+  {% assign share = budget | divided_by: n %}
+  {% assign small = 0 %}{% assign big = 0 %}
+  {% if need_h <= share %}{% assign small = small | plus: need_h %}{% else %}{% assign big = big | plus: 1 %}{% endif %}
+  {% if need_1 <= share %}{% assign small = small | plus: need_1 %}{% else %}{% assign big = big | plus: 1 %}{% endif %}
+  {% if need_2 <= share %}{% assign small = small | plus: need_2 %}{% else %}{% assign big = big | plus: 1 %}{% endif %}
+  {% assign rem = budget | minus: small %}
+  {% assign each = rem | divided_by: big %}
+  {% assign used = each | times: big %}
+  {% assign extra = rem | minus: used %}
+  {% if need_h <= share %}{{ need_h }}{% else %}{{ each | plus: extra }}{% assign extra = 0 %}{% endif %},{% if need_1 <= share %}{{ need_1 }}{% else %}{{ each | plus: extra }}{% assign extra = 0 %}{% endif %},{% if need_2 <= share %}{{ need_2 }}{% else %}{{ each | plus: extra }}{% endif %}
+{% endif %}
+{% endtemplate %}
+
+{% comment %} alloc3: line clamps for hero / side1 / side2 given each text, the sizes, content width(s), a pixel budget and the device. Outputs "h,s1,s2". {% endcomment %}
+{% template alloc3 %}
+{% assign hero_width = hero_width | default: width %}
+{% capture cpl_h %}{% render "cpl", size: hero_size, width: hero_width %}{% endcapture %}{% assign cpl_h = cpl_h | strip | plus: 0 %}
+{% capture cpl_s %}{% render "cpl", size: side_size, width: width %}{% endcapture %}{% assign cpl_s = cpl_s | strip | plus: 0 %}
+{% capture lh_h %}{% render "lh", size: hero_size, dev: dev %}{% endcapture %}{% assign lh_h = lh_h | strip | plus: 0 %}
+{% capture lh_s %}{% render "lh", size: side_size, dev: dev %}{% endcapture %}{% assign lh_s = lh_s | strip | plus: 0 %}
+{% capture need_h %}{% render "lines_needed", text: hero_body, cpl: cpl_h %}{% endcapture %}{% assign need_h = need_h | strip | times: lh_h %}
+{% capture need_1 %}{% render "lines_needed", text: side1_body, cpl: cpl_s %}{% endcapture %}{% assign need_1 = need_1 | strip | times: lh_s %}
+{% capture need_2 %}{% render "lines_needed", text: side2_body, cpl: cpl_s %}{% endcapture %}{% assign need_2 = need_2 | strip | times: lh_s %}
+{% capture px %}{% render "fit3", need_h: need_h, need_1: need_1, need_2: need_2, budget: budget %}{% endcapture %}
+{% assign px = px | strip | split: "," %}
+{% assign l_h = px[0] | plus: 0 | divided_by: lh_h %}
+{% assign l_1 = px[1] | plus: 0 | divided_by: lh_s %}
+{% assign l_2 = px[2] | plus: 0 | divided_by: lh_s %}
+{% comment %} Rounding down to whole lines can leave room unused; hand it back, one line at a time, to cards that are still clipped. {% endcomment %}
+{% assign used_h = l_h | times: lh_h %}{% assign used_1 = l_1 | times: lh_s %}{% assign used_2 = l_2 | times: lh_s %}
+{% assign left = budget | minus: used_h | minus: used_1 | minus: used_2 %}
+{% for i in (1..3) %}
+  {% if need_h > used_h and left >= lh_h %}{% assign l_h = l_h | plus: 1 %}{% assign used_h = used_h | plus: lh_h %}{% assign left = left | minus: lh_h %}{% endif %}
+  {% if need_1 > used_1 and left >= lh_s %}{% assign l_1 = l_1 | plus: 1 %}{% assign used_1 = used_1 | plus: lh_s %}{% assign left = left | minus: lh_s %}{% endif %}
+  {% if need_2 > used_2 and left >= lh_s %}{% assign l_2 = l_2 | plus: 1 %}{% assign used_2 = used_2 | plus: lh_s %}{% assign left = left | minus: lh_s %}{% endif %}
+{% endfor %}
+{{ l_h }},{{ l_1 }},{{ l_2 }}
+{% endtemplate %}
+
+{% comment %} body_class (description / title title--small / title / title title--large) -> size name. {% endcomment %}
+{% template body_size %}{% case body_class %}{% when "description" %}description{% when "title title--small" %}small{% when "title" %}base{% when "title title--large" %}large{% else %}xlarge{% endcase %}{% endtemplate %}
+
+
+
 {% comment %} Stacked layout (hero on top, sides below): used by the narrow/tall views and every portrait variant.
-   hidden: extra classes for the wrapper (e.g. landscape:hidden). *_lg_lines are the TRMNL X clamps. {% endcomment %}
+   hidden: extra classes for the wrapper (e.g. landscape:hidden). room / room_lg: measured body-text room in px with
+   all three sections on; each missing side gives its label and divider back. {% endcomment %}
 {% template stacked %}
+{% assign width = width | default: 385 %}
+{% if side_count < 1 %}{% assign side1_body = "" %}{% assign side1_answer = "" %}{% endif %}
+{% if side_count < 2 %}{% assign side2_body = "" %}{% assign side2_answer = "" %}{% endif %}
+{% capture s_size %}{% render "body_size", body_class: side_body %}{% endcapture %}{% assign s_size = s_size | strip %}
+{% assign missing = 2 | minus: side_count %}
+{% assign budget = missing | times: 34 | plus: room %}
+{% assign budget_lg = missing | times: 45 | plus: room_lg %}
+{% capture alloc %}{% render "alloc3", hero_body: hero_body, side1_body: side1_body, side2_body: side2_body, hero_size: hero_size, side_size: s_size, width: width, budget: budget, dev: "og" %}{% endcapture %}
+{% assign alloc = alloc | strip | split: "," %}
+{% capture alloc_lg %}{% render "alloc3", hero_body: hero_body, side1_body: side1_body, side2_body: side2_body, hero_size: hero_size, side_size: s_size, width: width, budget: budget_lg, dev: "lg" %}{% endcapture %}
+{% assign alloc_lg = alloc_lg | strip | split: "," %}
 <div class="layout layout--col layout--top layout--stretch-x gap--{{ gap }} {{ hidden }}">
-  {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: state, reveal_label: reveal_label, title_size: hero_size, text_size: hero_text, lines: hero_lines, lg_lines: hero_lg_lines %}
+  {% render "hero_card", label: hero_label, body: hero_body, answer: hero_answer, state: state, reveal_label: reveal_label, title_size: hero_size, text_size: hero_text, lines: alloc[0], lg_lines: alloc_lg[0] %}
   {% if side_count > 0 %}
   <div class="divider divider--h"></div>
-  {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: state, reveal_label: reveal_label, label_size: side_label, body_class: side_body, text_size: side_text, lines: side1_lines, lg_lines: side1_lg_lines %}
+  {% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: state, reveal_label: reveal_label, label_size: side_label, body_class: side_body, text_size: side_text, lines: alloc[1], lg_lines: alloc_lg[1] %}
   {% endif %}
   {% if side_count > 1 %}
   <div class="divider divider--h"></div>
-  {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: state, reveal_label: reveal_label, label_size: side_label, body_class: side_body, text_size: side_text, lines: side2_lines, lg_lines: side2_lg_lines %}
+  {% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: state, reveal_label: reveal_label, label_size: side_label, body_class: side_body, text_size: side_text, lines: alloc[2], lg_lines: alloc_lg[2] %}
   {% endif %}
 </div>
+{% endtemplate %}
+
+{% comment %} Two side cards stacked in their own column (half_horizontal and full landscape sidebars, TRMNL X quadrant rows):
+   room / room_lg is the measured body-text room of that column. {% endcomment %}
+{% template side_pair %}
+{% assign width = width | default: 380 %}
+{% capture s_size %}{% render "body_size", body_class: side_body %}{% endcapture %}{% assign s_size = s_size | strip %}
+{% assign budget = room %}
+{% assign budget_lg = room_lg %}
+{% capture alloc %}{% render "alloc3", hero_body: "", side1_body: side1_body, side2_body: side2_body, hero_size: "small", side_size: s_size, width: width, budget: budget, dev: "og" %}{% endcapture %}
+{% assign alloc = alloc | strip | split: "," %}
+{% capture alloc_lg %}{% render "alloc3", hero_body: "", side1_body: side1_body, side2_body: side2_body, hero_size: "small", side_size: s_size, width: width, budget: budget_lg, dev: "lg" %}{% endcapture %}
+{% assign alloc_lg = alloc_lg | strip | split: "," %}
+{% render "side_card", label: side1_label, body: side1_body, answer: side1_answer, state: state, reveal_label: reveal_label, label_size: side_label, body_class: side_body, text_size: side_text, lines: alloc[1], lg_lines: alloc_lg[1] %}
+<div class="divider divider--h"></div>
+{% render "side_card", label: side2_label, body: side2_body, answer: side2_answer, state: state, reveal_label: reveal_label, label_size: side_label, body_class: side_body, text_size: side_text, lines: alloc[2], lg_lines: alloc_lg[2] %}
 {% endtemplate %}
 
 {% template plugin_title_bar %}

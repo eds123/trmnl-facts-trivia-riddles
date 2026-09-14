@@ -147,6 +147,7 @@ def pick(candidates: list[dict], used: dict[str, str], rng: random.Random) -> di
 
 MAX_RIDDLE_LEN = 200  # longer riddles truncate on the OG quadrant / half layouts
 MAX_TRIVIA_LEN = 180
+SHORT_MAX = 82  # items above this count as "long" (3+ lines on the OG half layouts); a day gets at most one of them
 
 
 def load_facts() -> list[dict]:
@@ -333,30 +334,47 @@ def build(today: dt.date, reschedule_from: dt.date | None = None) -> None:
         key = d.isoformat()
         rng = random.Random(key)
         entry: dict = {}
+        # At most one long item per day, so the two non-primary cards fit the small layouts.
+        # The riddle pool is the smallest and longest, so it picks first and the others adapt;
+        # on "On this day" days the event takes precedence instead.
+        long_left = 1
+        on_this_day = d.toordinal() % ON_THIS_DAY_EVERY == 0
+        order = ("fact", "riddle", "trivia") if on_this_day else ("riddle", "trivia", "fact")
 
-        used_facts = last_used(history, "fact")
-        fact = None
-        if d.toordinal() % ON_THIS_DAY_EVERY == 0:
-            fact = pick(fetch_fact_candidates(d.month, d.day), used_facts, rng)
-        if not fact:
-            fact = pick(facts, used_facts, rng)
-        if fact:
-            entry["fact"] = fact
-        else:
-            log(f"  {key}: no fact candidate")
+        def fit(cands: list[dict], field: str) -> list[dict]:
+            if long_left > 0:
+                return cands
+            short = [c for c in cands if len(c[field]) <= SHORT_MAX]
+            return short or cands
 
-        broad = [t for t in trivia_pool if t["category"] not in NICHE_CATEGORIES]
-        allow_niche = d.toordinal() % NICHE_EVERY == 0 or not broad
-        trivia = pick(trivia_pool if allow_niche else broad, last_used(history, "trivia"), rng)
-        if trivia:
-            entry["trivia"] = trivia
-            trivia_pool = [t for t in trivia_pool if t["id"] != trivia["id"]]
-        else:
-            log(f"  {key}: no trivia candidate")
-
-        riddle = pick(riddles, last_used(history, "riddle"), rng)
-        if riddle:
-            entry["riddle"] = riddle
+        for section in order:
+            if section == "fact":
+                used_facts = last_used(history, "fact")
+                fact = None
+                if on_this_day:
+                    fact = pick(fit(fetch_fact_candidates(d.month, d.day), "text"), used_facts, rng)
+                if not fact:
+                    fact = pick(fit(facts, "text"), used_facts, rng)
+                if fact:
+                    entry["fact"] = fact
+                    long_left -= len(fact["text"]) > SHORT_MAX
+                else:
+                    log(f"  {key}: no fact candidate")
+            elif section == "trivia":
+                broad = [t for t in trivia_pool if t["category"] not in NICHE_CATEGORIES]
+                allow_niche = d.toordinal() % NICHE_EVERY == 0 or not broad
+                trivia = pick(fit(trivia_pool if allow_niche else broad, "question"), last_used(history, "trivia"), rng)
+                if trivia:
+                    entry["trivia"] = trivia
+                    trivia_pool = [t for t in trivia_pool if t["id"] != trivia["id"]]
+                    long_left -= len(trivia["question"]) > SHORT_MAX
+                else:
+                    log(f"  {key}: no trivia candidate")
+            else:
+                riddle = pick(fit(riddles, "question"), last_used(history, "riddle"), rng)
+                if riddle:
+                    entry["riddle"] = riddle
+                    long_left -= len(riddle["question"]) > SHORT_MAX
 
         if not entry:
             raise RuntimeError(f"{key}: nothing could be scheduled")

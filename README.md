@@ -91,8 +91,11 @@ The feed is a JSON object keyed by date, covering the past week and the next 45 
 }
 ```
 
-Note: If the feed is unreachable the templates fall
-back to a small built-in sample set.
+The build keeps each day's trio short enough for the small layouts: at most one of the three items
+is over 90 characters. The templates then share each layout's measured room between the cards by
+how much text they carry, so a short trivia question lends its spare lines to a long riddle.
+
+Note: If the feed is unreachable the templates fall back to a small built-in sample set.
 
 
 ## Development
