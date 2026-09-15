@@ -1497,6 +1497,38 @@
     "question": "In Game of Thrones, what is Littlefinger's real name?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-10-30": {
+   "fact": {
+    "id": "fact-501938bdd7bb",
+    "kind": "simple",
+    "text": "Bone marrow transplants can treat blood cancers.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Riddle",
+    "id": "crawsome-baf2cb85b6",
+    "license": "Unlicense",
+    "question": "To unravel me you need a simple key, no key that was made by locksmith's hand. But a key that only I will understand.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "NH3",
+    "category": "Science & nature",
+    "choices": [
+     "NH3",
+     "CO2",
+     "NO3",
+     "CH4"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-b21df482536f",
+    "license": "CC BY-SA 4.0",
+    "question": "What is the chemical formula for ammonia?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
