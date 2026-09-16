@@ -1529,6 +1529,41 @@
     "question": "What is the chemical formula for ammonia?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-10-31": {
+   "fact": {
+    "id": "wiki-8013e7fdd21f",
+    "kind": "on_this_day",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikipedia",
+    "text": "In 1996, TG4, the world's first Irish language television station, began broadcasting.",
+    "title": "TG4",
+    "url": "https://en.wikipedia.org/wiki/TG4",
+    "year": 1996
+   },
+   "riddle": {
+    "answer": "Musician",
+    "id": "crawsome-c4b31555b4",
+    "license": "Unlicense",
+    "question": "Who works when he plays and plays when he works?",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "For Emma, Forever Ago",
+    "category": "Music",
+    "choices": [
+     "For Emma, Forever Ago",
+     "Bon Iver, Bon Iver",
+     "22, A Million",
+     "Blood Bank EP"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-a08343c9831f",
+    "license": "CC BY-SA 4.0",
+    "question": "What was Bon Iver's debut album released in 2007?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
