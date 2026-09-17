@@ -1564,6 +1564,38 @@
     "question": "What was Bon Iver's debut album released in 2007?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-01": {
+   "fact": {
+    "id": "fact-dea600c00027",
+    "kind": "simple",
+    "text": "Emperor penguins can dive 1,800 feet deep.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Numbers",
+    "id": "crawsome-bd2848cf3a",
+    "license": "Unlicense",
+    "question": "A man went to the hardware store to buy items for his house. 1 would cost $.25. 12 would cost $.50. 122 would cost $.75. When he left the store he had spent $.75, what did he buy?",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Kyoko Tokiwa",
+    "category": "Japanese anime & manga",
+    "choices": [
+     "Kyoko Tokiwa",
+     "Melissa Mao",
+     "Ren Mikihara",
+     "Teletha \"Tessa\" Testarossa"
+    ],
+    "difficulty": "hard",
+    "id": "otdb-b9de03e62e38",
+    "license": "CC BY-SA 4.0",
+    "question": "In the anime, Full Metal Panic!, who is Kaname's best friend?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
