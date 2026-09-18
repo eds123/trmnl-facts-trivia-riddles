@@ -1596,6 +1596,38 @@
     "question": "In the anime, Full Metal Panic!, who is Kaname's best friend?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-02": {
+   "fact": {
+    "id": "fact-12ef7e0742e7",
+    "kind": "simple",
+    "text": "The oldest continuously inhabited city is Damascus, Syria.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Darkness",
+    "id": "crawsome-730aa9cfe7",
+    "license": "Unlicense",
+    "question": "The more of it there is, the less you see.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Rik Mayall",
+    "category": "Television",
+    "choices": [
+     "Rik Mayall",
+     "Adrian Edmondson",
+     "Nigel Planer",
+     "Christopher Ryan"
+    ],
+    "difficulty": "hard",
+    "id": "otdb-39073ca48861",
+    "license": "CC BY-SA 4.0",
+    "question": "Which actor from The Young Ones also played Lord Flashheart in one episode of Blackadder II?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
