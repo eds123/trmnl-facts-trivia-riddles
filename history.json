@@ -1628,6 +1628,38 @@
     "question": "Which actor from The Young Ones also played Lord Flashheart in one episode of Blackadder II?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-03": {
+   "fact": {
+    "id": "fact-8bc360977567",
+    "kind": "simple",
+    "text": "Barbie's measurements, if she were life-size, would be 39-29-33.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Beehive",
+    "id": "crawsome-abd3fc2e43",
+    "license": "Unlicense",
+    "question": "Thousands lay up gold within this house. But no man made it. Spears past counting guard this house, but no man wards it.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Cancer",
+    "category": "General knowledge",
+    "choices": [
+     "Cancer",
+     "Libra",
+     "Virgo",
+     "Sagittarius"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-64f22ae23eb4",
+    "license": "CC BY-SA 4.0",
+    "question": "Which sign of the zodiac is represented by the Crab?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
