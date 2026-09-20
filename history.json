@@ -1660,6 +1660,38 @@
     "question": "Which sign of the zodiac is represented by the Crab?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-04": {
+   "fact": {
+    "id": "myth-785be6f53b34",
+    "kind": "misconception",
+    "text": "Houseflies have an average lifespan of 20 to 30 days, not 24 hours.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
+   },
+   "riddle": {
+    "answer": "Finger",
+    "id": "crawsome-8f5532a41a",
+    "license": "Unlicense",
+    "question": "Long and think, red within, with a nail at the end.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Chile",
+    "category": "Sports",
+    "choices": [
+     "Chile",
+     "Argentina",
+     "Brazil",
+     "Paraguay"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-19f454d70d1e",
+    "license": "CC BY-SA 4.0",
+    "question": "Which soccer team won the Copa América 2015 Championship ?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
