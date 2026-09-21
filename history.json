@@ -1692,6 +1692,38 @@
     "question": "Which soccer team won the Copa América 2015 Championship ?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-05": {
+   "fact": {
+    "id": "fact-9b063c630dd6",
+    "kind": "simple",
+    "text": "The word \"gorilla\" is derived from a Greek word meaning \"a tribe of hairy women.\"",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Eyes",
+    "id": "crawsome-1776f503b3",
+    "license": "Unlicense",
+    "question": "Two horses, swiftest traveling, harnessed in a pair, and grazing ever in places. Distant from them.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Seth Rollins",
+    "category": "Sports",
+    "choices": [
+     "Seth Rollins",
+     "Braun Strowman",
+     "AJ Styles",
+     "Andrade"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-53ac99ed8967",
+    "license": "CC BY-SA 4.0",
+    "question": "Which wrestler won the 2019 Men’s Royal Rumble?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
