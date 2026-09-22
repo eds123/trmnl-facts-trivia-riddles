@@ -1724,6 +1724,36 @@
     "question": "Which wrestler won the 2019 Men’s Royal Rumble?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-06": {
+   "fact": {
+    "id": "wiki-0d047ae17005",
+    "kind": "on_this_day",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikipedia",
+    "text": "In 1217, King Henry III of England issued the Charter of the Forest, re-establishing the rights of access of free men to royal forests.",
+    "title": "Henry III of England",
+    "url": "https://en.wikipedia.org/wiki/Henry_III_of_England",
+    "year": 1217
+   },
+   "riddle": {
+    "answer": "Potato",
+    "id": "crawsome-dc8c3939d7",
+    "license": "Unlicense",
+    "question": "A skin have I, more eyes than one. I can be very nice when I am done.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "False",
+    "category": "General knowledge",
+    "choices": [],
+    "difficulty": "easy",
+    "id": "otdb-ba0760104fd1",
+    "license": "CC BY-SA 4.0",
+    "question": "True or false: The New York Subway is the oldest underground in the world.",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
