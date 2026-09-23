@@ -1754,6 +1754,33 @@
     "question": "True or false: The New York Subway is the oldest underground in the world.",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-07": {
+   "fact": {
+    "id": "myth-f13c76d45424",
+    "kind": "misconception",
+    "text": "The word the was never pronounced or spelled \"ye\" in Old or Middle English.",
+    "title": "List of common misconceptions about arts and culture",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_arts_and_culture"
+   },
+   "riddle": {
+    "answer": "Sunrise",
+    "id": "crawsome-e5d9cdc024",
+    "license": "Unlicense",
+    "question": "Sleeping during the day, I hide away. Watchful through the night, I open at dawn's light. But only for the briefest time, do I shine. And then I hide away. And sleep through the day.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "True",
+    "category": "Books",
+    "choices": [],
+    "difficulty": "easy",
+    "id": "otdb-c8169c79874a",
+    "license": "CC BY-SA 4.0",
+    "question": "True or false: \"Green Eggs and Ham\" consists of only 50 different words.",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
