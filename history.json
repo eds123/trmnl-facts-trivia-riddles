@@ -1781,6 +1781,33 @@
     "question": "True or false: \"Green Eggs and Ham\" consists of only 50 different words.",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-08": {
+   "fact": {
+    "id": "fact-e1f7e10db5b3",
+    "kind": "simple",
+    "text": "The monkey face orchid looks like a monkey's face.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Steps",
+    "id": "crawsome-c5e4cf6461",
+    "license": "Unlicense",
+    "question": "The more you take, the more you leave behind.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "True",
+    "category": "Music",
+    "choices": [],
+    "difficulty": "easy",
+    "id": "otdb-a25d92159fe0",
+    "license": "CC BY-SA 4.0",
+    "question": "True or false: The music group Daft Punk got their name from a negative review they received.",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
