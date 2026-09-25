@@ -1808,6 +1808,33 @@
     "question": "True or false: The music group Daft Punk got their name from a negative review they received.",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-09": {
+   "fact": {
+    "id": "fact-6c6ec8e00b4d",
+    "kind": "simple",
+    "text": "The shortest bone in your body is in your ear.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Air",
+    "id": "crawsome-dde5c6dad6",
+    "license": "Unlicense",
+    "question": "I cost no money to use, or conscious effort to take part of. And as far as you can see, there is nothing to me. But without me, you are dead.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "False",
+    "category": "Geography",
+    "choices": [],
+    "difficulty": "easy",
+    "id": "otdb-2c78adafb33f",
+    "license": "CC BY-SA 4.0",
+    "question": "True or false: Washington, D.C. is considered a US state.",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
