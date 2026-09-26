@@ -1835,6 +1835,38 @@
     "question": "True or false: Washington, D.C. is considered a US state.",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-10": {
+   "fact": {
+    "id": "fact-86825ba7a371",
+    "kind": "simple",
+    "text": "The longest recorded surname has 666 letters.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Nose",
+    "id": "crawsome-37d9c313c3",
+    "license": "Unlicense",
+    "question": "Two little holes in the side of a hill. Just as you come to the cherry-red mill.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Hoatzin",
+    "category": "Animals",
+    "choices": [
+     "Hoatzin",
+     "Cormorant",
+     "Cassowary",
+     "Secretary bird"
+    ],
+    "difficulty": "hard",
+    "id": "otdb-b8d50bd197ab",
+    "license": "CC BY-SA 4.0",
+    "question": "What bird is born with claws on its wing digits?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
