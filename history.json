@@ -1867,6 +1867,38 @@
     "question": "What bird is born with claws on its wing digits?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-11": {
+   "fact": {
+    "id": "fact-629381bacaaa",
+    "kind": "simple",
+    "text": "The longest time between two twins being born is 87 days.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Mask",
+    "id": "crawsome-fb572abe0f",
+    "license": "Unlicense",
+    "question": "Tool of thief, toy of queen. Always used to be unseen. Sign of joy, sign of sorrow. Giving all likeness borrowed.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "November 11, 2006",
+    "category": "General knowledge",
+    "choices": [
+     "November 11, 2006",
+     "January 8, 2007",
+     "December 25, 2007",
+     "July 16, 2006"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-914e0cd8d69f",
+    "license": "CC BY-SA 4.0",
+    "question": "When was the Playstation 3 released?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
