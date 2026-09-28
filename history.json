@@ -1899,6 +1899,41 @@
     "question": "When was the Playstation 3 released?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-12": {
+   "fact": {
+    "id": "wiki-c5a17a2afc6c",
+    "kind": "on_this_day",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikipedia",
+    "text": "In 1970, the Oregon Highway Division unsuccessfully attempted to destroy a rotting beached sperm whale near Florence, Oregon, with dynamite.",
+    "title": "Oregon Department of Transportation",
+    "url": "https://en.wikipedia.org/wiki/Oregon_Department_of_Transportation",
+    "year": 1970
+   },
+   "riddle": {
+    "answer": "Shoe",
+    "id": "crawsome-012c81439b",
+    "license": "Unlicense",
+    "question": "Iron on a mammal. Mammal on your feet.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Ampersand",
+    "category": "General knowledge",
+    "choices": [
+     "Ampersand",
+     "Interrobang",
+     "Tilde",
+     "Pilcrow"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-841fe3078038",
+    "license": "CC BY-SA 4.0",
+    "question": "What character was once considered to be the 27th letter of the alphabet?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
