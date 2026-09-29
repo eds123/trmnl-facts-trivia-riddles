@@ -1934,6 +1934,38 @@
     "question": "What character was once considered to be the 27th letter of the alphabet?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-13": {
+   "fact": {
+    "id": "myth-42ad6cab6d33",
+    "kind": "misconception",
+    "text": "Stretching before or after exercise does not reduce delayed onset muscle soreness.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
+   },
+   "riddle": {
+    "answer": "Ship",
+    "id": "crawsome-3eb674fef3",
+    "license": "Unlicense",
+    "question": "Whilst I was engaged in sitting. I spied the dead carrying the living?",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Nikita Khrushchev",
+    "category": "Politics",
+    "choices": [
+     "Nikita Khrushchev",
+     "Leonid Brezhnev",
+     "Mikhail Gorbachev",
+     "Boris Yeltsin"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-1546c21b028b",
+    "license": "CC BY-SA 4.0",
+    "question": "Who succeeded Joseph Stalin as General Secretary of the Communist Party of the Soviet Union?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
