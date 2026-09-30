@@ -1966,6 +1966,38 @@
     "question": "Who succeeded Joseph Stalin as General Secretary of the Communist Party of the Soviet Union?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-14": {
+   "fact": {
+    "id": "fact-00803595f7d6",
+    "kind": "simple",
+    "text": "The lemon orchid has a citrus scent.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Hands",
+    "id": "crawsome-c044e0205e",
+    "license": "Unlicense",
+    "question": "They are many and one, they wave and they drum, Used to cover a state, they go with you everywhere.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Airship Dock",
+    "category": "History",
+    "choices": [
+     "Airship Dock",
+     "Lightning Rod",
+     "Antennae",
+     "Flag Pole"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-ba4f427a2ec5",
+    "license": "CC BY-SA 4.0",
+    "question": "The crown of the Empire State Building was originally built for what purpose?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
