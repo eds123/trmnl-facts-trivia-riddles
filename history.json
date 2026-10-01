@@ -1998,6 +1998,38 @@
     "question": "The crown of the Empire State Building was originally built for what purpose?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-15": {
+   "fact": {
+    "id": "fact-9ceee3c06c51",
+    "kind": "simple",
+    "text": "Rainbow eucalyptus trees have multicolored bark.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Stapler",
+    "id": "crawsome-1ec3766f1d",
+    "license": "Unlicense",
+    "question": "With pointed fangs it sits in wait. With piercing force it doles out fate, over bloodless victims proclaiming its might. Eternally joining in a single bite.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Jake",
+    "category": "Television",
+    "choices": [
+     "Jake",
+     "John",
+     "Jeremy",
+     "James"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-6a17a5bad08f",
+    "license": "CC BY-SA 4.0",
+    "question": "In Two and a Half Men, what is Alan Harper's son's name?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
