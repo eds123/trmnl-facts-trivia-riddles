@@ -2030,6 +2030,38 @@
     "question": "In Two and a Half Men, what is Alan Harper's son's name?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-16": {
+   "fact": {
+    "id": "fact-a6a38387b634",
+    "kind": "simple",
+    "text": "The most struck-by-lightning person was struck 7 times and survived.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Mirror",
+    "id": "crawsome-96ad548d4f",
+    "license": "Unlicense",
+    "question": "If you drop me I'm sure to crack. But give me a smile and I'll always smile back.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Atalanta",
+    "category": "Mythology",
+    "choices": [
+     "Atalanta",
+     "Peleus",
+     "Theseus",
+     "Jason"
+    ],
+    "difficulty": "hard",
+    "id": "otdb-e31fb18dc3d7",
+    "license": "CC BY-SA 4.0",
+    "question": "Who did Hippomenes defeat in a footrace?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
