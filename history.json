@@ -2062,6 +2062,38 @@
     "question": "Who did Hippomenes defeat in a footrace?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-17": {
+   "fact": {
+    "id": "fact-d2fec8e46220",
+    "kind": "simple",
+    "text": "An ostrich's eye is bigger than its brain.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Corn",
+    "id": "crawsome-bfcae334ff",
+    "license": "Unlicense",
+    "question": "You throw away the outside and cook the inside. Then you eat the outside and throw away the inside. What did you eat?",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Wizard and Glass",
+    "category": "Books",
+    "choices": [
+     "Wizard and Glass",
+     "Wolves of the Calla",
+     "Hearts in Atlantis",
+     "The Dark Half"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-1cd95db9c3e4",
+    "license": "CC BY-SA 4.0",
+    "question": "What is the name of the fourth book in Stephen King's The Dark Tower series?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
