@@ -2094,6 +2094,41 @@
     "question": "What is the name of the fourth book in Stephen King's The Dark Tower series?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-18": {
+   "fact": {
+    "id": "wiki-893f0ea31a64",
+    "kind": "on_this_day",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikipedia",
+    "text": "In 1865, \"The Celebrated Jumping Frog of Calaveras County\" was published, becoming the first great success of American author Mark Twain.",
+    "title": "The Celebrated Jumping Frog of Calaveras County",
+    "url": "https://en.wikipedia.org/wiki/The_Celebrated_Jumping_Frog_of_Calaveras_County",
+    "year": 1865
+   },
+   "riddle": {
+    "answer": "Horse",
+    "id": "crawsome-2e6a6a2b86",
+    "license": "Unlicense",
+    "question": "What always goes to bed with his shoes on?",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Simien Jackel",
+    "category": "Animals",
+    "choices": [
+     "Simien Jackel",
+     "Ethiopian Coyote",
+     "Amharic Fox",
+     "Canis Simiensis"
+    ],
+    "difficulty": "hard",
+    "id": "otdb-8060087ff152",
+    "license": "CC BY-SA 4.0",
+    "question": "What was the name of the Ethiopian Wolf before they knew it was related to wolves?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
