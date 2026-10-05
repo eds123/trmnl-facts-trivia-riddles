@@ -2129,6 +2129,33 @@
     "question": "What was the name of the Ethiopian Wolf before they knew it was related to wolves?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-19": {
+   "fact": {
+    "id": "fact-dde64953437f",
+    "kind": "simple",
+    "text": "The coconut orchid smells like coconut.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Mirror",
+    "id": "crawsome-8ec0c2376b",
+    "license": "Unlicense",
+    "question": "Look into my face and I'm everybody. Scratch my back and I'm nobody.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "True",
+    "category": "Vehicles",
+    "choices": [],
+    "difficulty": "easy",
+    "id": "otdb-2eb45ea1641b",
+    "license": "CC BY-SA 4.0",
+    "question": "True or false: BMW M GmbH is a subsidiary of BMW AG that focuses on car performance.",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
