@@ -2156,6 +2156,38 @@
     "question": "True or false: BMW M GmbH is a subsidiary of BMW AG that focuses on car performance.",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-20": {
+   "fact": {
+    "id": "fact-5bcaa9c67223",
+    "kind": "simple",
+    "text": "The first webcam was created to monitor a coffee pot.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Temper",
+    "id": "crawsome-fb4d66089b",
+    "license": "Unlicense",
+    "question": "You must keep this thing. Its loss will affect your brothers. For once yours is lost, it will soon be lost by others.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Jean",
+    "category": "Books",
+    "choices": [
+     "Jean",
+     "Jane",
+     "Emma",
+     "Jo"
+    ],
+    "difficulty": "hard",
+    "id": "otdb-46c3280e36d2",
+    "license": "CC BY-SA 4.0",
+    "question": "What is Hermione Granger's middle name?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
