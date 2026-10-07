@@ -2188,6 +2188,38 @@
     "question": "What is Hermione Granger's middle name?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-21": {
+   "fact": {
+    "id": "fact-5f68278cd3ff",
+    "kind": "simple",
+    "text": "The oldest seed to successfully germinate was 32,000 years old.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Alcohol",
+    "id": "crawsome-2ae8c1c7e0",
+    "license": "Unlicense",
+    "question": "Today he is there to trip you up. And he will torture you tomorrow. Yet he is also there to ease the pain, when you are lost in grief and sorrow.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Pamela",
+    "category": "Film",
+    "choices": [
+     "Pamela",
+     "Mary",
+     "Christine",
+     "Angeline"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-71c024fbcda0",
+    "license": "CC BY-SA 4.0",
+    "question": "In the Friday The 13th series, what is Jason's mother's first name?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
