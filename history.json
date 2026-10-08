@@ -2220,6 +2220,38 @@
     "question": "In the Friday The 13th series, what is Jason's mother's first name?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-22": {
+   "fact": {
+    "id": "fact-d19959da6535",
+    "kind": "simple",
+    "text": "Your heart beats over 3 billion times in your lifetime.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Match",
+    "id": "crawsome-c8bb0bdc32",
+    "license": "Unlicense",
+    "question": "Take one out and scratch my head, I am now black but once was red.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Procompsognathus",
+    "category": "Books",
+    "choices": [
+     "Procompsognathus",
+     "Dilophosaurus",
+     "Tyrannosaurus Rex",
+     "Velociraptor"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-e17fb2986a93",
+    "license": "CC BY-SA 4.0",
+    "question": "In Michael Crichton's novel \"Jurassic Park\", John Hammond meets his demise at the claws of which dinosaur?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
