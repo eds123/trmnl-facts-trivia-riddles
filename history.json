@@ -2252,6 +2252,38 @@
     "question": "In Michael Crichton's novel \"Jurassic Park\", John Hammond meets his demise at the claws of which dinosaur?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-23": {
+   "fact": {
+    "id": "fact-672b0f44fa5a",
+    "kind": "simple",
+    "text": "The naked man orchid looks like tiny naked men.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Clock",
+    "id": "crawsome-267d329cc2",
+    "license": "Unlicense",
+    "question": "I have a face, yet no senses. But I don't really care, because time is of the essence.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Munich",
+    "category": "Geography",
+    "choices": [
+     "Munich",
+     "Berlin",
+     "Hamburg",
+     "Dortmund"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-7fe2154917e5",
+    "license": "CC BY-SA 4.0",
+    "question": "Which German city is located on the River Isar?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
