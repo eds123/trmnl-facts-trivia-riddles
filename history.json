@@ -2284,6 +2284,41 @@
     "question": "Which German city is located on the River Isar?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-24": {
+   "fact": {
+    "id": "wiki-708bfe483eb0",
+    "kind": "on_this_day",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikipedia",
+    "text": "In 1925, the Eugene O'Neill Theatre opened on Broadway, New York, with a production of the musical Mayflowers.",
+    "title": "Eugene O'Neill Theatre",
+    "url": "https://en.wikipedia.org/wiki/Eugene_O'Neill_Theatre",
+    "year": 1925
+   },
+   "riddle": {
+    "answer": "Carpet",
+    "id": "crawsome-dd2ceb0176",
+    "license": "Unlicense",
+    "question": "What kind of pet always stays on the floor?",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Josh Brolin",
+    "category": "Film",
+    "choices": [
+     "Josh Brolin",
+     "Tom Hiddleston",
+     "Adam Sandler",
+     "Sean Gunn"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-16cd72089718",
+    "license": "CC BY-SA 4.0",
+    "question": "Who played Thanos in Avengers: Infinity War and Avengers: End Game?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
