@@ -2319,6 +2319,38 @@
     "question": "Who played Thanos in Avengers: Infinity War and Avengers: End Game?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-25": {
+   "fact": {
+    "id": "fact-81e2b6f64dc2",
+    "kind": "simple",
+    "text": "The average person spends 5 years of their life eating.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Ice",
+    "id": "crawsome-30ac8b878c",
+    "license": "Unlicense",
+    "question": "A precious stone, as clear as diamond. Seek it out while the sun's near the horizon. Though you can walk on water with its power, try to keep it, and it'll vanish in an hour.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Medellín",
+    "category": "General knowledge",
+    "choices": [
+     "Medellín",
+     "Bogotá",
+     "Quito",
+     "Cali"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-d898ac5625dd",
+    "license": "CC BY-SA 4.0",
+    "question": "The drug cartel run by Pablo Escobar originated in which South American city?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
