@@ -2351,6 +2351,33 @@
     "question": "The drug cartel run by Pablo Escobar originated in which South American city?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-26": {
+   "fact": {
+    "id": "fact-27bb41aeb0a4",
+    "kind": "simple",
+    "text": "Osteoclasts break down old bone tissue.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Dust",
+    "id": "crawsome-a51b567f4e",
+    "license": "Unlicense",
+    "question": "People are hired to get rid of me. I'm often hiding under your bed. In time I'll always return you see. Bite me and you're surely dead.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "False",
+    "category": "Animals",
+    "choices": [],
+    "difficulty": "easy",
+    "id": "otdb-9431cbee64a9",
+    "license": "CC BY-SA 4.0",
+    "question": "True or false: Kangaroos keep food in their pouches next to their children.",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
