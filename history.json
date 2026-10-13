@@ -2378,6 +2378,33 @@
     "question": "True or false: Kangaroos keep food in their pouches next to their children.",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-27": {
+   "fact": {
+    "id": "fact-d5cc1a618e5e",
+    "kind": "simple",
+    "text": "Neurons multiply at a rate 250,000 neurons per minute during early pregnancy.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Flag",
+    "id": "crawsome-469856dcb8",
+    "license": "Unlicense",
+    "question": "I march before armies, a thousand salute me. My fall can bring victory, but no one would shoot me. The wind is my lover, one-legged am I. Name me and see me at home in the sky.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "False",
+    "category": "Computers",
+    "choices": [],
+    "difficulty": "medium",
+    "id": "otdb-55c840c8f149",
+    "license": "CC BY-SA 4.0",
+    "question": "True or false: MacOS is based on Linux.",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
