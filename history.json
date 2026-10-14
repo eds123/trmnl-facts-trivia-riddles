@@ -2405,6 +2405,38 @@
     "question": "True or false: MacOS is based on Linux.",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-28": {
+   "fact": {
+    "id": "fact-8d4e2c7302ef",
+    "kind": "simple",
+    "text": "The human small intestine is about 20 feet long.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Music",
+    "id": "crawsome-9c165e0449",
+    "license": "Unlicense",
+    "question": "At the sound of me, one may dream or stamp their feet, At the sound of me, one may laugh or sometimes weep.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "A Tight Rope",
+    "category": "General knowledge",
+    "choices": [
+     "A Tight Rope",
+     "Broken Glass",
+     "Balls",
+     "The Moon"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-870aa0b0069b",
+    "license": "CC BY-SA 4.0",
+    "question": "What does a funambulist walk on?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
