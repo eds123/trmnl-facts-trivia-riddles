@@ -2437,6 +2437,38 @@
     "question": "What does a funambulist walk on?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-29": {
+   "fact": {
+    "id": "fact-fb9369ce2091",
+    "kind": "simple",
+    "text": "The average chocolate bar has 8 insects' legs in it.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Nest",
+    "id": "crawsome-1217d6c66c",
+    "license": "Unlicense",
+    "question": "A house of wood in a hidden place. Built without nails or glue. High above the earthen ground. It holds pale gems of blue.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "1996",
+    "category": "Music",
+    "choices": [
+     "1996",
+     "1990",
+     "2001",
+     "1994"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-38d1581fcf9d",
+    "license": "CC BY-SA 4.0",
+    "question": "What year was Weezer's album \"Pinkerton\" released?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
