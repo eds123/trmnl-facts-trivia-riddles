@@ -2469,6 +2469,41 @@
     "question": "What year was Weezer's album \"Pinkerton\" released?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-11-30": {
+   "fact": {
+    "id": "wiki-e6536d51b95e",
+    "kind": "on_this_day",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikipedia",
+    "text": "In 1953, Mutesa II, Kabaka of Buganda, was temporarily deposed and exiled to London by Andrew Cohen, the British governor of Uganda.",
+    "title": "Mutesa II of Buganda",
+    "url": "https://en.wikipedia.org/wiki/Mutesa_II_of_Buganda",
+    "year": 1953
+   },
+   "riddle": {
+    "answer": "Tree",
+    "id": "crawsome-7c2a6d8809",
+    "license": "Unlicense",
+    "question": "Dies half its life. Lives the rest. Dances without music. Breathes without breath.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Chagres River",
+    "category": "Geography",
+    "choices": [
+     "Chagres River",
+     "Tuira River",
+     "Chucunaque River",
+     "Chepo River"
+    ],
+    "difficulty": "hard",
+    "id": "otdb-31d4e409fae2",
+    "license": "CC BY-SA 4.0",
+    "question": "Which river was dammed to create Gatun Lake and the Panama Canal?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
