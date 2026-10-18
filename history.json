@@ -2531,6 +2531,38 @@
     "question": "True or false: According to Greek Mythology, Atlas was an Olympian God.",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-02": {
+   "fact": {
+    "id": "fact-53a57428f31a",
+    "kind": "simple",
+    "text": "Oranges aren't naturally orange in tropical climates.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Sword",
+    "id": "crawsome-d90a5fa70c",
+    "license": "Unlicense",
+    "question": "With sharp edged wit and pointed poise. It can settle disputes without making a noise.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Bow",
+    "category": "General knowledge",
+    "choices": [
+     "Bow",
+     "Stern",
+     "Port",
+     "Starboard"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-abf609e30673",
+    "license": "CC BY-SA 4.0",
+    "question": "What do sailors call the front of a boat?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
