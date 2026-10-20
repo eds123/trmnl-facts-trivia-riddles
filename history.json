@@ -2590,6 +2590,38 @@
     "question": "True or false: NCIS stands for \"Navy Corps Investigative Service\"",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-04": {
+   "fact": {
+    "id": "fact-01db2c334275",
+    "kind": "simple",
+    "text": "Leafy sea dragons look exactly like seaweed.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Grave",
+    "id": "crawsome-353699e667",
+    "license": "Unlicense",
+    "question": "So cold, damp and dark this place. To stay you would refrain, yet those who occupy this place do never complain.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Aloe Blacc",
+    "category": "Music",
+    "choices": [
+     "Aloe Blacc",
+     "Lena Meyer-Landrut",
+     "Stevie Wonder",
+     "Taylor Swift"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-a774498a9149",
+    "license": "CC BY-SA 4.0",
+    "question": "\"Lift Your Spirit\" is an album by which artist?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
