@@ -2622,6 +2622,38 @@
     "question": "\"Lift Your Spirit\" is an album by which artist?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-05": {
+   "fact": {
+    "id": "fact-548193f7017d",
+    "kind": "simple",
+    "text": "California consumes more bottled water than any other product.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Photo",
+    "id": "crawsome-12c0c4d0fe",
+    "license": "Unlicense",
+    "question": "A woman shoots her husband, then holds him under water for five minutes. Finally, she hangs him. Five minutes later they enjoy a wonderful dinner together. How can this be?",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "William Jefferson Clinton",
+    "category": "Politics",
+    "choices": [
+     "William Jefferson Clinton",
+     "William Roosevelt Clinton",
+     "William Truman Clinton",
+     "William Lincoln Clinton"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-c5d2f50f7c20",
+    "license": "CC BY-SA 4.0",
+    "question": "What is former United States President Bill Clinton's full name?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
