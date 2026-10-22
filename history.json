@@ -2654,6 +2654,41 @@
     "question": "What is former United States President Bill Clinton's full name?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-06": {
+   "fact": {
+    "id": "wiki-9e7af1247189",
+    "kind": "on_this_day",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikipedia",
+    "text": "In 1933, in United States v. One Book Called Ulysses Judge John M. Woolsey ruled that James Joyce's novel Ulysses was not obscene, allowing it to be imported into the United States.",
+    "title": "United States v. One Book Called Ulysses",
+    "url": "https://en.wikipedia.org/wiki/United_States_v._One_Book_Called_Ulysses",
+    "year": 1933
+   },
+   "riddle": {
+    "answer": "Iceberg",
+    "id": "crawsome-4d137890a2",
+    "license": "Unlicense",
+    "question": "Lighter than what I am made of, More of me is hidden Than is seen.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "South America",
+    "category": "Geography",
+    "choices": [
+     "South America",
+     "Europe",
+     "Asia",
+     "Africa"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-72da34eea231",
+    "license": "CC BY-SA 4.0",
+    "question": "On which continent does the Andes mountain range lie?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
