@@ -2689,6 +2689,38 @@
     "question": "On which continent does the Andes mountain range lie?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-07": {
+   "fact": {
+    "id": "fact-6aaa7edd56e1",
+    "kind": "simple",
+    "text": "There is over 3,000 characters that are commonly used in Jepan (Jappanese).",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Sharing",
+    "id": "crawsome-b872e4f8f2",
+    "license": "Unlicense",
+    "question": "Of these things - I have two. One for me - and one for you. And when you ask about the price, I simply smile and nod twice.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "PanzerKampfwagen V Panther",
+    "category": "Vehicles",
+    "choices": [
+     "PanzerKampfwagen V Panther",
+     "Marder III",
+     "Mks Matilda II",
+     "PanzerKampfwagen VI Tiger"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-2c99c7e87eaa",
+    "license": "CC BY-SA 4.0",
+    "question": "During World War 2, with tank was the most fear by the allies?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
