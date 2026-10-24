@@ -2721,6 +2721,38 @@
     "question": "During World War 2, with tank was the most fear by the allies?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-08": {
+   "fact": {
+    "id": "myth-9c557151588f",
+    "kind": "misconception",
+    "text": "Members of the Church of Jesus Christ of Latter-day Saints (LDS Church) no longer practice polygamy.",
+    "title": "List of common misconceptions about arts and culture",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_arts_and_culture"
+   },
+   "riddle": {
+    "answer": "Noon",
+    "id": "crawsome-70af7da030",
+    "license": "Unlicense",
+    "question": "What word is the same written forward, backward and upside down?",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Radiohead",
+    "category": "Music",
+    "choices": [
+     "Radiohead",
+     "R.E.M.",
+     "Nirvana",
+     "Coldplay"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-553ca58fb6d4",
+    "license": "CC BY-SA 4.0",
+    "question": "Which alternative rock band released the critically-acclaimed album \"OK Computer\"?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
