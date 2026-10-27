@@ -2785,6 +2785,70 @@
     "question": "What African country has Portuguese as its official language?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-10": {
+   "fact": {
+    "id": "fact-c28588caa049",
+    "kind": "simple",
+    "text": "Star-nosed moles can identify and eat prey in 230 milliseconds.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Thorn",
+    "id": "crawsome-4db99bef0c",
+    "license": "Unlicense",
+    "question": "I walked and walked and at last I got it. I didn't want it. So I stopped and looked for it. When I found it, I threw it away.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "The Prodigy",
+    "category": "Music",
+    "choices": [
+     "The Prodigy",
+     "The Chemical Brothers",
+     "The Crystal Method",
+     "Infected Mushroom"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-019029f4b2ec",
+    "license": "CC BY-SA 4.0",
+    "question": "Liam Howlett founded which electronic music group in 1990?",
+    "source": "Open Trivia DB"
+   }
+  },
+  "2026-12-11": {
+   "fact": {
+    "id": "fact-96ea3e70286e",
+    "kind": "simple",
+    "text": "The Great Wall of China contains rice as one of its binding ingredients.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Volcano",
+    "id": "crawsome-32b031e1fb",
+    "license": "Unlicense",
+    "question": "My thunder comes before the lightning. My lightning comes before the clouds. My rain dries all the land it touches.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Disk Operating System",
+    "category": "Computers",
+    "choices": [
+     "Disk Operating System",
+     "Dumb Operating System",
+     "Driver Oriented System",
+     "Diskless Operating System"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-8ae2e4a4f9a6",
+    "license": "CC BY-SA 4.0",
+    "question": "What does the DOS in Microsoft's first operating system \"MS-DOS\" stand for?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
