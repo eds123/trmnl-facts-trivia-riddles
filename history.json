@@ -2849,6 +2849,36 @@
     "question": "What does the DOS in Microsoft's first operating system \"MS-DOS\" stand for?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-12": {
+   "fact": {
+    "id": "wiki-fe9dd673f1f5",
+    "kind": "on_this_day",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikipedia",
+    "text": "In 2021, at the season-ending Abu Dhabi Grand Prix, Max Verstappen overtook Lewis Hamilton on the final lap to become World Drivers' Champion.",
+    "title": "2021 Abu Dhabi Grand Prix",
+    "url": "https://en.wikipedia.org/wiki/2021_Abu_Dhabi_Grand_Prix",
+    "year": 2021
+   },
+   "riddle": {
+    "answer": "Ice",
+    "id": "crawsome-bd9e636bb3",
+    "license": "Unlicense",
+    "question": "Power enough to smash ships and crush roofs. Yet it still must fear the sun.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "True",
+    "category": "Music",
+    "choices": [],
+    "difficulty": "hard",
+    "id": "otdb-db41ea5a821f",
+    "license": "CC BY-SA 4.0",
+    "question": "True or false: The band STRFKR was also briefly known as Pyramiddd.",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
