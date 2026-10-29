@@ -2879,6 +2879,38 @@
     "question": "True or false: The band STRFKR was also briefly known as Pyramiddd.",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-13": {
+   "fact": {
+    "id": "fact-dcf23c7ce889",
+    "kind": "simple",
+    "text": "A dragonfly has a lifespan of 24 hours.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Mirror",
+    "id": "crawsome-a098a1fbea",
+    "license": "Unlicense",
+    "question": "I look at you, you look at me, I raise my right, you raise your left.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "23",
+    "category": "Mathematics",
+    "choices": [
+     "23",
+     "25",
+     "21",
+     "27"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-0bcd81c97bf8",
+    "license": "CC BY-SA 4.0",
+    "question": "What prime number comes next after 19?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
