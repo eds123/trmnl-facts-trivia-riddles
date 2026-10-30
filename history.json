@@ -2911,6 +2911,38 @@
     "question": "What prime number comes next after 19?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-14": {
+   "fact": {
+    "id": "fact-ffdba238529b",
+    "kind": "simple",
+    "text": "Peanuts grow underground and are legumes, not nuts.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Past",
+    "id": "crawsome-4a66d746cd",
+    "license": "Unlicense",
+    "question": "Half-way up the hill, I see you at last, lying beneath me with your sounds and sights. A city in the twilight, dim and vast, with smoking roofs, soft bells, and gleaming lights.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Russia",
+    "category": "Sports",
+    "choices": [
+     "Russia",
+     "Germany",
+     "United States",
+     "Saudi Arabia"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-b929bed66917",
+    "license": "CC BY-SA 4.0",
+    "question": "Which country hosted the 2018 FIFA World Cup?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
