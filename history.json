@@ -2975,6 +2975,38 @@
     "question": "Whistler was the codename of this Microsoft Operating System.",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-16": {
+   "fact": {
+    "id": "fact-6c4dd42628d5",
+    "kind": "simple",
+    "text": "The jewel orchid is grown for its beautiful leaves.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Egg",
+    "id": "crawsome-4ab8c57e7a",
+    "license": "Unlicense",
+    "question": "A box without hinges, lock or key, yet golden treasure lies within.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "8 Minutes",
+    "category": "Science & nature",
+    "choices": [
+     "8 Minutes",
+     "6 Minutes",
+     "2 Minutes",
+     "12 Minutes"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-64508c9e4a50",
+    "license": "CC BY-SA 4.0",
+    "question": "To the nearest minute, how long does it take for light to travel from the Sun to the Earth?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
