@@ -3007,6 +3007,38 @@
     "question": "To the nearest minute, how long does it take for light to travel from the Sun to the Earth?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-17": {
+   "fact": {
+    "id": "myth-77d053158e1b",
+    "kind": "misconception",
+    "text": "PepsiCo in no real sense ever owned the \"6th most powerful navy\" in the world after a deal with the Soviet Union. In 1989, Pepsi acquired several decommissioned warships as part of a barter deal.",
+    "title": "List of common misconceptions about arts and culture",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_arts_and_culture"
+   },
+   "riddle": {
+    "answer": "Love",
+    "id": "crawsome-d789477456",
+    "license": "Unlicense",
+    "question": "What can touch someone once and last them a life time?",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Alex",
+    "category": "Television",
+    "choices": [
+     "Alex",
+     "Todd",
+     "Neal",
+     "Grimus"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-88d6465a90c7",
+    "license": "CC BY-SA 4.0",
+    "question": "On the NBC show Community what was Star Burns' real name?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
