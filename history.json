@@ -3039,6 +3039,41 @@
     "question": "On the NBC show Community what was Star Burns' real name?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-18": {
+   "fact": {
+    "id": "wiki-68116810a115",
+    "kind": "on_this_day",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikipedia",
+    "text": "In 1958, the United States launched SCORE (rocket pictured), the world's first communications satellite.",
+    "title": "SCORE (satellite)",
+    "url": "https://en.wikipedia.org/wiki/SCORE_(satellite)",
+    "year": 1958
+   },
+   "riddle": {
+    "answer": "Lava",
+    "id": "crawsome-36d31a0022",
+    "license": "Unlicense",
+    "question": "I am the red tongue of the earth, that buries cities.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "6",
+    "category": "Science & nature",
+    "choices": [
+     "6",
+     "2",
+     "3",
+     "4"
+    ],
+    "difficulty": "hard",
+    "id": "otdb-52f980bbf3af",
+    "license": "CC BY-SA 4.0",
+    "question": "How many types of quarks are there in the standard model of physics?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
