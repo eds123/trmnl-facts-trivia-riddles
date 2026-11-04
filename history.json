@@ -3074,6 +3074,38 @@
     "question": "How many types of quarks are there in the standard model of physics?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-19": {
+   "fact": {
+    "id": "fact-c000cbc45e2f",
+    "kind": "simple",
+    "text": "The dancing girls orchid looks like dancing figures.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Book",
+    "id": "crawsome-a69d02b821",
+    "license": "Unlicense",
+    "question": "My life is often a volume of grief, your help is needed to turn a new leaf. Stiff is my spine and my body is pale. But I'm always ready to tell a tale.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Wales",
+    "category": "Geography",
+    "choices": [
+     "Wales",
+     "England",
+     "North Ireland",
+     "Scotland"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-cc5be23e0269",
+    "license": "CC BY-SA 4.0",
+    "question": "Which UK country features a dragon on their flag?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
