@@ -3106,6 +3106,38 @@
     "question": "Which UK country features a dragon on their flag?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-20": {
+   "fact": {
+    "id": "myth-686f209ebfb6",
+    "kind": "misconception",
+    "text": "Cockroaches would not be the only organisms capable of surviving in an environment contaminated with nuclear fallout.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
+   },
+   "riddle": {
+    "answer": "Work",
+    "id": "crawsome-780feb4381",
+    "license": "Unlicense",
+    "question": "What does no man want, yet no man want to lose?",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "1GB",
+    "category": "Computers",
+    "choices": [
+     "1GB",
+     "512MB",
+     "5GB",
+     "Unlimited"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-8d1efab44698",
+    "license": "CC BY-SA 4.0",
+    "question": "When Gmail first launched, how much storage did it provide for your email?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
