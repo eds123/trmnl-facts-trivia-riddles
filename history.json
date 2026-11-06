@@ -3138,6 +3138,38 @@
     "question": "When Gmail first launched, how much storage did it provide for your email?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-21": {
+   "fact": {
+    "id": "myth-ed11d7f43be6",
+    "kind": "misconception",
+    "text": "Egg balancing is possible on every day of the year, not just the vernal equinox.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
+   },
+   "riddle": {
+    "answer": "Cat",
+    "id": "crawsome-7939857ade",
+    "license": "Unlicense",
+    "question": "Though desert men once called me God, today men call me mad. For I wag my tail when I am angry. And growl when I am glad.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Venus",
+    "category": "Science & nature",
+    "choices": [
+     "Venus",
+     "Jupiter",
+     "Mercury",
+     "Mars"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-f267b2f0c4c1",
+    "license": "CC BY-SA 4.0",
+    "question": "What is the hottest planet in the solar system",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
