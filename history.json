@@ -3170,6 +3170,38 @@
     "question": "What is the hottest planet in the solar system",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-22": {
+   "fact": {
+    "id": "fact-43228364346a",
+    "kind": "simple",
+    "text": "Wheat is the most widely grown crop in the world.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Apple",
+    "id": "crawsome-33e5945de7",
+    "license": "Unlicense",
+    "question": "I'm very tempting, so its said, I have a shiny coat of red, and my flesh is white beneath. I smell so sweet, taste good to eat, and help to guard your teeth.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "27° Million F (15° Million C)",
+    "category": "Science & nature",
+    "choices": [
+     "27° Million F (15° Million C)",
+     "938,000° F (521093.3° C)",
+     "8° Billion F (°4.4 Billion C)",
+     "Absolute Zero (Both F and C)"
+    ],
+    "difficulty": "hard",
+    "id": "otdb-32e5424b7cca",
+    "license": "CC BY-SA 4.0",
+    "question": "The core of the Sun can reach which temperature?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
