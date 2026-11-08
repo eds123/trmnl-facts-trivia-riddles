@@ -3202,6 +3202,38 @@
     "question": "The core of the Sun can reach which temperature?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-23": {
+   "fact": {
+    "id": "myth-3ce91a87c92f",
+    "kind": "misconception",
+    "text": "The Big Bang model does not fully explain the origin of the universe.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
+   },
+   "riddle": {
+    "answer": "Shadow",
+    "id": "crawsome-2705bc24c8",
+    "license": "Unlicense",
+    "question": "Tall in the morning, short at noon, gone at night. But I'll be back soon.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Trent Reznor",
+    "category": "Music",
+    "choices": [
+     "Trent Reznor",
+     "Marilyn Manson",
+     "Robin Finck",
+     "Josh Homme"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-45caa5fc16ac",
+    "license": "CC BY-SA 4.0",
+    "question": "Who is the founder and leader of industrial rock band, 'Nine Inch Nails'?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
