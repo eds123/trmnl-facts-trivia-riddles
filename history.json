@@ -3234,6 +3234,36 @@
     "question": "Who is the founder and leader of industrial rock band, 'Nine Inch Nails'?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-24": {
+   "fact": {
+    "id": "wiki-055e3169466f",
+    "kind": "on_this_day",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikipedia",
+    "text": "In 1818, the Christmas carol \"Silent Night\" (audio featured) by Joseph Mohr and Franz Gruber was first performed in a church in Oberndorf bei Salzburg, Austria.",
+    "title": "Christmas carol",
+    "url": "https://en.wikipedia.org/wiki/Christmas_carol",
+    "year": 1818
+   },
+   "riddle": {
+    "answer": "Dozens",
+    "id": "crawsome-25e53c2b46",
+    "license": "Unlicense",
+    "question": "A word I know, six letters it contains. Subtract just one and twelve remains.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "False",
+    "category": "Politics",
+    "choices": [],
+    "difficulty": "easy",
+    "id": "otdb-ee7660a3d0e8",
+    "license": "CC BY-SA 4.0",
+    "question": "True or false: Berlin was the capital of two countries for about 40 years.",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
