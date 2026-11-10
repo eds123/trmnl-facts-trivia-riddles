@@ -3264,6 +3264,38 @@
     "question": "True or false: Berlin was the capital of two countries for about 40 years.",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-25": {
+   "fact": {
+    "id": "fact-c1a1a1b15ea6",
+    "kind": "simple",
+    "text": "The human eye can see 10 million colors.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Sun",
+    "id": "crawsome-22a42f2a9a",
+    "license": "Unlicense",
+    "question": "Inside a great blue castle lives a shy young maid. She blushes in the morning and comes not out at night.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "1915 - 1916",
+    "category": "History",
+    "choices": [
+     "1915 - 1916",
+     "1914 - 1918",
+     "1914 - 1915",
+     "1915 - 1918"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-07fe2ebb1c50",
+    "license": "CC BY-SA 4.0",
+    "question": "In which years did the Battle of Gallipoli take place?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
