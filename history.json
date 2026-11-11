@@ -3296,6 +3296,38 @@
     "question": "In which years did the Battle of Gallipoli take place?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-26": {
+   "fact": {
+    "id": "myth-4730c2d62805",
+    "kind": "misconception",
+    "text": "The Cape of Good Hope is not the southern tip of Africa; that distinction belongs to Cape Agulhas, located about to the east-southeast.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
+   },
+   "riddle": {
+    "answer": "Ton",
+    "id": "crawsome-319482f217",
+    "license": "Unlicense",
+    "question": "Forward I'm heavy, but backwards I'm not.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Microsoft",
+    "category": "General knowledge",
+    "choices": [
+     "Microsoft",
+     "Google",
+     "Apple",
+     "Yahoo"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-7611f4e8a56e",
+    "license": "CC BY-SA 4.0",
+    "question": "What company owns Outlook?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
