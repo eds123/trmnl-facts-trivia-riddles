@@ -3328,6 +3328,38 @@
     "question": "What company owns Outlook?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-27": {
+   "fact": {
+    "id": "fact-665b4dc60a77",
+    "kind": "simple",
+    "text": "The human parathyroid glands regulate calcium.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Chess",
+    "id": "crawsome-2daac8236d",
+    "license": "Unlicense",
+    "question": "A slow, solemn square-dance of warriors feinting. One by one they fall, warriors fainting, thirty-two on sixty-four.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Kazuma Kiryu",
+    "category": "Video games",
+    "choices": [
+     "Kazuma Kiryu",
+     "Sohei Dojima",
+     "Ryuji Goda",
+     "Haruka Sawamura"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-a6be0ed75228",
+    "license": "CC BY-SA 4.0",
+    "question": "In the Yakuza series who is the Dragon of Dojima?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
