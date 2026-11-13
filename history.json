@@ -3360,6 +3360,38 @@
     "question": "In the Yakuza series who is the Dragon of Dojima?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-28": {
+   "fact": {
+    "id": "fact-dcb42ed42d5d",
+    "kind": "simple",
+    "text": "Antarctica is the world's largest desert, not the Sahara.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Fleas",
+    "id": "crawsome-df91d4fb4f",
+    "license": "Unlicense",
+    "question": "When they are caught, they are thrown away. When they escape, you itch all day.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Polska",
+    "category": "General knowledge",
+    "choices": [
+     "Polska",
+     "Pupcia",
+     "Polszka",
+     "Póland"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-4c983cd222dc",
+    "license": "CC BY-SA 4.0",
+    "question": "What is the name of Poland in Polish?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
