@@ -3392,6 +3392,38 @@
     "question": "What is the name of Poland in Polish?",
     "source": "Open Trivia DB"
    }
+  },
+  "2026-12-29": {
+   "fact": {
+    "id": "fact-6224c71b2851",
+    "kind": "simple",
+    "text": "The most lightning-struck place is Lake Maracaibo, Venezuela.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Moon",
+    "id": "crawsome-a302ae8fd3",
+    "license": "Unlicense",
+    "question": "Always old, sometimes new. Never sad, sometimes blue. Never empty, sometimes full. Never pushes, always pulls.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Laika, the dog",
+    "category": "History",
+    "choices": [
+     "Laika, the dog",
+     "Ham, the chimpanzee",
+     "Baker, the monkey",
+     "Belka, the dog"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-b6e3d0d4110c",
+    "license": "CC BY-SA 4.0",
+    "question": "Who was the first mammal successfully launched into Earth's orbit?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
