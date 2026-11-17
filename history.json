@@ -3486,6 +3486,38 @@
     "question": "True or false: The 'Squaring the Circle' problem is solvable.",
     "source": "Open Trivia DB"
    }
+  },
+  "2027-01-01": {
+   "fact": {
+    "id": "myth-ee6175f29994",
+    "kind": "misconception",
+    "text": "The Fisher Space Pen was not commissioned by NASA at a cost of millions of dollars, while the Soviets used pencils.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
+   },
+   "riddle": {
+    "answer": "Secret",
+    "id": "crawsome-93e7adf858",
+    "license": "Unlicense",
+    "question": "If you have it, you want to share it. If you share it, you don't have it.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "The Day of the Locust",
+    "category": "Books",
+    "choices": [
+     "The Day of the Locust",
+     "Catch-22",
+     "Of Mice and Men",
+     "A Separate Peace"
+    ],
+    "difficulty": "hard",
+    "id": "otdb-a1aa4fa1e3d0",
+    "license": "CC BY-SA 4.0",
+    "question": "In which classic novel is there a character named Homer Simpson?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
