@@ -3518,6 +3518,33 @@
     "question": "In which classic novel is there a character named Homer Simpson?",
     "source": "Open Trivia DB"
    }
+  },
+  "2027-01-02": {
+   "fact": {
+    "id": "fact-ac50c3528fda",
+    "kind": "simple",
+    "text": "US Dollar bills are made out of cotton and linen.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Heart",
+    "id": "crawsome-04d5162363",
+    "license": "Unlicense",
+    "question": "I'm the source of all emotion, but I'm caged in a white prison.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "True",
+    "category": "General knowledge",
+    "choices": [],
+    "difficulty": "easy",
+    "id": "otdb-dcbcc86d4e0f",
+    "license": "CC BY-SA 4.0",
+    "question": "True or false: On average, at least 1 person is killed by a drunk driver in the United States every hour.",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
