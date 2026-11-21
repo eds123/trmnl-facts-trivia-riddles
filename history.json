@@ -3577,6 +3577,73 @@
     "question": "How many cores does the Intel i7-6950X have?",
     "source": "Open Trivia DB"
    }
+  },
+  "2027-01-04": {
+   "fact": {
+    "id": "fact-96d006fcabf3",
+    "kind": "simple",
+    "text": "When you die your hair still grows for a couple of months.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Gold",
+    "id": "crawsome-17849dbb7b",
+    "license": "Unlicense",
+    "question": "I drive men mad for love of me. Easily beaten, never free.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Brazil",
+    "category": "Sports",
+    "choices": [
+     "Brazil",
+     "Argentina",
+     "Portugal",
+     "Spain"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-c82210140ba3",
+    "license": "CC BY-SA 4.0",
+    "question": "Which country produced football players such as Cafu, Roberto Carlos and Pelé?",
+    "source": "Open Trivia DB"
+   }
+  },
+  "2027-01-05": {
+   "fact": {
+    "id": "wiki-11aa9b1e19f7",
+    "kind": "on_this_day",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikipedia",
+    "text": "In 2008, Mikheil Saakashvili was decisively re-elected as President of Georgia in \"the first genuinely competitive presidential election\" in the history of the country.",
+    "title": "Mikheil Saakashvili",
+    "url": "https://en.wikipedia.org/wiki/Mikheil_Saakashvili",
+    "year": 2008
+   },
+   "riddle": {
+    "answer": "Skeleton",
+    "id": "crawsome-fe05be8eaf",
+    "license": "Unlicense",
+    "question": "Twigs and spheres and poles and plates. Join and bind to reason make.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Toy Story 2",
+    "category": "Film",
+    "choices": [
+     "Toy Story 2",
+     "Sin City: A Dame to Kill For",
+     "Speed 2: Cruise Control",
+     "Son of the Mask"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-fd90c467b690",
+    "license": "CC BY-SA 4.0",
+    "question": "Which movie sequel had improved box office results compared to its original film?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
