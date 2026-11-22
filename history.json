@@ -3644,6 +3644,38 @@
     "question": "Which movie sequel had improved box office results compared to its original film?",
     "source": "Open Trivia DB"
    }
+  },
+  "2027-01-06": {
+   "fact": {
+    "id": "myth-429eea6be1ab",
+    "kind": "misconception",
+    "text": "The daddy longlegs spider (Pholcidae) is not the most venomous spider in the world.",
+    "title": "List of common misconceptions about science, technology, and mathematics",
+    "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions_about_science,_technology,_and_mathematics"
+   },
+   "riddle": {
+    "answer": "Drum",
+    "id": "crawsome-1a5dc3cfa3",
+    "license": "Unlicense",
+    "question": "Although my cow is dead, I still beat her What a racket she makes.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Masrani Global Corporation",
+    "category": "Film",
+    "choices": [
+     "Masrani Global Corporation",
+     "Biology Synthetics Technologies",
+     "International Genetics Incorporated",
+     "International Genetic Technologies"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-255edf6a07eb",
+    "license": "CC BY-SA 4.0",
+    "question": "In \"Jurassic World\", which company purchases InGen and creates Jurassic World?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
