@@ -3676,6 +3676,38 @@
     "question": "In \"Jurassic World\", which company purchases InGen and creates Jurassic World?",
     "source": "Open Trivia DB"
    }
+  },
+  "2027-01-07": {
+   "fact": {
+    "id": "fact-0cbe61401299",
+    "kind": "simple",
+    "text": "The Word \"Tragedy\" Comes from an Ancient Greek Word Meaning \"Goat Song\"",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Log",
+    "id": "crawsome-ef06b9031c",
+    "license": "Unlicense",
+    "question": "In your fire you hear me scream, creaking and whining, yet I am dead before you lay me in your hearth.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Ian Fleming",
+    "category": "Books",
+    "choices": [
+     "Ian Fleming",
+     "Joseph Conrad",
+     "John Buchan",
+     "Graham Greene"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-d41509f7b441",
+    "license": "CC BY-SA 4.0",
+    "question": "Which famous spy novelist wrote the childrens' story \"Chitty-Chitty-Bang-Bang\"?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
