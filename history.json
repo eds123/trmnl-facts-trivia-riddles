@@ -3708,6 +3708,38 @@
     "question": "Which famous spy novelist wrote the childrens' story \"Chitty-Chitty-Bang-Bang\"?",
     "source": "Open Trivia DB"
    }
+  },
+  "2027-01-08": {
+   "fact": {
+    "id": "fact-d8bda8f1a8ba",
+    "kind": "simple",
+    "text": "Butterflies cannot fly if their body temperature is less than 86 degrees.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Reflection",
+    "id": "crawsome-a907ec8924",
+    "license": "Unlicense",
+    "question": "You saw me where I never was and where I could not be. And yet within that very place, my face you often see.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Hypoglycemia",
+    "category": "Science & nature",
+    "choices": [
+     "Hypoglycemia",
+     "Hypothyroidism",
+     "Hypothermia",
+     "Hypoxia"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-db4a8d396e47",
+    "license": "CC BY-SA 4.0",
+    "question": "What is the medical term for low blood sugar?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
