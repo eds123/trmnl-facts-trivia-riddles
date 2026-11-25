@@ -3740,6 +3740,38 @@
     "question": "What is the medical term for low blood sugar?",
     "source": "Open Trivia DB"
    }
+  },
+  "2027-01-09": {
+   "fact": {
+    "id": "fact-5cec8b95b0a4",
+    "kind": "simple",
+    "text": "The human skeleton completely replaces itself every 10 years.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Bell",
+    "id": "crawsome-5b97c8b334",
+    "license": "Unlicense",
+    "question": "You heart it speak, for it has a hard tongue. But it cannot breathe, for it has not a lung.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Laos",
+    "category": "History",
+    "choices": [
+     "Laos",
+     "Cambodia",
+     "Vietnam",
+     "Thailand"
+    ],
+    "difficulty": "hard",
+    "id": "otdb-6dcde223a9c0",
+    "license": "CC BY-SA 4.0",
+    "question": "What Southeast Asian country was formerly known as 'Lan Xang'?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
