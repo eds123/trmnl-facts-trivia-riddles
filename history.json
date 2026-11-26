@@ -3772,6 +3772,38 @@
     "question": "What Southeast Asian country was formerly known as 'Lan Xang'?",
     "source": "Open Trivia DB"
    }
+  },
+  "2027-01-10": {
+   "fact": {
+    "id": "fact-99cf897f8a8f",
+    "kind": "simple",
+    "text": "Bones store 99% of the body's calcium.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "Coal",
+    "id": "crawsome-20e39f5ca8",
+    "license": "Unlicense",
+    "question": "Black we are and much admired. Many seek us if they are tired. We tire the horse, and comfort man, and turn White when we've fulfilled your plan.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Helium",
+    "category": "Science & nature",
+    "choices": [
+     "Helium",
+     "Oxygen",
+     "Argon",
+     "Nitrogen"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-c4af65ecfba7",
+    "license": "CC BY-SA 4.0",
+    "question": "Stars consist mainly of hydrogen and which other gas?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
