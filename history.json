@@ -3804,6 +3804,41 @@
     "question": "Stars consist mainly of hydrogen and which other gas?",
     "source": "Open Trivia DB"
    }
+  },
+  "2027-01-11": {
+   "fact": {
+    "id": "wiki-9595f9312fc8",
+    "kind": "on_this_day",
+    "license": "CC BY-SA 4.0",
+    "source": "Wikipedia",
+    "text": "In 1986, the Gateway Bridge in Brisbane, Australia, opened as the largest prestressed-concrete, single-box bridge in the world.",
+    "title": "Sir Leo Hielscher Bridges",
+    "url": "https://en.wikipedia.org/wiki/Sir_Leo_Hielscher_Bridges",
+    "year": 1986
+   },
+   "riddle": {
+    "answer": "Waterfall",
+    "id": "crawsome-9f06ba500c",
+    "license": "Unlicense",
+    "question": "Bright as diamonds, Loud as thunder, Never still, A thing of wonder.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Chile",
+    "category": "Politics",
+    "choices": [
+     "Chile",
+     "Ethiopia",
+     "Indonesia",
+     "Nicaragua"
+    ],
+    "difficulty": "medium",
+    "id": "otdb-b03a3b7e6e2a",
+    "license": "CC BY-SA 4.0",
+    "question": "Between 1973 to 1990, what country was ruled by dictator Augusto Pinochet?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
