@@ -3839,6 +3839,38 @@
     "question": "Between 1973 to 1990, what country was ruled by dictator Augusto Pinochet?",
     "source": "Open Trivia DB"
    }
+  },
+  "2027-01-12": {
+   "fact": {
+    "id": "fact-6c784523ba82",
+    "kind": "simple",
+    "text": "Sharks are older than trees.",
+    "title": "",
+    "url": "https://huggingface.co/datasets/ProCreations/simple-facts"
+   },
+   "riddle": {
+    "answer": "War",
+    "id": "crawsome-9e2586b3b8",
+    "license": "Unlicense",
+    "question": "A harvest sown and reaped on the same day in an unplowed field. Which increases without growing, remains whole though it is eaten within and without. Is useless and yet the staple of nations.",
+    "source": "crawsome/riddles",
+    "source_url": "https://github.com/crawsome/riddles"
+   },
+   "trivia": {
+    "answer": "Get Lucky",
+    "category": "Music",
+    "choices": [
+     "Get Lucky",
+     "Doin' It Right",
+     "Instant Crush",
+     "The Game of Love"
+    ],
+    "difficulty": "easy",
+    "id": "otdb-8e1e94245f0e",
+    "license": "CC BY-SA 4.0",
+    "question": "Which song on Daft Punk's \"Random Access Memories\" features Pharrell Williams?",
+    "source": "Open Trivia DB"
+   }
   }
  },
  "version": 1
